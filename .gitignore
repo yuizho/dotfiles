@@ -1,0 +1,14 @@
+.DS_Store
+*~
+.emacs.d/auto-save-list/**
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.emacs.d/backups/**
+.emacs.d/eshell/**
+ac-comphist.dat
+.\#*
+
+*.elc
+.cask
+*.pyc
