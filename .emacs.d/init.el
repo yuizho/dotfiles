@@ -414,6 +414,16 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; wgrepの設定
 (require 'wgrep nil t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; gitの設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; https://github.com/magit/magit
+(require 'magit-status)
+;; key binds
+(global-set-key (kbd "C-x g") 'magit-status)
+
+;; auto refresh
+(add-hook 'after-save-hook 'magit-refresh)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ********* 各言語ごとの設定 *********
