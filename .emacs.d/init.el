@@ -10,7 +10,7 @@
 ))
 
 ;; ウィンドウの透明化
-(add-to-list 'default-frame-alist '(alpha . (0.8 0.8)))
+;;(add-to-list 'default-frame-alist '(alpha . (0.8 0.8)))
 
 ;;; ツールバーを非表示
 ;; M-x tool-bar-mode で表示非表示を切り替えられる
@@ -163,8 +163,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
       ;;(count-lines-region (region-beginning) (region-end))
     ""))
 
-(add-to-list 'default-mode-line-format
-             '(:eval (count-lines-and-chars)))
+;;(add-to-list 'default-mode-line-format
+;;             '(:eval (count-lines-and-chars)))
 
 ;;; P90 タイトルバーにファイルのフルパスを表示
 (setq frame-title-format "%f")
@@ -199,9 +199,9 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;;; P97-99 フォントの設定
 (when (eq window-system 'ns)
-  ;; asciiフォントをMenloに
+  ;; asciiフォントの設定
   (set-face-attribute 'default nil
-                      :family "Menlo"
+                      :family "Misc Fixed"
                       :height 240)
   ;; 日本語フォントをヒラギノ明朝 Proに
   (set-fontset-font
@@ -264,8 +264,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; parenのスタイル: expressionは括弧内も強調表示
 (setq show-paren-style 'expression)
 ;; フェイスを変更する
-(set-face-background 'show-paren-match-face nil)
-(set-face-underline-p 'show-paren-match-face "gray8")
+;;(set-face-background 'show-paren-match-face nil)
+;;(set-face-underline-p 'show-paren-match-face "gray8")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -371,11 +371,19 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ▼要拡張機能インストール▼
 ;;; P130-131 利用可能にする
-(when (require 'auto-complete-config nil t)
-  (add-to-list 'ac-dictionary-directories 
-    "~/.emacs.d/elisp/ac-dict")
-  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
-  (ac-config-default))
+;;(when (require 'auto-complete-config nil t)
+;;  (add-to-list 'ac-dictionary-directories
+;;    "~/.emacs.d/elisp/ac-dict")
+;;  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+;;  (ac-config-default))
+
+;; companyの設定
+(require 'company)
+(global-company-mode) ; 全バッファで有効にする 
+(setq company-idle-delay 0) ; デフォルトは0.5
+(setq company-minimum-prefix-length 2) ; デフォルトは4
+(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+
 
 ;; 閉じカッコの自動挿入
 ;; http://bhby39.blogspot.jp/2014/02/emacs.html
@@ -532,6 +540,13 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (add-hook 'scala-mode-hook 'ensime)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Lua用の設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; FlyCheck用の設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
@@ -542,7 +557,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
  '(flycheck-disabled-checkers (quote (javascript-jshint javascript-jscs)))
  '(package-selected-packages
    (quote
-    (ensime wgrep web-mode tuareg python-mode pos-tip multi-term magit js2-mode htmlize helm-swoop haskell-mode flymake flycheck erlang))))
+    (company lua-mode ensime wgrep web-mode tuareg python-mode pos-tip multi-term magit js2-mode htmlize helm-swoop haskell-mode flymake flycheck erlang))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
