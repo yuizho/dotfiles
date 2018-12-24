@@ -19,6 +19,8 @@
 ;; タイトルバーにファイル名表示
 (setq frame-title-format (format "%%f - Emacs@%s" (system-name)))
 
+;; ignore error sound
+(setq ring-bell-function 'ignore)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 3.2 Emacsの起動と終了                                  ;;
