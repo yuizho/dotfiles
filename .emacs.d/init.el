@@ -463,6 +463,11 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; auto refresh
 (add-hook 'after-save-hook 'magit-refresh)
 
+
+;; gutter
+(global-git-gutter+-mode)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ********* 各言語ごとの設定 *********
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
