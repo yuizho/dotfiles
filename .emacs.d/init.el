@@ -409,14 +409,10 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
 
-;; C-sで絞り込む
-(define-key company-active-map (kbd "C-s") 'company-filter-candidates)
-
 ;; TABで候補を設定
 (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+(define-key company-active-map (kbd "TAB") 'company-complete-selection)
 
-;; 各種メジャーモードでも C-M-iで company-modeの補完を使う
-(define-key emacs-lisp-mode-map (kbd "C-M-i") 'company-complete)
 
 
 ;; 閉じカッコの自動挿入
