@@ -34,6 +34,10 @@
 ;; スタートアップメッセージを非表示
 ;;(setq inhibit-startup-screen t)
 
+;; to prevent unexpected termination
+;; https://superuser.com/questions/349943/how-to-awake-emacs-gui-after-pressing-ctrlz
+(global-unset-key (kbd "C-z"))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 4.1 効率的な設定ファイルの作り方と管理方法             ;;
