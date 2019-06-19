@@ -204,7 +204,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   ;; asciiフォントの設定
   (set-face-attribute 'default nil
                       :family "Misc Fixed"
-                      :height 240)
+                      :height 150)
   ;; 日本語フォントをヒラギノ明朝 Proに
   (set-fontset-font
    nil 'japanese-jisx0208
