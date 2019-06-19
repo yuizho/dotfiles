@@ -275,9 +275,9 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; P102-103 バックアップとオートセーブの設定
 ;; バックアップファイルを作成しない
-;; (setq make-backup-files nil) ; 初期値はt
+(setq make-backup-files nil) ; 初期値はt
 ;; オートセーブファイルを作らない
-;; (setq auto-save-default nil) ; 初期値はt
+(setq auto-save-default nil) ; 初期値はt
 
 ;; バックアップファイルの作成場所をシステムのTempディレクトリに変更する
 ;; (setq backup-directory-alist
@@ -287,15 +287,15 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;       `((".*" ,temporary-file-directory t)))
 
 ;; バックアップとオートセーブファイルを~/.emacs.d/backups/へ集める
-(add-to-list 'backup-directory-alist
-             (cons "." "~/.emacs.d/backups/"))
-(setq auto-save-file-name-transforms
-      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
+;;(add-to-list 'backup-directory-alist
+;;             (cons "." "~/.emacs.d/backups/"))
+;;(setq auto-save-file-name-transforms
+;;      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
 
 ;; オートセーブファイル作成までの秒間隔
-(setq auto-save-timeout 15)
+;;(setq auto-save-timeout 15)
 ;; オートセーブファイル作成までのタイプ間隔
-(setq auto-save-interval 60)
+;;(setq auto-save-interval 60)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
