@@ -596,10 +596,17 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
  '(flycheck-disabled-checkers (quote (javascript-jshint javascript-jscs)))
  '(package-selected-packages
    (quote
-    (company lua-mode ensime wgrep web-mode tuareg python-mode pos-tip multi-term magit js2-mode htmlize helm-swoop haskell-mode flymake flycheck erlang))))
+    (rust-mode company lua-mode ensime wgrep web-mode tuareg python-mode pos-tip multi-term magit js2-mode htmlize helm-swoop haskell-mode flymake flycheck erlang))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Rust用の設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "/path/to/rust-mode/")
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
