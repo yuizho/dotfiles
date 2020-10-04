@@ -32,7 +32,7 @@
 ;; Emacsからの質問をy/nで回答する
 (fset 'yes-or-no-p 'y-or-n-p)
 ;; スタートアップメッセージを非表示
-;;(setq inhibit-startup-screen t)
+(setq inhibit-startup-screen t)
 
 ;; to prevent unexpected termination
 ;; https://superuser.com/questions/349943/how-to-awake-emacs-gui-after-pressing-ctrlz
