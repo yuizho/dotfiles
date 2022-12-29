@@ -1,6 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; 外観
+;; 外観
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Color-theme
+(load-theme 'misterioso t)
+
 ;; ウィンドウサイズの位置、サイズ
 (if window-system (progn
   (set-background-color "Black")
@@ -17,44 +20,6 @@
 ;; ignore error sound
 (setq ring-bell-function 'ignore)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Emacsの起動と終了
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; おまじない
-(require 'cl)
-
-;; スタートアップメッセージを非表示
-(setq inhibit-startup-screen t)
-
-;; prevent unexpected termination
-;; https://superuser.com/questions/349943/how-to-awake-emacs-gui-after-pressing-ctrlz
-(global-unset-key (kbd "C-z"))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 効率的な設定ファイルの作り方と管理方法
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; load-path を追加する関数を定義
-(defun add-to-load-path (&rest paths)
-  (let (path)
-    (dolist (path paths paths)
-      (let ((default-directory
-              (expand-file-name (concat user-emacs-directory path))))
-        (add-to-list 'load-path default-directory)
-        (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-            (normal-top-level-add-subdirs-to-load-path))))))
-
-;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
-(add-to-load-path "elisp")
-
-;; Emacs自体が書き込む設定先の変更
-(setq custom-file (locate-user-emacs-file "custom.el"))
-(unless (file-exists-p custom-file)
-  (write-region "" nil custom-file))
-(load custom-file)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 環境に応じた設定の分岐                             
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ターミナル以外はツールバー、スクロールバーを非表示
 (when window-system
   ;; tool-barを非表示
@@ -67,60 +32,6 @@
   ;; menu-barを非表示
   (menu-bar-mode 0))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; キーバインドの設定                                 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; C-hをバックスペースにする
-;; 入力されるキーシーケンスを置き換える
-;; ?\C-?はDELのキーシケンス
-(keyboard-translate ?\C-h ?\C-?)
-
-;; 折り返しトグルコマンド
-(define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
-
-;; "C-t" でウィンドウを切り替える。初期値はtranspose-chars
-(define-key global-map (kbd "C-t") 'other-window)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ファイル読み込みの設定                                 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 自動で外部でのファイル更新を読み込み
-(global-auto-revert-mode 1)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 環境変数の設定                                     
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; パスの設定
-(add-to-list 'exec-path "/opt/local/bin")
-(add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path "~/bin")
-
-;; shellのpathを引き継ぎ
-;; http://qiita.com/catatsuy/items/3dda714f4c60c435bb25
-(defun set-exec-path-from-shell-PATH ()
-    "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
-
-This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
-    (interactive)
-    (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
-      (setenv "PATH" path-from-shell)
-      (setq exec-path (split-string path-from-shell path-separator))))
-(set-exec-path-from-shell-PATH)
-
-;;; 文字コードを指定する
-(set-language-environment "Japanese")
-(prefer-coding-system 'utf-8)
-
-;;; ファイル名の扱い
-;; Mac OS Xの場合のファイル名の設定
-(when (eq system-type 'darwin)
-  (require 'ucs-normalize)
-  (set-file-name-coding-system 'utf-8)
-  (setq locale-coding-system 'utf-8))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; フレームに関する設定                               
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; カラム番号も表示
 (column-number-mode t)
 
@@ -136,25 +47,18 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; 行番号を常に表示する
 (global-linum-mode t)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; インデントの設定                                    
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; TABの表示幅。初期値は8
-(setq-default tab-width 4)
+;; スタートアップメッセージを非表示
+(setq inhibit-startup-screen t)
 
-;; インデントにタブ文字を使用しない
-(setq-default indent-tabs-mode nil)
+;; 文字コードを指定する
+(set-language-environment "Japanese")
+(prefer-coding-system 'utf-8)
 
-;; C、C++、JAVA、PHPなどのインデント
-(add-hook 'c-mode-common-hook
-          '(lambda ()
-             (c-set-style "java")))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; 表示・装飾に関する設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Color-theme
-(load-theme 'misterioso t)
+;; Mac OS Xの場合のファイル名の設定
+(when (eq system-type 'darwin)
+  (require 'ucs-normalize)
+  (set-file-name-coding-system 'utf-8)
+  (setq locale-coding-system 'utf-8))
 
 ;; フォントの設定
 (when (eq window-system 'ns)
@@ -181,28 +85,75 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
           (".*nfmotoyacedar-medium.*" . 1.2)
           ("-cdac$" . 1.3))))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ハイライトの設定                                   
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; 現在行のハイライト
-(defface my-hl-line-face
-  ;; 背景がdarkならば背景色を紺に
-  '((((class color) (background dark))
-     (:background "gray8" t))
-    ;; 背景がlightならば背景色を緑に
-    (((class color) (background light))
-     (:background "98FB98" t))
-    (t (:bold t)))
-  "hl-line's my face")
-(setq hl-line-face 'my-hl-line-face)
-(global-hl-line-mode t)
-
 ;; 括弧の対応関係のハイライト
 ;; paren-mode：対応する括弧を強調して表示する
 (setq show-paren-delay 0) ; 表示までの秒数。初期値は0.125
 (show-paren-mode t) ; 有効化
+
 ;; parenのスタイル: expressionは括弧内も強調表示
 (setq show-paren-style 'expression)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 設定ファイル
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Emacs自体が書き込む設定先の変更
+(setq custom-file (locate-user-emacs-file "custom.el"))
+(unless (file-exists-p custom-file)
+  (write-region "" nil custom-file))
+(load custom-file)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; キーバインドの設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; C-hをバックスペースにする
+;; 入力されるキーシーケンスを置き換える
+;; ?\C-?はDELのキーシケンス
+(keyboard-translate ?\C-h ?\C-?)
+
+;; 折り返しトグルコマンド
+(define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
+
+;; "C-t" でウィンドウを切り替える。初期値はtranspose-chars
+(define-key global-map (kbd "C-t") 'other-window)
+
+;; prevent unexpected termination
+;; https://superuser.com/questions/349943/how-to-awake-emacs-gui-after-pressing-ctrlz
+(global-unset-key (kbd "C-z"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ファイル読み込みの設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 自動で外部でのファイル更新を読み込み
+(global-auto-revert-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 環境変数の設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; パスの設定
+(add-to-list 'exec-path "/opt/local/bin")
+(add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "~/bin")
+
+;; shellのpathを引き継ぎ
+;; http://qiita.com/catatsuy/items/3dda714f4c60c435bb25
+(defun set-exec-path-from-shell-PATH ()
+    "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
+
+This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
+    (interactive)
+    (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
+      (setenv "PATH" path-from-shell)
+      (setq exec-path (split-string path-from-shell path-separator))))
+(set-exec-path-from-shell-PATH)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; インデントの設定                                    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TABの表示幅。初期値は8
+(setq-default tab-width 4)
+
+;; インデントにタブ文字を使用しない
+(setq-default indent-tabs-mode nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; バックアップとオートセーブ
@@ -215,24 +166,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;; オートセーブファイルを作らない
 (setq auto-save-default nil) ; 初期値はt
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; フック
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ファイルが #! から始まる場合、+xを付けて保存する
-(add-hook 'after-save-hook
-          'executable-make-buffer-file-executable-if-script-p)
-
-;; emacs-lisp-mode-hook用の関数を定義
-(defun elisp-mode-hooks ()
-  "lisp-mode-hooks"
-  (when (require 'eldoc nil t)
-    (setq eldoc-idle-delay 0.2)
-    (setq eldoc-echo-area-use-multiline-p t)
-    (turn-on-eldoc-mode)))
-
-;; emacs-lisp-modeのフックをセット
-(add-hook 'emacs-lisp-mode-hook 'elisp-mode-hooks)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Elispの設定
@@ -371,24 +304,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
          ("M-p" . flycheck-previous-error))
   :global-minor-mode global-flycheck-mode)
 
-(leaf js2-mode
-  :doc "Improved JavaScript editing mode"
-  :req "emacs-24.1" "cl-lib-0.5"
-  :tag "javascript" "languages" "emacs>=24.1"
-  :url "https://github.com/mooz/js2-mode/"
-  :added "2022-12-29"
-  :emacs>= 24.1
-  :ensure t)
-
-(leaf web-mode
-  :doc "major mode for editing web templates"
-  :req "emacs-23.1"
-  :tag "languages" "emacs>=23.1"
-  :url "https://web-mode.org"
-  :added "2022-12-29"
-  :emacs>= 23.1
-  :ensure t)
-
 (leaf erlang
   :doc "Erlang major mode"
   :req "emacs-24.1"
@@ -458,10 +373,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (global-git-gutter+-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ********* 各言語ごとの設定 *********
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Python用の設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; python-modeの基本設定
@@ -482,49 +393,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; pyflake - flake8 - pep8
 (defun flycheck-python-setup ()(flycheck-mode))
 (add-hook 'python-mode-hook #'flycheck-python-setup)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; JS, Html, Cssの設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; js2-modeの基本設定
-(autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-;; defaultのシンタクスチェックをoffに
-;; http://umi-uyura.hatenablog.com/entry/2015/10/28/182320
-(setq js2-include-browser-externs nil)
-(setq js2-mode-show-parse-errors nil)
-(setq js2-mode-show-strict-warnings nil)
-(setq js2-highlight-external-variables nil)
-(setq js2-include-jslint-globals nil)
-;; FlycheckのJSHint設定を解除
-(eval-after-load 'flycheck
-  '(custom-set-variables
-    '(flycheck-disabled-checkers '(javascript-jshint javascript-jscs))
-    ))
-;; .jsx のファイルで js2-jsx-mode を使う
-(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-jsx-mode))
-;; js2-jsx-mode を使う時には flycheck-mode も使う
-(add-hook 'js2-jsx-mode-hook #'flycheck-mode)
-
-;;; web-mod(html, css)eの設定
-(require 'web-mode)
-;;; emacs 23以下の互換
-(when (< emacs-major-version 24)
-  (defalias 'prog-mode 'fundamental-mode))
-
-;;; 適用する拡張子
-(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
-
-;;; インデント数
-(defun web-mode-hook ()
-  "Hooks for Web mode."
-  (setq web-mode-html-offset   2)
-  (setq web-mode-css-offset    2)
-  (setq web-mode-script-offset 2)
-  (setq web-mode-php-offset    2)
-  (setq web-mode-java-offset   2)
-  (setq web-mode-asp-offset    2))
-(add-hook 'web-mode-hook 'web-mode-hook)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Erlang用の設定
