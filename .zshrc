@@ -36,19 +36,6 @@ alias emacs='emacs -nw'
 alias ls='ls -la --color=auto'
 alias sbt='rlwrap sbt'
 
-# env variables
-export PATH=~/.local/bin:$PATH
-export PATH=~/.npm-global/bin:$PATH
-export PATH=~/.cargo/bin:$PATH
-export PATH=~/go/bin:$PATH
-
-# zash history config
-export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=50000
-export SAVEHIST=100000
-setopt hist_ignore_dups
-setopt EXTENDED_HISTORY
-
 # set bell-style none
 set bell-style none
 
