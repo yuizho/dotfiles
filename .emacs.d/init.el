@@ -321,6 +321,11 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   :added "2022-12-29"
   :ensure t)
 
+(leaf paren
+  :doc "highlight matching paren"
+  :tag "builtin"
+  :added "2022-12-29")
+
 (leaf python-mode
   :doc "Python major mode"
   :tag "oop" "python" "processes" "languages"
@@ -558,24 +563,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; FlyCheck用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(flycheck-disabled-checkers '(javascript-jshint javascript-jscs))
- '(package-selected-packages
-   '(dash markdown-mode helm rust-mode company lua-mode ensime wgrep web-mode tuareg python-mode pos-tip magit js2-mode htmlize helm-swoop haskell-mode flycheck erlang)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Rust用の設定
