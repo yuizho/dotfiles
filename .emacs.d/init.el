@@ -61,15 +61,15 @@
   (setq locale-coding-system 'utf-8))
 
 ;; フォントの設定
-(when (eq window-system 'ns)
+(when (eq window-system 'x)
   ;; asciiフォントの設定
   (set-face-attribute 'default nil
-                      :family "Misc Fixed"
-                      :height 240)
+                      :family "migmix"
+                      :height 150)
   ;; 日本語フォントをヒラギノ明朝 Proに
   (set-fontset-font
    nil 'japanese-jisx0208
-   (font-spec :family "ヒラギノ明朝 Pro"))
+   (font-spec :family "Noto Sans Gothic"))
   ;; ひらがなとカタカナをモトヤシーダに
   ;; U+3000-303FCJKの記号および句読点
   ;; U+3040-309Fひらがな
