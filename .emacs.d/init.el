@@ -340,7 +340,10 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   :url "http://www.flycheck.org"
   :added "2022-12-29"
   :emacs>= 24.3
-  :ensure t)
+  :ensure t
+  :bind (("M-n" . flycheck-next-error)
+         ("M-p" . flycheck-previous-error))
+  :global-minor-mode global-flycheck-mode)
 
 (leaf js2-mode
   :doc "Improved JavaScript editing mode"
