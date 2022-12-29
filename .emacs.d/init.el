@@ -305,7 +305,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
           ("C-n" . company-select-next)
           ("C-p" . company-select-previous)))
   :custom ((company-idle-delay . 0)
-           (company-minimum-prefix-length . 1)
+           (company-minimum-prefix-length . 2)
            (company-selection-wrap-around . t)
            (company-transformers . '(company-sort-by-occurrence)))
   :global-minor-mode global-company-mode)
