@@ -310,6 +310,17 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
            (company-transformers . '(company-sort-by-occurrence)))
   :global-minor-mode global-company-mode)
 
+(leaf multiple-cursors
+  :doc "Multiple cursors for Emacs."
+  :req "cl-lib-0.5"
+  :tag "cursors" "editing"
+  :url "https://github.com/magnars/multiple-cursors.el"
+  :added "2022-12-29"
+  :ensure t
+  :bind (("C-c C-c" . mc/edit-lines)
+         ("C-<down>" . mc/mark-next-like-this)
+         ("C-<up>" . mc/mark-previous-like-this)))
+
 (leaf magit
   :doc "A Git porcelain inside Emacs."
   :req "emacs-25.1" "compat-28.1.1.2" "dash-20210826" "git-commit-20221127" "magit-section-20221127" "transient-20220325" "with-editor-20220318"
