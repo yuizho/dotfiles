@@ -7,6 +7,7 @@
 auto-save-list
 tramp
 .\#*
+\*scratch\*
 
 # Org-mode
 .org-id-locations
@@ -46,3 +47,6 @@ flycheck_*.el
 
 # network security
 /network-security.data
+
+# magit
+transient/
