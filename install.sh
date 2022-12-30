@@ -27,6 +27,7 @@ function main() {
 
     ln $ln_option "$(pwd)/.zshenv" ~
     ln $ln_option "$(pwd)/.zshrc" ~
+    ln $ln_option "$(pwd)/.p10k.zsh" ~
     ln $ln_option "$(pwd)/.emacs.d" ~
 
     mkdir -p ~/.config/sheldon
