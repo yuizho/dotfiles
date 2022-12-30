@@ -29,6 +29,9 @@ function main() {
     ln $ln_option "$(pwd)/.zshrc" ~
     ln $ln_option "$(pwd)/.emacs.d" ~
 
+    mkdir -p ~/.config/sheldon
+    ln $ln_option "$(pwd)/sheldon/plugins.toml" ~/.config/sheldon/
+
     echo "install completed!!"
 }
 
