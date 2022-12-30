@@ -254,6 +254,14 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
          ("C-<down>" . mc/mark-next-like-this)
          ("C-<up>" . mc/mark-previous-like-this)))
 
+(leaf xclip
+  :doc "Copy&paste GUI clipboard from text terminal"
+  :tag "tools" "convenience"
+  :url "https://elpa.gnu.org/packages/xclip.html"
+  :added "2022-12-30"
+  :ensure t
+  :global-minor-mode xclip-mode)
+
 (leaf magit
   :doc "A Git porcelain inside Emacs."
   :req "emacs-25.1" "compat-28.1.1.2" "dash-20210826" "git-commit-20221127" "magit-section-20221127" "transient-20220325" "with-editor-20220318"
