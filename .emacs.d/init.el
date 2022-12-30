@@ -39,9 +39,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 外観
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Color-theme
-(load-theme 'misterioso t)
-
 ;; ウィンドウサイズの位置、サイズ
 (if window-system (progn
   (set-background-color "Black")
@@ -429,6 +426,13 @@
   :added "2022-12-29"
   :emacs>= 25.1
   :ensure t)
+
+(leaf zenburn-theme
+  :doc "A low contrast color theme for Emacs."
+  :url "http://github.com/bbatsov/zenburn-emacs"
+  :added "2022-12-30"
+  :ensure t
+  :config (load-theme 'zenburn t))
 
 (provide 'init)
 ;;; init.el ends here
