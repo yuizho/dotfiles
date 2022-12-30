@@ -10,7 +10,7 @@ eval "$(sheldon source)"
 
 # alias
 alias emacs='emacs -nw'
-alias ls='ls -la --color=auto'
+alias ls='exa -la'
 alias sbt='rlwrap sbt'
 
 # set bell-style none

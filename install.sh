@@ -26,11 +26,11 @@ function main() {
     done
 
     # zsh
-    ln $ln_option "$(pwd)/zsh/.zshenv" ~
-    ln $ln_option "$(pwd)/zsh/.zshrc" ~
-    ln $ln_option "$(pwd)/zsh/.p10k.zsh" ~
+    ln $ln_option "$(pwd)/.zshenv" ~
+    ln $ln_option "$(pwd)/.zshrc" ~
+    ln $ln_option "$(pwd)/.p10k.zsh" ~
     mkdir -p ~/.config/sheldon
-    ln $ln_option "$(pwd)/zsh/sheldon/plugins.toml" ~/.config/sheldon/
+    ln $ln_option "$(pwd)/.config/sheldon/plugins.toml" ~/.config/sheldon/
 
     # emacs
     ln $ln_option "$(pwd)/.emacs.d" ~
