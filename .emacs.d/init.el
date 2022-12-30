@@ -173,18 +173,6 @@
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "~/bin")
 
-;; shellのpathを引き継ぎ
-;; http://qiita.com/catatsuy/items/3dda714f4c60c435bb25
-(defun set-exec-path-from-shell-PATH ()
-    "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
-
-This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
-    (interactive)
-    (let ((path-from-shell (replace-regexp-in-string "[ \t\n]*$" "" (shell-command-to-string "$SHELL --login -i -c 'echo $PATH'"))))
-      (setenv "PATH" path-from-shell)
-      (setq exec-path (split-string path-from-shell path-separator))))
-(set-exec-path-from-shell-PATH)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; インデントの設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -271,6 +259,17 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   :added "2022-12-30"
   :ensure t
   :global-minor-mode xclip-mode)
+
+;; https://qiita.com/catatsuy/items/3dda714f4c60c435bb25
+(leaf exec-path-from-shell
+  :doc "Get environment variables such as $PATH from the shell"
+  :req "emacs-24.1" "cl-lib-0.6"
+  :tag "environment" "unix" "emacs>=24.1"
+  :url "https://github.com/purcell/exec-path-from-shell"
+  :added "2022-12-30"
+  :emacs>= 24.1
+  :ensure t
+  :config (exec-path-from-shell-initialize))
 
 (leaf magit
   :doc "A Git porcelain inside Emacs."
