@@ -26,6 +26,12 @@ tramp
 # reftex files
 *.rel
 
+# preschient
+/var/prescient-save.el
+
+# recentf
+recentf
+
 # AUCTeX auto folder
 /auto/
 
