@@ -359,16 +359,6 @@
   :hook (after-save-hook . magit-refresh)
   :bind ("C-x g" . magit-status))
 
-(leaf git-gutter+
-  :doc "Manage Git hunks straight from the buffer"
-  :req "git-commit-0" "dash-0"
-  :tag "vc" "git"
-  :url "https://github.com/nonsequitur/git-gutter-plus"
-  :added "2022-12-29"
-  :ensure t
-  :after git-commit
-  :global-minor-mode global-git-gutter+-mode)
-
 (leaf wgrep
   :doc "Writable grep buffer and apply the changes to files"
   :tag "extensions" "edit" "grep"
