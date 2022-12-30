@@ -312,23 +312,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
          ("M-p" . flycheck-previous-error))
   :global-minor-mode global-flycheck-mode)
 
-(leaf erlang
-  :doc "Erlang major mode"
-  :req "emacs-24.1"
-  :tag "processes" "languages" "erlang" "emacs>=24.1"
-  :added "2022-12-29"
-  :emacs>= 24.1
-  :ensure t)
-
-(leaf caml
-  :doc "Caml mode for GNU Emacs"
-  :req "emacs-24.3"
-  :tag "ocaml" "emacs>=24.3"
-  :url "https://github.com/ocaml/caml-mode"
-  :added "2022-12-29"
-  :emacs>= 24.3
-  :ensure t)
-
 (leaf haskell-mode
   :doc "A Haskell editing mode"
   :req "emacs-25.1"
@@ -380,60 +363,4 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; gutter
 (global-git-gutter+-mode)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Python用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; python-modeの基本設定
-(add-hook 'python-mode-hook
-    (lambda ()
-      (setq indent-tabs-mode nil)
-      (setq indent-level 4)
-      (setq python-indent 4)
-      (setq tab-width 4)))
 
-;;; 自動インデントの設定
-(add-hook 'python-mode-hook
-          (lambda ()
-            (define-key python-mode-map (kbd "\C-m") 'newline-and-indent)
-            (define-key python-mode-map (kbd "RET") 'newline-and-indent)))
-
-;;; flake8の設定
-;; pyflake - flake8 - pep8
-(defun flycheck-python-setup ()(flycheck-mode))
-(add-hook 'python-mode-hook #'flycheck-python-setup)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Erlang用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-hook 'erlang-mode-hook 'erlang-font-lock-level-4)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; OCaml用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'auto-mode-alist '("\\.ml[iylp]?" . tuareg-mode))
-(autoload 'tuareg-mode "tuareg" "Major mode for editing OCaml code" t)
-(autoload 'tuareg-run-ocaml "tuareg" "Run an inferior OCaml process." t)
-(autoload 'ocamldebug "ocamldebug" "Run the OCaml debugger" t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Haskell用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'auto-mode-alist '("\\.hs" . haskell-mode))
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-(add-hook 'haskell-mode-hook 'font-lock-mode)
-(add-hook 'haskell-mode-hook 'imenu-add-menubar-index)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Lua用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
-(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Rust用の設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;(add-to-list 'load-path "/path/to/rust-mode/")
-(autoload 'rust-mode "rust-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
