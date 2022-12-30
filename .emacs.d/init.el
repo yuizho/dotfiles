@@ -1,3 +1,14 @@
+;;; init.el --- init.el  -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; Emacs実践入門の内容をかなり参考にさせてもらっています。
+
+;;; Code:
+
+;; this enables this running method
+;;   emacs -q -l ~/.debug.emacs.d/{{pkg}}/init.
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 外観
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -147,7 +158,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (set-exec-path-from-shell-PATH)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; インデントの設定                                    
+;; インデントの設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; TABの表示幅。初期値は8
 (setq-default tab-width 4)
@@ -364,3 +375,5 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (global-git-gutter+-mode)
 
 
+(provide 'init)
+;;; init.el ends here
