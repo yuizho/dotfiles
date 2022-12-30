@@ -281,7 +281,9 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   :added "2022-12-29"
   :emacs>= 25.1
   :ensure t
-  :after compat git-commit magit-section with-editor)
+  :after compat git-commit magit-section with-editor
+  :hook (after-save-hook . magit-refresh)
+  :bind ("C-x g" . magit-status))
 
 (leaf git-gutter+
   :doc "Manage Git hunks straight from the buffer"
@@ -290,7 +292,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   :url "https://github.com/nonsequitur/git-gutter-plus"
   :added "2022-12-29"
   :ensure t
-  :after git-commit)
+  :after git-commit
+  :global-minor-mode global-git-gutter+-mode)
 
 (leaf wgrep
   :doc "Writable grep buffer and apply the changes to files"
@@ -359,21 +362,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (global-set-key (kbd "C-x m") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; gitの設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; https://github.com/magit/magit
-(require 'magit-status)
-;; key binds
-(global-set-key (kbd "C-x g") 'magit-status)
-
-;; auto refresh
-(add-hook 'after-save-hook 'magit-refresh)
-
-;; gutter
-(global-git-gutter+-mode)
-
 
 (provide 'init)
 ;;; init.el ends here
