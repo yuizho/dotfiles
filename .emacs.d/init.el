@@ -334,6 +334,22 @@
   :ensure t
   :config (exec-path-from-shell-initialize))
 
+(leaf whitespace
+  :doc "minor mode to visualize TAB, (HARD) SPACE, NEWLINE"
+  :tag "builtin"
+  :added "2022-12-30"
+  :ensure t
+  :custom
+  ((whitespace-style . '(face
+                         trailing
+                         tabs
+                         ;; spaces
+                         ;; empty
+                         space-mark
+                         tab-mark))
+   (whitespace-display-mappings . '((tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
+   (global-whitespace-mode . t)))
+
 (leaf magit
   :doc "A Git porcelain inside Emacs."
   :req "emacs-25.1" "compat-28.1.1.2" "dash-20210826" "git-commit-20221127" "magit-section-20221127" "transient-20220325" "with-editor-20220318"
