@@ -95,30 +95,18 @@
   (set-file-name-coding-system 'utf-8)
   (setq locale-coding-system 'utf-8))
 
-;; フォントの設定
+;; Linuxのフォント設定
 (when (eq window-system 'x)
-  ;; asciiフォントの設定
+  ;; asciiフォント
   (set-face-attribute 'default nil
-                      :family "migmix"
-                      :height 150)
-  ;; 日本語フォントをヒラギノ明朝 Proに
+                      :family "Noto Sans"
+                      :height 140)
+  ;; 日本語フォント
   (set-fontset-font
    nil 'japanese-jisx0208
-   (font-spec :family "Noto Sans Gothic"))
-  ;; ひらがなとカタカナをモトヤシーダに
-  ;; U+3000-303FCJKの記号および句読点
-  ;; U+3040-309Fひらがな
-  ;; U+30A0-30FFカタカナ
-  (set-fontset-font
-   nil '(#x3040 . #x30ff)
-   (font-spec :family "NfMotoyaCedar"))
-  ;; フォントの横幅を調節する
-  (setq face-font-rescale-alist
-        '((".*Menlo.*" . 1.0)
-          (".*Hiragino_Mincho_Pro.*" . 1.2)
-          (".*nfmotoyacedar-bold.*" . 1.2)
-          (".*nfmotoyacedar-medium.*" . 1.2)
-          ("-cdac$" . 1.3))))
+   (font-spec :family "Noto Sans CJK JP"))
+  ;; フォントの横幅を調節
+  (add-to-list 'face-font-rescale-alist '(".*Noto.*" . 1.0)))
 
 ;; 括弧の対応関係のハイライト
 ;; paren-mode：対応する括弧を強調して表示する
