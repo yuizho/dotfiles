@@ -25,12 +25,15 @@ function main() {
         shift
     done
 
+    local current_dir=$(dirname "${BASH_SOURCE[0]:-$0}")
+    local current_abs_dir=$(realpath $current_dir)
+
     # zsh
-    ln $ln_option "$(pwd)/.zshenv" ~
-    ln $ln_option "$(pwd)/.zshrc" ~
-    ln $ln_option "$(pwd)/.p10k.zsh" ~
+    ln $ln_option "${current_abs_dir}/.zshenv" ~
+    ln $ln_option "${current_abs_dir}/.zshrc" ~
+    ln $ln_option "${current_abs_dir}/.p10k.zsh" ~
     mkdir -p ~/.config/sheldon
-    ln $ln_option "$(pwd)/.config/sheldon/plugins.toml" ~/.config/sheldon/
+    ln $ln_option "${current_abs_dir}/.config/sheldon/plugins.toml" ~/.config/sheldon/
 
     # emacs
     ln $ln_option "$(pwd)/.emacs.d" ~
