@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# https://unix.stackexchange.com/questions/339954/zsh-command-not-found-compinstall-compinit-compdef
+autoload -Uz compinit && compinit
+
 # load zsh plugins by sheldon
 eval "$(sheldon source)"
 
