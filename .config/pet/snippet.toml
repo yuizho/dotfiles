@@ -12,3 +12,8 @@
   description = "create symlink"
   command = "ln -s <real_file(dir)_path> <symlink_path>"
   output = ""
+
+[[snippets]]
+  description = "unlink <symlink_path>"
+  command = "remove symlink"
+  output = ""
