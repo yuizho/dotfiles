@@ -29,17 +29,16 @@ function main() {
     local current_abs_dir=$(realpath $current_dir)
 
     # zsh
-    ln $ln_option "${current_abs_dir}/.zshenv" ~
-    ln $ln_option "${current_abs_dir}/.zshrc" ~
-    ln $ln_option "${current_abs_dir}/.p10k.zsh" ~
-    mkdir -p ~/.config/sheldon
-    ln $ln_option "${current_abs_dir}/.config/sheldon/plugins.toml" ~/.config/sheldon/
+    ln $ln_option "${current_abs_dir}/.zshenv" ~/
+    ln $ln_option "${current_abs_dir}/.zshrc" ~/
+    ln $ln_option "${current_abs_dir}/.p10k.zsh" ~/
+    ln $ln_option "${current_abs_dir}/.config/sheldon" ~/.config/
 
     # emacs
-    ln $ln_option "$(pwd)/.emacs.d" ~
+    ln $ln_option "${current_abs_dir}/.emacs.d" ~/
 
     # pet
-    ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/pet
+    ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/
 
     echo "install completed!!"
 }
