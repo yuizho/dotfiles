@@ -38,6 +38,9 @@ function main() {
     # emacs
     ln $ln_option "$(pwd)/.emacs.d" ~
 
+    # pet
+    ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/pet
+
     echo "install completed!!"
 }
 

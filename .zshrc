@@ -11,6 +11,13 @@ autoload -Uz compinit && compinit
 # load zsh plugins by sheldon
 eval "$(sheldon source)"
 
+# a function to register prev command to pet
+# https://github.com/knqyf263/pet#zsh-prev-function
+function prev() {
+  PREV=$(fc -lrn | head -n 1)
+  sh -c "pet new `printf %q "$PREV"`"
+}
+
 # alias
 alias emacs='emacs -nw'
 alias ls='exa -la'

@@ -1,0 +1,14 @@
+[[snippets]]
+  description = "search files that have '10' recursively"
+  command = "grep -l '^10$' -R"
+  output = ""
+
+[[snippets]]
+  description = "count unique words in a file by lines"
+  command = "cat access.log | sort | uniq -c"
+  output = ""
+
+[[snippets]]
+  description = "create symlink"
+  command = "ln -s <real_file(dir)_path> <symlink_path>"
+  output = ""
