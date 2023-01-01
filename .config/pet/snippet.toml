@@ -1,11 +1,11 @@
 [[snippets]]
-  description = "search files that have '10' recursively"
+  description = "find files that have '10' recursively"
   command = "grep -l '^10$' -R"
   output = ""
 
 [[snippets]]
   description = "count unique words in a file by lines"
-  command = "cat access.log | sort | uniq -c"
+  command = "cat <file_name> | sort | uniq -c"
   output = ""
 
 [[snippets]]
