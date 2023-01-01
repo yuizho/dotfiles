@@ -17,3 +17,28 @@
   description = "unlink <symlink_path>"
   command = "remove symlink"
   output = ""
+
+[[snippets]]
+  description = "filter lines by regexp"
+  command = "seq 5 | awk '/[24]/'"
+  output = ""
+
+[[snippets]]
+  description = "三項演算子 by awk"
+  command = "seq 5 | awk '{r=$1%2 ? \"奇数\":\"偶数\"; print r}'"
+  output = ""
+
+[[snippets]]
+  description = "print just first line by awk"
+  command = "seq 5 | awk 'NR==1 {print $1}'"
+  output = ""
+
+[[snippets]]
+  description = "basic usage of sed"
+  command = "echo foobar | sed 's/bar/baz/'"
+  output = ""
+
+[[snippets]]
+  description = "summary lines by awk BEGIN-END"
+  command = "seq 5 | awk 'BEGIN{a=0}$1%2==0{print $1,\"偶数\"}$1%2{print $1,\"奇数\"}{a+=$1}END{print \"合計\",a}'"
+  output = ""
