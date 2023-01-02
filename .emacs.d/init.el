@@ -357,6 +357,30 @@
   :tag "builtin"
   :added "2022-12-29")
 
+(leaf lsp-mode
+  :doc "LSP mode"
+  :req "emacs-26.3" "dash-2.18.0" "f-0.20.0" "ht-2.3" "spinner-1.7.3" "markdown-mode-2.3" "lv-0" "eldoc-1.11"
+  :tag "languages" "emacs>=26.3"
+  :url "https://github.com/emacs-lsp/lsp-mode"
+  :added "2023-01-02"
+  :emacs>= 26.3
+  :ensure t
+  ;:after spinner markdown-mode lv eldoc
+  :bind ("C-c u" . lsp-find-references)
+  :hook ((lsp-mode-hook . lsp-ui-mode)
+         (sh-mode-hook . lsp)
+         (python-mode-hook . lsp))
+  :commands lsp
+  :config (leaf lsp-ui
+            :doc "UI modules for lsp-mode"
+            :req "emacs-26.1" "dash-2.18.0" "lsp-mode-6.0" "markdown-mode-2.3"
+            :tag "tools" "languages" "emacs>=26.1"
+            :url "https://github.com/emacs-lsp/lsp-ui"
+            :added "2023-01-02"
+            :emacs>= 26.1
+            :ensure t
+            :after lsp-mode))
+
 (leaf python-mode
   :doc "Python major mode"
   :tag "oop" "python" "processes" "languages"
