@@ -295,8 +295,7 @@
   :url "https://github.com/magnars/multiple-cursors.el"
   :added "2022-12-29"
   :ensure t
-  :bind (("C-c C-c" . mc/edit-lines)
-         ("C-<down>" . mc/mark-next-like-this)
+  :bind (("C-<down>" . mc/mark-next-like-this)
          ("C-<up>" . mc/mark-previous-like-this)))
 
 (leaf xclip
