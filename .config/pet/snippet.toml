@@ -162,3 +162,53 @@
   description = "while-loop in shell"
   command = "seq 3 | while read x; do echo $x | xargs; done"
   output = ""
+
+[[snippets]]
+  description = "check previous command's result"
+  command = "echo $?"
+  output = ""
+
+[[snippets]]
+  description = "check previous pipeline's results in zsh"
+  command = "echo ${pipestatus[@]}"
+  output = ""
+
+[[snippets]]
+  description = "check previous pipeline's results in bash"
+  command = "echo ${PIPESTATUS[@]}"
+  output = ""
+
+[[snippets]]
+  description = "handle shell script's parameters as list by \"$@\""
+  command = "set aa bb cc; for x in \"$@\"; do echo $x; done"
+  output = ""
+
+[[snippets]]
+  description = "check if a file exists in shell"
+  command = "if [ -e <file_name> ]; then echo \"file exists\"; else echo \"file doesn't exists\"; fi"
+  output = ""
+
+[[snippets]]
+  description = "compare if numbers are same in shell"
+  command = "if [ 1 -eq 1 ]; then echo \"same num\"; else echo \"different num\"; fi"
+  output = ""
+
+[[snippets]]
+  description = "compare if strings are same in shell"
+  command = "if [ 'a' = 'b' ]; then echo \"same str\"; else echo \"different str\"; fi"
+  output = ""
+
+[[snippets]]
+  description = "shebung for bash script"
+  command = "#!/usr/bin/env bash"
+  output = ""
+
+[[snippets]]
+  description = "read std input in shell script"
+  command = "echo $(cat)"
+  output = ""
+
+[[snippets]]
+  description = "use deafult value if a specified variable is empty by parameter expression (変数展開)"
+  command = "echo ${<variable_name>:-\"fuga\"}"
+  output = ""
