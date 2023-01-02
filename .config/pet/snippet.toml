@@ -122,3 +122,43 @@
   description = "sed like operation by parameter expression (変数展開)"
   command = "a=私は俳優よ; echo ${a/俳優/排骨麺};"
   output = ""
+
+[[snippets]]
+  description = "play music by mpv"
+  command = "mpv --no-video ."
+  output = ""
+
+[[snippets]]
+  description = "save a command result to clipboard in Linux"
+  command = "echo \"hoge\" | xclip -selection c"
+  output = ""
+
+[[snippets]]
+  description = "arithmetic operations (四則演算) in shell"
+  command = "echo $((1+2))"
+  output = ""
+
+[[snippets]]
+  description = "declare list in shell"
+  command = "a=(\"$SHELL\" \"$LANG\" \"$USER\")"
+  output = ""
+
+[[snippets]]
+  description = "declare dictionary in shell"
+  command = "declare -A b; b[\"SHELL\"]=\"$SHELL\"; b[\"LANG\"]=\"$LANG\"; b[\"USER\"]=\"$USER\""
+  output = ""
+
+[[snippets]]
+  description = "get string length by parameter expression (変数展開)"
+  command = "hoge=\"hoge\"; echo ${#hoge}"
+  output = ""
+
+[[snippets]]
+  description = "for-loop in shell"
+  command = "for x in \"$1\" \"$2\" \"$3\"; do echo $x; done"
+  output = ""
+
+[[snippets]]
+  description = "while-loop in shell"
+  command = "seq 3 | while read x; do echo $x | xargs; done"
+  output = ""
