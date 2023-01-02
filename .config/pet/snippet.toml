@@ -42,3 +42,83 @@
   description = "summary lines by awk BEGIN-END"
   command = "seq 5 | awk 'BEGIN{a=0}$1%2==0{print $1,\"偶数\"}$1%2{print $1,\"奇数\"}{a+=$1}END{print \"合計\",a}'"
   output = ""
+
+[[snippets]]
+  description = "\"tail -f\" by less"
+  command = "less +F <file_name>"
+  output = ""
+
+[[snippets]]
+  description = "awk by specified separator string"
+  command = "echo \"1,2,3,4\\n5,6,7,8\" | awk -F',' '{print $2,$4}'"
+  output = ""
+
+[[snippets]]
+  description = "extract by from-to condition of sed"
+  command = "seq 10 | sed -n '/2/,/6/p'"
+  output = ""
+
+[[snippets]]
+  description = "find fonts"
+  command = "fc-list"
+  output = ""
+
+[[snippets]]
+  description = "find files that have '10' recursively by ripgrep"
+  command = "rg -l '^10$'"
+  output = ""
+
+[[snippets]]
+  description = "find commands that can execute by current login user"
+  command = "sudo -l"
+  output = ""
+
+[[snippets]]
+  description = "find commands that can execute by group"
+  command = "sudo -l -g <group_name>"
+  output = ""
+
+[[snippets]]
+  description = "find opened files by a process"
+  command = "ls /proc/<process_id>/fd"
+  output = ""
+
+[[snippets]]
+  description = "find openned files by a process"
+  command = "lsof -c <process_name>"
+  output = ""
+
+[[snippets]]
+  description = "show network communication status on this server"
+  command = "netstat -anp"
+  output = ""
+
+[[snippets]]
+  description = "extract logs 2016/12/24 21:00~2016/12/25 03:00"
+  command = "cat <log_file_name> | sed -n '/24\\/Dec\\/2016 21:..:../,/25\\/Dec\\/2016 03:..:../p'"
+  output = ""
+
+[[snippets]]
+  description = "convert line break to space every 3 lines by xargs"
+  command = "seq 10 | xargs -n3"
+  output = ""
+
+[[snippets]]
+  description = "concurrent execute by xargs"
+  command = "seq 10 | xargs -P$(nproc)"
+  output = ""
+
+[[snippets]]
+  description = "use here document"
+  command = "cat << END"
+  output = ""
+
+[[snippets]]
+  description = "substring like operation by parameter expression (変数展開)"
+  command = "a=私は俳優よ; echo ${a:0:1}${a:2:2};"
+  output = ""
+
+[[snippets]]
+  description = "sed like operation by parameter expression (変数展開)"
+  command = "a=私は俳優よ; echo ${a/俳優/排骨麺};"
+  output = ""
