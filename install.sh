@@ -2,7 +2,7 @@
 set -ue
 
 function helpmsg() {
-    echo "Usage: ${BASH_SOURCE[0]:-$0} [--force | -f] [--help | -h]" 0>&2
+    echo "Usage: ${BASH_SOURCE[0]:-$0} [--force | -f] [--help | -h]"
 }
 
 function main() {
