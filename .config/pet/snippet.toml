@@ -222,3 +222,48 @@
   description = "show process tree (parent-child relation)"
   command = "pstree -T"
   output = ""
+
+[[snippets]]
+  description = "pet search"
+  command = "list1=(\"a\", \"b\", \"c\");list2=(\"${list1[@]}\", \"d\");echo ${list2[@]}"
+  output = ""
+
+[[snippets]]
+  description = "add items to list in shell"
+  command = "list1=(\"a\", \"b\", \"c\");list2=(\"${list1[@]}\", \"d\", \"e\");echo ${list2[@]}"
+  output = ""
+
+[[snippets]]
+  description = "check variable and declare defaul val by parameter expression (変数展開)"
+  command = "echo ${hoge:-\"default value\"}"
+  output = ""
+
+[[snippets]]
+  description = "create string patterns by brace expression (ブレース展開)"
+  command = "echo file.{txt,csv}"
+  output = ""
+
+[[snippets]]
+  description = "treat a command result as a file by process substitution (プロセス置き換え)"
+  command = "diff <(echo \"a\\nb\\nc\") <(echo \"a\\nB\\nc\")"
+  output = ""
+
+[[snippets]]
+  description = "reference prev command"
+  command = "!!"
+  output = ""
+
+[[snippets]]
+  description = "history 20"
+  command = "history"
+  output = ""
+
+[[snippets]]
+  description = "show a command history"
+  command = "history <history_length>"
+  output = ""
+
+[[snippets]]
+  description = "exec a command in history by history number"
+  command = "!<history_number>"
+  output = ""
