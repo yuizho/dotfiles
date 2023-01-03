@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name: entry-script-template
+# key: main
+# --
+function helpmsg() {
+    echo "Usage: ${BASH_SOURCE[0]:-$0} [--help | -h]" 0>&2
+}
+
+function main() {
+    while [ $# -gt 0 ]; do
+        case ${1} in
+            --help | -h)
+                helpmsg
+                exit 1
+                ;;
+            *)
+                helpmsg
+                exit 1
+                ;;
+        esac
+        shift
+    done
+
+    # ---- do something
+}
+
+main "$@"
