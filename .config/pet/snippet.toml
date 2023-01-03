@@ -212,3 +212,18 @@
   description = "use deafult value if a specified variable is empty by parameter expression (変数展開)"
   command = "echo ${<variable_name>:-\"fuga\"}"
   output = ""
+
+[[snippets]]
+  description = "count line break number"
+  command = "seq 100 | wc -l"
+  output = ""
+
+[[snippets]]
+  description = "show all procs with CPU utilization, memory usage"
+  command = "ps aux"
+  output = ""
+
+[[snippets]]
+  description = "show process tree (parent-child relation)"
+  command = "pstree -T"
+  output = ""
