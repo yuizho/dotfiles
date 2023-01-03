@@ -199,11 +199,6 @@
   output = ""
 
 [[snippets]]
-  description = "shebung for bash script"
-  command = "#!/usr/bin/env bash"
-  output = ""
-
-[[snippets]]
   description = "read std input in shell script"
   command = "echo $(cat)"
   output = ""
