@@ -357,6 +357,18 @@
   :tag "builtin"
   :added "2022-12-29")
 
+(leaf yasnippet
+  :doc "Yet another snippet extension for Emacs"
+  :req "cl-lib-0.5"
+  :tag "emulation" "convenience"
+  :url "http://github.com/joaotavora/yasnippet"
+  :added "2023-01-03"
+  :ensure t
+  :bind (("C-c C-y n" . yas-new-snippet)
+         ("C-c C-y e" . yas-visit-snippet-file)
+         ("C-c C-y s" . ivy-yasnippet))
+  :custom (yas-global-mode . t))
+
 (leaf lsp-mode
   :doc "LSP mode"
   :req "emacs-26.3" "dash-2.18.0" "f-0.20.0" "ht-2.3" "spinner-1.7.3" "markdown-mode-2.3" "lv-0" "eldoc-1.11"
