@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: receive option and stdin parameter (option has a priority)
+# key: recevie
+# --
+\${1:-\$(cat)}
