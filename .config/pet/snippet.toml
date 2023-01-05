@@ -322,3 +322,13 @@
   description = "delete string by tr command"
   command = "echo \"a, b, c, d\" | tr -d ','"
   output = ""
+
+[[snippets]]
+  description = "show available java environment in ArchLinux"
+  command = "archlinux-java status"
+  output = ""
+
+[[snippets]]
+  description = "set specified java environment as system default in ArchLinux"
+  command = "sudo archlinux-java set <java_environment_name>"
+  output = ""
