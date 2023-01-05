@@ -267,3 +267,13 @@
   description = "exec a command in history by history number"
   command = "!<history_number>"
   output = ""
+
+[[snippets]]
+  description = "dump Brewfile to specified path"
+  command = "brew bundle dump --file ./.Brewfile --force"
+  output = ""
+
+[[snippets]]
+  description = "install brew packages by .Brewfile in specified path"
+  command = "brew bundle install --file ./.Brewfile"
+  output = ""
