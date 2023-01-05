@@ -64,9 +64,16 @@ function main() {
 
     case ${OSTYPE} in
         darwin*)
+            # python
             local py_version=$(brew list | grep -E '^python@.+' | sed 's/python@//' | sort -n | head -n 1)
             echo "=====> create symlink for python (python${py_version) in mac"
             ln -sf "/usr/local/bin/python${py_version}" "/usr/local/bin/python"
+
+            # iterm
+            echo "=====> About configuration for iterm"
+            echo "You needs to set iterm config file path (${current_dir}/mac/iterm/com.googlecode.iterm2.plist)"
+            echo "from iterm preference 'General > Preferences > Load preferences from a custom folder or URL'."
+            echo "After the opelation you need to reboot OS to apply the configurations."
             ;;
         *)
             echo "unsupported OS $OSTYPE"
