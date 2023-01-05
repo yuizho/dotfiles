@@ -277,3 +277,8 @@
   description = "install brew packages by .Brewfile in specified path"
   command = "brew bundle install --file ./.Brewfile"
   output = ""
+
+[[snippets]]
+  description = "generate random high secure passwords"
+  command = "pwgen -s -y 20"
+  output = ""
