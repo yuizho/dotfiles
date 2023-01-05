@@ -2,7 +2,7 @@
 # name: parameter check
 # key: parameter
 # --
-if [ "$#" -eq 0 ]; then
-    echo "no arguments supplied to ${BASH_SOURCE[0]:-$0}"
+if [ "\$#" -eq 0 ]; then
+    echo "no arguments supplied to \${BASH_SOURCE[0]:-\$0}"
     exit 1
 fi
