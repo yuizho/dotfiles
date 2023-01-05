@@ -116,6 +116,9 @@
 ;; parenのスタイル: expressionは括弧内も強調表示
 (setq show-paren-style 'expression)
 
+;; Insert Final Newline
+(setq require-final-newline t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 設定ファイル
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
