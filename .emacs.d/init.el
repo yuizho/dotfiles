@@ -241,7 +241,18 @@
            ("C-x C-r" . counsel-recentf))
     :custom `((counsel-yank-pop-separator . "\n----------\n")
               (counsel-find-file-ignore-regexp . ,(rx-to-string '(or "./" "../") 'no-group)))
-    :global-minor-mode t))
+    :global-minor-mode t)
+
+  (leaf ivy-yasnippet
+    :doc "Preview yasnippets with ivy"
+    :req "emacs-24.1" "cl-lib-0.6" "ivy-0.10.0" "yasnippet-0.12.2" "dash-2.14.1"
+    :tag "convenience" "emacs>=24.1"
+    :url "https://github.com/mkcms/ivy-yasnippet"
+    :added "2023-01-05"
+    :emacs>= 24.1
+    :ensure t
+    :bind ("C-c C-y s" . ivy-yasnippet)
+    :after ivy yasnippet))
 
 (leaf prescient
   :doc "Better sorting and filtering"
@@ -365,8 +376,7 @@
   :added "2023-01-03"
   :ensure t
   :bind (("C-c C-y n" . yas-new-snippet)
-         ("C-c C-y e" . yas-visit-snippet-file)
-         ("C-c C-y s" . ivy-yasnippet))
+         ("C-c C-y e" . yas-visit-snippet-file))
   :custom (yas-global-mode . t))
 
 (leaf lsp-mode

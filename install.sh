@@ -2,20 +2,27 @@
 set -ue
 
 function helpmsg() {
-    echo "Usage: ${BASH_SOURCE[0]:-$0} [--force | -f] [--help | -h]"
+    echo "Usage: ${BASH_SOURCE[0]:-$0} [--debug | -d] [--force | -f] [--help | -h] [--install-packages | -i]"
 }
 
 function main() {
     local ln_option="-si"
+    local needs_installing_packages="false"
 
-    while [ $# -gt 0 ]; do
+    while [ "$#" -gt 0 ]; do
         case ${1} in
+            --debug | -d)
+                set -uex
+                ;;
             --force | -f)
                 ln_option="-sf"
                 ;;
             --help | -h)
                 helpmsg
                 exit 0
+                ;;
+            --install-packages | -i)
+                needs_installing_packages="true"
                 ;;
             *)
                 helpmsg
@@ -26,6 +33,24 @@ function main() {
     done
 
     local current_dir=$(dirname "${BASH_SOURCE[0]:-$0}")
+
+    if [ "$needs_installing_packages" = true ]; then
+        case ${OSTYPE} in
+            darwin*)
+                "${current_dir}/.bin/install_packages_for_mac.sh" $current_dir
+                ;;
+            linux*)
+                # FIXME: Linux向けの実装を書く
+                ;;
+            *)
+                echo "unsupported OS $OSTYPE"
+                exit 1
+                ;;
+        esac
+    fi
+
+    echo "=====> create symlinks for config files"
+
     local current_abs_dir=$(realpath $current_dir)
 
     # zsh
@@ -40,7 +65,17 @@ function main() {
     # pet
     ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/
 
-    echo "install completed!!"
+    case ${OSTYPE} in
+        darwin*)
+            "${current_dir}/.bin/extra_configs_for_mac.sh" $current_dir
+            ;;
+        *)
+            echo "unsupported OS $OSTYPE"
+            exit 1
+            ;;
+    esac
+
+    echo "=====> instllation is complete!!!"
 }
 
 main "$@"
