@@ -2,7 +2,7 @@
 set -ue
 
 function helpmsg() {
-    echo "Usage: ${BASH_SOURCE[0]:-$0} [--force | -f] [--help | -h] [--install-packages | -i]"
+    echo "Usage: ${BASH_SOURCE[0]:-$0} [--debug | -d] [--force | -f] [--help | -h] [--install-packages | -i]"
 }
 
 function main() {
@@ -11,6 +11,9 @@ function main() {
 
     while [ "$#" -gt 0 ]; do
         case ${1} in
+            --debug | -d)
+                set -uex
+                ;;
             --force | -f)
                 ln_option="-sf"
                 ;;
