@@ -62,6 +62,18 @@ function main() {
     # pet
     ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/
 
+    case ${OSTYPE} in
+        darwin*)
+            local py_version=$(brew list | grep -E '^python@.+' | sed 's/python@//' | sort -n | head -n 1)
+            echo "=====> create symlink for python (python${py_version) in mac"
+            ln -sf "/usr/local/bin/python${py_version}" "/usr/local/bin/python"
+            ;;
+        *)
+            echo "unsupported OS $OSTYPE"
+            exit 1
+            ;;
+    esac
+
     echo "=====> instllation is complete!!!"
 }
 
