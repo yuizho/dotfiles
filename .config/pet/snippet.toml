@@ -312,3 +312,13 @@
   description = "remove lines by grep"
   command = "echo \"a\\nb\\nc\" | grep -v '^[ab]'"
   output = ""
+
+[[snippets]]
+  description = "replace string by tr command"
+  command = "echo \"a, b, c, d\" | tr ',' '|'"
+  output = ""
+
+[[snippets]]
+  description = "delete string by tr command"
+  command = "echo \"a, b, c, d\" | tr -d ','"
+  output = ""
