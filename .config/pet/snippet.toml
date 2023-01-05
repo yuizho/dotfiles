@@ -282,3 +282,33 @@
   description = "generate random high secure passwords"
   command = "pwgen -s -y 20"
   output = ""
+
+[[snippets]]
+  description = "compare strings by regexp in if-statement of shell"
+  command = "if [[ 'abc' =~ '^a$' ]]; then echo \"same str\"; else echo \"different str\"; fi"
+  output = ""
+
+[[snippets]]
+  description = "while infinit-loop in shell"
+  command = "while :; do sleep 1; echo hoge; done"
+  output = ""
+
+[[snippets]]
+  description = "list current folder files recursive"
+  command = "find -type f"
+  output = ""
+
+[[snippets]]
+  description = "find recursively files by file name in current folder"
+  command = "find . -name \"file_name\""
+  output = ""
+
+[[snippets]]
+  description = "find files by file name in current folder"
+  command = "find . -maxdepth 1 -name \"file_name\""
+  output = ""
+
+[[snippets]]
+  description = "remove lines by grep"
+  command = "echo \"a\\nb\\nc\" | grep -v '^[ab]'"
+  output = ""
