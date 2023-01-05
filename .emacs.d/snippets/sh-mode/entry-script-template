@@ -3,12 +3,15 @@
 # key: main
 # --
 function helpmsg() {
-    echo "Usage: ${BASH_SOURCE[0]:-$0} [--help | -h]"
+    echo "Usage: ${BASH_SOURCE[0]:-$0} [--debug | -d] [--help | -h]"
 }
 
 function main() {
     while [ $# -gt 0 ]; do
         case ${1} in
+            --debug | -d)
+                -set uex
+                ;;
             --help | -h)
                 helpmsg
                 exit 0
