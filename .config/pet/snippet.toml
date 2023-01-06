@@ -332,3 +332,8 @@
   description = "set specified java environment as system default in ArchLinux"
   command = "sudo archlinux-java set <java_environment_name>"
   output = ""
+
+[[snippets]]
+  description = "register message to slack reminder"
+  command = "/remind <#channel_name> <message> <date_time>"
+  output = ""
