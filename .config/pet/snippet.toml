@@ -337,3 +337,48 @@
   description = "register message to slack reminder"
   command = "/remind <#channel_name> <message> <date_time>"
   output = ""
+
+[[snippets]]
+  description = "overwrite and create backup file by sed"
+  command = "sed -i.bk 's/hoge/fuga/g' hoge.txt"
+  output = ""
+
+[[snippets]]
+  description = "show calendar"
+  command = "cal"
+  output = ""
+
+[[snippets]]
+  description = "check if swap is happend (see Swap row)"
+  command = "free"
+  output = ""
+
+[[snippets]]
+  description = "check the cause of high load average (CPU utilization(user?, system?), ioawait?)"
+  command = "sar <duration> <count>"
+  output = ""
+
+[[snippets]]
+  description = "check I/O utilization (see %util column)"
+  command = "iostat -x"
+  output = ""
+
+[[snippets]]
+  description = "check load aveages"
+  command = "top"
+  output = ""
+
+[[snippets]]
+  description = "check high memory consuming process (use 'Shift + m' shortcut key)"
+  command = "top"
+  output = ""
+
+[[snippets]]
+  description = "check high CPU utilization (including user, system) processes"
+  command = "pidstat"
+  output = ""
+
+[[snippets]]
+  description = "check high I/O utilization processes (see kB_rd/s、kB_wr/s)"
+  command = "pidstat -d"
+  output = ""
