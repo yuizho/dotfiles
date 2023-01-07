@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: trap-unexpected-exit-event
+# key: trap
+# --
+trap '<commdand>' EXIT
