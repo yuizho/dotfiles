@@ -382,3 +382,18 @@
   description = "check high I/O utilization processes (see kB_rd/s、kB_wr/s)"
   command = "pidstat -d"
   output = ""
+
+[[snippets]]
+  description = "execute a coomand in cycles"
+  command = "watch <command>"
+  output = ""
+
+[[snippets]]
+  description = "just check syntax errors in a command (the command is not executed)."
+  command = "bash -n <command>"
+  output = ""
+
+[[snippets]]
+  description = "cut by delimiter and specify columns range"
+  command = "echo \"1:user1:root\\n2:user2:normal\\n3:user3:root\" | cut -d ':' -f 2-"
+  output = ""
