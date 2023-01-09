@@ -397,3 +397,13 @@
   description = "cut by delimiter and specify columns range"
   command = "echo \"1:user1:root\\n2:user2:normal\\n3:user3:root\" | cut -d ':' -f 2-"
   output = ""
+
+[[snippets]]
+  description = "show variables which start by \"FOO\""
+  command = "echo ${!FOO*}"
+  output = ""
+
+[[snippets]]
+  description = "reverse each line"
+  command = "echo \"12345\\nabcde\" | rev"
+  output = ""
