@@ -3,7 +3,7 @@
 set -ue
 
 if [ "$#" -eq 0 ]; then
-    echo "no arguments supplied to ${BASH_SOURCE[0]:-$0}"
+    echo "no arguments supplied to ${BASH_SOURCE[0]:-$0}" 1>&2
     exit 1
 fi
 

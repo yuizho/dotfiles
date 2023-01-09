@@ -3,18 +3,18 @@ set -ue
 
 
 if [ "$#" -eq 0 ]; then
-    echo "no arguments supplied to ${BASH_SOURCE[0]:-$0}"
+    echo "no arguments supplied to ${BASH_SOURCE[0]:-$0}" 1>&2
     exit 1
 fi
 
 if [[ ! "$OSTYPE" =~ ^darwin* ]]; then
-    echo "unexpected OS ($OSTYPE) to install packages for mac"
+    echo "unexpected OS ($OSTYPE) to install packages for mac" 1>&2
     exit 1
 fi
 
 if ! command -v brew &> /dev/null; then
-    echo "=====> brew is not installed!"
-    echo "=====> start install brew"
+    echo "=====> Homebrew is not installed!"
+    echo "=====> start installing Homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 

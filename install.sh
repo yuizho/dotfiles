@@ -25,7 +25,7 @@ function main() {
                 needs_installing_packages="true"
                 ;;
             *)
-                helpmsg
+                helpmsg 1>&2
                 exit 1
                 ;;
         esac
