@@ -407,3 +407,8 @@
   description = "reverse each line"
   command = "echo \"12345\\nabcde\" | rev"
   output = ""
+
+[[snippets]]
+  description = "output to stdout and file by tee command"
+  command = "echo \"abcdefg\" | tee <file_name>"
+  output = ""
