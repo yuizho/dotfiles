@@ -69,6 +69,9 @@ function main() {
         darwin*)
             "${current_dir}/.bin/extra_configs_for_mac.sh" $current_dir
             ;;
+        linux*)
+            # FIXME: Linux向けの実装を書く
+            ;;
         *)
             echo "unsupported OS $OSTYPE"
             exit 1
