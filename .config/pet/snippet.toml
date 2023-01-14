@@ -412,3 +412,33 @@
   description = "output to stdout and file by tee command"
   command = "echo \"abcdefg\" | tee <file_name>"
   output = ""
+
+[[snippets]]
+  description = "write oneliner by Python"
+  command = "cat hoge.txt | python -c 'import sys; [print(a.strip()) for a in sys.stdin]'"
+  output = ""
+
+[[snippets]]
+  description = "count length of each line"
+  command = "cat speech.txt | awk '{print length($1), $1}'"
+  output = ""
+
+[[snippets]]
+  description = "find files which are created at 30 or more days before."
+  command = "find . -ctime +30"
+  output = ""
+
+[[snippets]]
+  description = "find files by multiple conditions with -or option (-and option is also able to use)"
+  command = "find . -ctime +30 -or -name hoge"
+  output = ""
+
+[[snippets]]
+  description = "show disk utilization"
+  command = "df -h"
+  output = ""
+
+[[snippets]]
+  description = "show disk utilization of the specified folder"
+  command = "du -h ."
+  output = ""
