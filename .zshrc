@@ -26,5 +26,16 @@ alias sbt='rlwrap sbt'
 # set bell-style none
 set bell-style none
 
+# confis for each OS
+case ${OSTYPE} in
+    darwin*)
+        # add keys stored in key-chain to ssh agent
+        ssh-add --apple-load-keychain
+        # SDKMAN
+        [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+        ;;
+esac
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
