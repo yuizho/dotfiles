@@ -15,7 +15,7 @@ function main() {
                 set -uex
                 ;;
             --force | -f)
-                ln_option="-sf"
+                ln_option="-sfn"
                 ;;
             --help | -h)
                 helpmsg
