@@ -63,6 +63,9 @@ function main() {
     ln $ln_option "${current_abs_dir}/.emacs.d" ~/
 
     # pet
+    if [ ! -e ~/.config ]; then
+        mkdir ~/.config
+    fi
     ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/
 
     case ${OSTYPE} in
