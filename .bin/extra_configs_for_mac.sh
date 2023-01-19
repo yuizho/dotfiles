@@ -13,9 +13,9 @@ dotfiles_dir="$1"
 echo "=====> start extra configurations for mac"
 
 # python
-py_version=$(brew list | grep -E '^python@.+' | sed 's/python@//' | sort -n | head -n 1)
+py_version=$(/opt/homebrew/bin/brew list | grep -E '^python@.+' | sed 's/python@//' | sort -n | head -n 1)
 echo "=====> create symlink for python${py_version} in mac"
-ln -sf "/usr/local/bin/python${py_version}" "/usr/local/bin/python"
+sudo ln -sf "/opt/homebrew/bin/python${py_version}" "/usr/local/bin/python"
 
 # iterm
 echo "=====> About configuration for iterm"

@@ -21,6 +21,10 @@ fi
 echo "=====> start package instllation"
 
 dotfiles_dir="$1"
-brew bundle install --file "${dotfiles_dir}/.Brewfile"
+/opt/homebrew/bin/brew bundle install --file "${dotfiles_dir}/.Brewfile"
+
+echo "=====> configure PATH for commands installed by brew!!"
+
+export PATH="/opt/homebrew/bin:$PATH"
 
 echo "=====> package instllation is complete!!"
