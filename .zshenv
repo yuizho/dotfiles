@@ -3,6 +3,11 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/go/bin:$PATH
+case ${OSTYPE} in
+    darwin*)
+        export PATH=/opt/homebrew/bin:$PATH
+        ;;
+esac
 
 # zesh history config
 export HISTFILE=${HOME}/.zsh_history
