@@ -442,3 +442,33 @@
   description = "show disk utilization of the specified folder"
   command = "du -h ."
   output = ""
+
+[[snippets]]
+  description = "check network utilization of each process"
+  command = "sudo nethogs"
+  output = ""
+
+[[snippets]]
+  description = "grep and show only words matched by regex"
+  command = "echo 'abc1def2gh3' | grep -oE '[1-9]+'"
+  output = ""
+
+[[snippets]]
+  description = "output system call log by strace"
+  command = "strace -o <strace_log_file_name> <command_name>"
+  output = ""
+
+[[snippets]]
+  description = "display information about ELF file(実行可能ファイル)"
+  command = "readelf -h <executable_file>"
+  output = ""
+
+[[snippets]]
+  description = "show only unique rows"
+  command = "echo \"a\\na\\nb\\nc\" | uniq -u"
+  output = ""
+
+[[snippets]]
+  description = "skip evaluating column 1 by uniq command"
+  command = "echo \"1 a\\n2 a\\n3 b\\n4 c\" | uniq -f1 -c"
+  output = ""
