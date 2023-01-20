@@ -19,12 +19,16 @@ if ! command -v brew &> /dev/null; then
 fi
 
 echo "=====> start package instllation"
-
 dotfiles_dir="$1"
 /opt/homebrew/bin/brew bundle install --file "${dotfiles_dir}/.Brewfile"
 
 echo "=====> configure PATH for commands installed by brew!!"
-
 export PATH="/opt/homebrew/bin:$PATH"
+
+if ! command -v sdk &> /dev/null; then
+    echo "=====> SDKMAN is not installed!"
+    echo "=====> start installing SDKMAN"
+    curl -s "https://get.sdkman.io" | bash
+fi
 
 echo "=====> package instllation is complete!!"
