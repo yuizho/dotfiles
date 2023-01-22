@@ -472,3 +472,13 @@
   description = "skip evaluating column 1 by uniq command"
   command = "echo \"1 a\\n2 a\\n3 b\\n4 c\" | uniq -f1 -c"
   output = ""
+
+[[snippets]]
+  description = "wrap all matched string by 全体マッチ of sed"
+  command = "echo \"私はラーメンが好きです。\\nラーメンうまい。\" | sed 's/ラーメン/「&」/g'"
+  output = ""
+
+[[snippets]]
+  description = "show logical cpu count"
+  command = "grep -c processor /proc/cpuinfo"
+  output = ""
