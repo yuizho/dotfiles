@@ -482,3 +482,13 @@
   description = "show logical cpu count"
   command = "grep -c processor /proc/cpuinfo"
   output = ""
+
+[[snippets]]
+  description = "show reminder list of the skack channel"
+  command = "/remind list"
+  output = ""
+
+[[snippets]]
+  description = "delete local git branch"
+  command = "git branch -d <branch_name>"
+  output = ""
