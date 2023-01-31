@@ -492,3 +492,8 @@
   description = "delete local git branch"
   command = "git branch -d <branch_name>"
   output = ""
+
+[[snippets]]
+  description = "check Line Break Code (改行コード) of the file ($: LF, ^M: CR)"
+  command = "cat -e <fine_name>"
+  output = ""
