@@ -497,3 +497,18 @@
   description = "check Line Break Code (改行コード) of the file ($: LF, ^M: CR)"
   command = "cat -e <fine_name>"
   output = ""
+
+[[snippets]]
+  description = "format table"
+  command = "echo 'hoge 1000\\nfoo 200\\nfugafuga 10' | column -t"
+  output = ""
+
+[[snippets]]
+  description = "parse csv by python csv package"
+  command = "echo '\"1\",\"\"\"2\"\"\",3\\n4,5,6' | python -c 'import csv,sys;[print(x[1]) for x in csv.reader(sys.stdin)]'"
+  output = ""
+
+[[snippets]]
+  description = "convert txt format or apply formatter by pandoc"
+  command = "cat table.md | pandoc -t gfm"
+  output = ""
