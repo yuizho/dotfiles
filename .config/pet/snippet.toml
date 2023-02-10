@@ -512,3 +512,38 @@
   description = "convert txt format or apply formatter by pandoc"
   command = "cat table.md | pandoc -t gfm"
   output = ""
+
+[[snippets]]
+  description = "show 10 days ago date by date command"
+  command = "date -d '10 days ago'"
+  output = ""
+
+[[snippets]]
+  description = "show 10 days later date by date command"
+  command = "date -d '10 days'"
+  output = ""
+
+[[snippets]]
+  description = "show date specified by time zone"
+  command = "TZ=UTC date"
+  output = ""
+
+[[snippets]]
+  description = "replace parameter string by xargs"
+  command = "seq 4 | xargs -I@ echo '@ days'"
+  output = ""
+
+[[snippets]]
+  description = "show a date 10 days later from 2017-02-14"
+  command = "date -d '2017-02-14 10 days'"
+  output = ""
+
+[[snippets]]
+  description = "compare only first 7 caracters by uniq command"
+  command = "seq 0 10 | xargs -I@ date '+%F' -d '2017-02-24 @day' | uniq -w7"
+  output = ""
+
+[[snippets]]
+  description = "do startsWith by cut command"
+  command = "echo \"2021-12-01\\n2021-12-02\" | cut -c 1-7"
+  output = ""
