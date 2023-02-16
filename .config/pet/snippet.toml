@@ -552,3 +552,8 @@
   description = "convert hex to decimal number in bash"
   command = "echo $(( 16#101e ))"
   output = ""
+
+[[snippets]]
+  description = "separate string by 4 words with sed"
+  command = "echo \"1111111111111111\" | sed -E 's/.{4}/& /g'"
+  output = ""
