@@ -557,3 +557,13 @@
   description = "separate string by 4 words with sed"
   command = "echo \"1111111111111111\" | sed -E 's/.{4}/& /g'"
   output = ""
+
+[[snippets]]
+  description = "separate chars by new line (改行) with grep -o"
+  command = "echo \"あいうえお\" | grep -o ."
+  output = ""
+
+[[snippets]]
+  description = "show byte length by wc"
+  command = "echo あ | wc -c"
+  output = ""
