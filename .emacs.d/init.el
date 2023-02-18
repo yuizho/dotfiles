@@ -85,6 +85,9 @@
 ;; スタートアップメッセージを非表示
 (setq inhibit-startup-screen t)
 
+;; スタートアップ時のメジャーモードをorg-modeに
+(setq initial-major-mode 'org-mode)
+
 ;; 文字コードを指定する
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
