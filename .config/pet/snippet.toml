@@ -567,3 +567,8 @@
   description = "show byte length by wc"
   command = "echo あ | wc -c"
   output = ""
+
+[[snippets]]
+  description = "show emoji by unicode"
+  command = "echo -e '\\U1F363\\U1F37A'"
+  output = ""
