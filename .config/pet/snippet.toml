@@ -160,7 +160,7 @@
 
 [[snippets]]
   description = "while-loop in shell"
-  command = "seq 3 | while read x; do echo $x | xargs; done"
+  command = "seq 3 | while read x; do echo $x; done"
   output = ""
 
 [[snippets]]
