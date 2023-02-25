@@ -577,3 +577,28 @@
   description = "check caracter code(文字コード) of the file"
   command = "file -i <file_name>"
   output = ""
+
+[[snippets]]
+  description = "echo unicode codepoints of emoji"
+  command = "echo 🍣🍺 | iconv -f UTF-8 -t UCS-4 | xxd -p | fold -b8"
+  output = ""
+
+[[snippets]]
+  description = "encode a bianry file to base64"
+  command = "base64 <binary_file_name>"
+  output = ""
+
+[[snippets]]
+  description = "generate sha256 hash of a file"
+  command = "sha256sum <file_name>"
+  output = ""
+
+[[snippets]]
+  description = "convert binary number to hex"
+  command = "echo 11100100 | sed 's/^/obase=16;ibase=2;/' | bc"
+  output = ""
+
+[[snippets]]
+  description = "add prefix string by sed"
+  command = "echo \"太郎\" | sed 's/^/山田/'"
+  output = ""
