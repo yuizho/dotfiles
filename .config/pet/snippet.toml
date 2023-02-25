@@ -572,3 +572,8 @@
   description = "show emoji by unicode"
   command = "echo -e '\\U1F363\\U1F37A'"
   output = ""
+
+[[snippets]]
+  description = "check caracter code(文字コード) of the file"
+  command = "file -i <file_name>"
+  output = ""
