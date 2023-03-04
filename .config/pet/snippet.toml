@@ -600,5 +600,25 @@
 
 [[snippets]]
   description = "add prefix string by sed"
-  command = "echo \"太郎\" | sed 's/^/山田/'"
+  command = "echo \"hoge\\nfuga\" | sed '1s/^/[prefix]/'"
+  output = ""
+
+[[snippets]]
+  description = "decompress gz file"
+  command = "gzip -d <gz file name>"
+  output = ""
+
+[[snippets]]
+  description = "check Line Break Code (改行コード) of the file"
+  command = "cat newline.txt | tr -dc '\\015\\012' | sed -z 's/\\x0d/CR/g;s/\\x0a/LF&/g' | sort | uniq -c"
+  output = ""
+
+[[snippets]]
+  description = "filter rows by sed (just show 1~3 rows)"
+  command = "seq 5 | sed -n '1,3p'"
+  output = ""
+
+[[snippets]]
+  description = "filter rows by sed (just show 2~ rows)"
+  command = "seq 5 | sed -n '2,$p'"
   output = ""
