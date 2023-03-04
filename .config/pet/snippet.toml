@@ -622,3 +622,18 @@
   description = "filter rows by sed (just show 2~ rows)"
   command = "seq 5 | sed -n '2,$p'"
   output = ""
+
+[[snippets]]
+  description = "filter rows by sed (just show 1行目から2行飛ばし)"
+  command = "seq 10 | sed -n '1~2p'"
+  output = ""
+
+[[snippets]]
+  description = "encode str to base64 string"
+  command = "echo \"hoge\" | base64"
+  output = ""
+
+[[snippets]]
+  description = "decode base64 string"
+  command = "echo \"aG9nZQo=\" | base64 -d"
+  output = ""
