@@ -637,3 +637,13 @@
   description = "decode base64 string"
   command = "echo \"aG9nZQo=\" | base64 -d"
   output = ""
+
+[[snippets]]
+  description = "infnity loop by seq"
+  command = "pref"
+  output = ""
+
+[[snippets]]
+  description = "split each char and do something by awk"
+  command = "seq -w 0 10 | awk -F \"\" '{print $1*$1+$2*$2}'"
+  output = ""
