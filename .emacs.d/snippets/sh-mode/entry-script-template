@@ -7,14 +7,19 @@ function helpmsg() {
 }
 
 function main() {
+    local param=""
     while [ $# -gt 0 ]; do
-        case ${1} in
+        case \${1} in
             --debug | -d)
                 -set uex
                 ;;
             --help | -h)
                 helpmsg
                 exit 0
+                ;;
+            --param | -p)
+                param=\${2}
+                shift
                 ;;
             *)
                 helpmsg
