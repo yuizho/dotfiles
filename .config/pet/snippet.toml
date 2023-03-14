@@ -574,6 +574,81 @@
   output = ""
 
 [[snippets]]
+  description = "check caracter code(文字コード) of the file"
+  command = "file -i <file_name>"
+  output = ""
+
+[[snippets]]
+  description = "echo unicode codepoints of emoji"
+  command = "echo 🍣🍺 | iconv -f UTF-8 -t UCS-4 | xxd -p | fold -b8"
+  output = ""
+
+[[snippets]]
+  description = "encode a bianry file to base64"
+  command = "base64 <binary_file_name>"
+  output = ""
+
+[[snippets]]
+  description = "generate sha256 hash of a file"
+  command = "sha256sum <file_name>"
+  output = ""
+
+[[snippets]]
+  description = "convert binary number to hex"
+  command = "echo 11100100 | sed 's/^/obase=16;ibase=2;/' | bc"
+  output = ""
+
+[[snippets]]
+  description = "add prefix string by sed"
+  command = "echo \"hoge\\nfuga\" | sed '1s/^/[prefix]/'"
+  output = ""
+
+[[snippets]]
+  description = "decompress gz file"
+  command = "gzip -d <gz file name>"
+  output = ""
+
+[[snippets]]
+  description = "check Line Break Code (改行コード) of the file"
+  command = "cat newline.txt | tr -dc '\\015\\012' | sed -z 's/\\x0d/CR/g;s/\\x0a/LF&/g' | sort | uniq -c"
+  output = ""
+
+[[snippets]]
+  description = "filter rows by sed (just show 1~3 rows)"
+  command = "seq 5 | sed -n '1,3p'"
+  output = ""
+
+[[snippets]]
+  description = "filter rows by sed (just show 2~ rows)"
+  command = "seq 5 | sed -n '2,$p'"
+  output = ""
+
+[[snippets]]
+  description = "filter rows by sed (just show 1行目から2行飛ばし)"
+  command = "seq 10 | sed -n '1~2p'"
+  output = ""
+
+[[snippets]]
+  description = "encode str to base64 string"
+  command = "echo \"hoge\" | base64"
+  output = ""
+
+[[snippets]]
+  description = "decode base64 string"
+  command = "echo \"aG9nZQo=\" | base64 -d"
+  output = ""
+
+[[snippets]]
+  description = "infnity loop by seq"
+  command = "pref"
+  output = ""
+
+[[snippets]]
+  description = "split each char and do something by awk"
+  command = "seq -w 0 10 | awk -F \"\" '{print $1*$1+$2*$2}'"
+  output = ""
+
+[[snippets]]
   description = "setup slack reacji-channeler (emoji reaction)"
   command = "/reacji-channeler <target_emoji like :mega:> <channel_name like #big-news>"
   output = ""
