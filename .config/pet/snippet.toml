@@ -572,3 +572,8 @@
   description = "show emoji by unicode"
   command = "echo -e '\\U1F363\\U1F37A'"
   output = ""
+
+[[snippets]]
+  description = "setup slack reacji-channeler (emoji reaction)"
+  command = "/reacji-channeler <target_emoji like :mega:> <channel_name like #big-news>"
+  output = ""
