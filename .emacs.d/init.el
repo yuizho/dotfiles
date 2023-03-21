@@ -394,7 +394,7 @@
   :emacs>= 26.3
   :ensure t
   ;:after spinner markdown-mode lv eldoc
-  :bind ("C-c u" . lsp-find-references)
+  :bind ("M-?" . lsp-find-references)
   :hook ((lsp-mode-hook . lsp-ui-mode)
          (sh-mode-hook . lsp)
          (python-mode-hook . lsp))
