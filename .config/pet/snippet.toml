@@ -672,3 +672,8 @@
   description = "sort files by created at (DESC)"
   command = "ls -ltr"
   output = ""
+
+[[snippets]]
+  description = "list files with full created at"
+  command = "ls --full-time"
+  output = ""
