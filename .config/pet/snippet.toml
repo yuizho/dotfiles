@@ -667,3 +667,8 @@
   description = "sort rows by second column values"
   command = "echo \"bar 30\\nhogehoge 3\\nhoge 2\\nfuga 1\" | sort -k 2,2"
   output = ""
+
+[[snippets]]
+  description = "sort files by created at (DESC)"
+  command = "ls -ltr"
+  output = ""
