@@ -677,3 +677,8 @@
   description = "list files with full created at"
   command = "ls --full-time"
   output = ""
+
+[[snippets]]
+  description = "rename current git branch"
+  command = "git branch -m <new_branch_name>"
+  output = ""
