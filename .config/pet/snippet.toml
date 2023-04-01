@@ -692,3 +692,8 @@
   description = "show dependency tree of the mevan project"
   command = "mvn dependency:tree"
   output = ""
+
+[[snippets]]
+  description = "shuffle passed lines"
+  command = "seq 5 | shuf"
+  output = ""
