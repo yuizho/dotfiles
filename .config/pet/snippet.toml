@@ -697,3 +697,18 @@
   description = "shuffle passed lines"
   command = "seq 5 | shuf"
   output = ""
+
+[[snippets]]
+  description = "check required shared library of the command"
+  command = "ldd /usr/bin/tail"
+  output = ""
+
+[[snippets]]
+  description = "mount a device"
+  command = "mount -t <file system type e.g. vfat> <partition e.g. /dev/sdb1> <mount dir e.g. /mnt/disk1>"
+  output = ""
+
+[[snippets]]
+  description = "observ usb devices"
+  command = "lsusb"
+  output = ""
