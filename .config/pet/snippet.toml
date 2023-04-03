@@ -712,3 +712,8 @@
   description = "observ usb devices"
   command = "lsusb"
   output = ""
+
+[[snippets]]
+  description = "show proc id of the app name"
+  command = "pgrep <app_name>"
+  output = ""
