@@ -727,3 +727,48 @@
   description = "save a command result to clipboard in Mac"
   command = "echo \"hoge\" | pbcopy"
   output = ""
+
+[[snippets]]
+  description = "connect local mysql by mysql client"
+  command = "mysql -h 127.0.0.1 -u <user_name> -p <schema_name> -A"
+  output = ""
+
+[[snippets]]
+  description = "check general_log config of mysql"
+  command = "show variables like 'general_log%';"
+  output = ""
+
+[[snippets]]
+  description = "configure general_log"
+  command = "set global general_log = on;"
+  output = ""
+
+[[snippets]]
+  description = "list changed file of the GitHub pull request"
+  command = "gh pr diff <pr_number> --name-only"
+  output = ""
+
+[[snippets]]
+  description = "get a GitHub personal token configured to use"
+  command = "gh auth token"
+  output = ""
+
+[[snippets]]
+  description = "save git chages to stash"
+  command = "git stash -u"
+  output = ""
+
+[[snippets]]
+  description = "list saved changes of git stash"
+  command = "git stash list"
+  output = ""
+
+[[snippets]]
+  description = "apply git stash of \"stash@{0}\""
+  command = "git stash apply stash@{0}"
+  output = ""
+
+[[snippets]]
+  description = "checkout specified file of the branch"
+  command = "git checkout <branch_name> -- <file_name>"
+  output = ""
