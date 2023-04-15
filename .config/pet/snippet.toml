@@ -772,3 +772,8 @@
   description = "checkout specified file of the branch"
   command = "git checkout <branch_name> -- <file_name>"
   output = ""
+
+[[snippets]]
+  description = "show ip address of devices"
+  command = "ip address"
+  output = ""
