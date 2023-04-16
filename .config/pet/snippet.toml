@@ -777,3 +777,13 @@
   description = "show ip address of devices"
   command = "ip address"
   output = ""
+
+[[snippets]]
+  description = "show terminal emulator's configs"
+  command = "stty -a"
+  output = ""
+
+[[snippets]]
+  description = "show the shared libraries that the program depends on."
+  command = "ldd <program_path>"
+  output = ""
