@@ -772,3 +772,13 @@
   description = "checkout specified file of the branch"
   command = "git checkout <branch_name> -- <file_name>"
   output = ""
+
+[[snippets]]
+  description = "get absolute path"
+  command = "realpath <path>"
+  output = ""
+
+[[snippets]]
+  description = "format mysql datetime type value to yyyy-mm-dd string"
+  command = "DATE_FORMAT(<date_time_column>, '%Y-%m-%d')"
+  output = ""
