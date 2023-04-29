@@ -774,6 +774,16 @@
   output = ""
 
 [[snippets]]
+  description = "get absolute path"
+  command = "realpath <path>"
+  output = ""
+
+[[snippets]]
+  description = "format mysql datetime type value to yyyy-mm-dd string"
+  command = "DATE_FORMAT(<date_time_column>, '%Y-%m-%d')"
+  output = ""
+
+[[snippets]]
   description = "show ip address of devices"
   command = "ip address"
   output = ""
