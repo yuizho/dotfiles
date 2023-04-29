@@ -782,3 +782,43 @@
   description = "format mysql datetime type value to yyyy-mm-dd string"
   command = "DATE_FORMAT(<date_time_column>, '%Y-%m-%d')"
   output = ""
+
+[[snippets]]
+  description = "show ip address of devices"
+  command = "ip address"
+  output = ""
+
+[[snippets]]
+  description = "show terminal emulator's configs"
+  command = "stty -a"
+  output = ""
+
+[[snippets]]
+  description = "show the shared libraries that the program depends on."
+  command = "ldd <program_path>"
+  output = ""
+
+[[snippets]]
+  description = "add prefix string by sed ver2"
+  command = "echo \"hoge\" | sed 's/.*/prefix_&/g'"
+  output = ""
+
+[[snippets]]
+  description = "echo string by unicode"
+  command = "echo -e '\\U30B7\\U30A7\\U30EB'"
+  output = ""
+
+[[snippets]]
+  description = "start http server by python"
+  command = "python -m http.server 8000"
+  output = ""
+
+[[snippets]]
+  description = "start telnet server by nc"
+  command = "nc -l -p 8080"
+  output = ""
+
+[[snippets]]
+  description = "send text on telnet by bash feature"
+  command = "echo \"hoge\" > /dev/tcp/127.0.0.1/8080"
+  output = ""
