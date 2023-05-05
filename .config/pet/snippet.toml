@@ -842,3 +842,8 @@
   description = "joint multiple text files"
   command = "paste <file_1> <file_2> <file_3>"
   output = ""
+
+[[snippets]]
+  description = "show files modified and unstaged"
+  command = "git ls-files -m"
+  output = ""
