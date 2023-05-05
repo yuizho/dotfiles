@@ -847,3 +847,8 @@
   description = "show files modified and unstaged"
   command = "git ls-files -m"
   output = ""
+
+[[snippets]]
+  description = "restore a file managed by git to previous commit"
+  command = "git restore -s HEAD^ <file_name>"
+  output = ""
