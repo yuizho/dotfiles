@@ -852,3 +852,13 @@
   description = "restore a file managed by git to previous commit"
   command = "git restore -s HEAD^ <file_name>"
   output = ""
+
+[[snippets]]
+  description = "echo same row 2 times"
+  command = "seq 5 | sed p"
+  output = ""
+
+[[snippets]]
+  description = "remove first row and final row by sed"
+  command = "seq 5 | sed '1d;$d'"
+  output = ""
