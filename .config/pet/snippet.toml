@@ -862,3 +862,8 @@
   description = "remove first row and final row by sed"
   command = "seq 5 | sed '1d;$d'"
   output = ""
+
+[[snippets]]
+  description = "exec command passed by string"
+  command = "bash -c 'echo \"hoge\"'"
+  output = ""
