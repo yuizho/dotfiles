@@ -867,3 +867,8 @@
   description = "exec command passed by string"
   command = "bash -c 'echo \"hoge\"'"
   output = ""
+
+[[snippets]]
+  description = "connect server with ssh"
+  command = "ssh <user_name>@<host_name>"
+  output = ""
