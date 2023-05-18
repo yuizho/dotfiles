@@ -877,3 +877,8 @@
   description = "request to http server and just get http status"
   command = "curl -s -o /dev/null -w '%{http_code}' https://www.google.co.jp"
   output = ""
+
+[[snippets]]
+  description = "request to a http server (support redirect)"
+  command = "curl -IL https://google.co.jp"
+  output = ""
