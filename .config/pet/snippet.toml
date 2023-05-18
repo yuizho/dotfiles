@@ -872,3 +872,8 @@
   description = "connect server with ssh"
   command = "ssh <user_name>@<host_name>"
   output = ""
+
+[[snippets]]
+  description = "request to http server and just get http status"
+  command = "curl -s -o /dev/null -w '%{http_code}' https://www.google.co.jp"
+  output = ""
