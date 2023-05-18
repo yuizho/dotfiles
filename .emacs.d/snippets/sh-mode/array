@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: array
+# key: array
+# --
+array=("a b c")
+array+=("d")
+
+for i in \${array[@]}; do
+    echo \$i
+done
