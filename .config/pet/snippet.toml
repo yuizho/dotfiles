@@ -882,3 +882,18 @@
   description = "request to a http server (support redirect)"
   command = "curl -IL https://google.co.jp"
   output = ""
+
+[[snippets]]
+  description = "tail docker compose woking on background log"
+  command = "docker compose logs -f"
+  output = ""
+
+[[snippets]]
+  description = "start docker compose with Dockerfile build"
+  command = "docker compose up --build"
+  output = ""
+
+[[snippets]]
+  description = "reset docker enrvironment"
+  command = "docker system prune -a"
+  output = ""
