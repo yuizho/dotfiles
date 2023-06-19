@@ -897,3 +897,8 @@
   description = "reset docker enrvironment"
   command = "docker system prune -a"
   output = ""
+
+[[snippets]]
+  description = "show emoji by bytecode(Hex)"
+  command = "echo -e '\\xF0\\x9F\\x91\\x8D'"
+  output = ""
