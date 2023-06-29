@@ -902,3 +902,8 @@
   description = "show emoji by bytecode(Hex)"
   command = "echo -e '\\xF0\\x9F\\x91\\x8D'"
   output = ""
+
+[[snippets]]
+  description = "show auto_increment id values of tables"
+  command = "SELECT table_name, auto_increment FROM information_schema.tables ORDER BY auto_increment DESC;"
+  output = ""
