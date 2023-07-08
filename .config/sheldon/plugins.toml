@@ -29,12 +29,6 @@ github = "zsh-users/zsh-completions"
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 
-[plugins.zsh-history-substring-search]
-github = "zsh-users/zsh-history-substring-search"
-
-[plugins.enhancd]
-github = "b4b4r07/enhancd"
-
 [plugins.autojump]
 github = "wting/autojump"
 dir = "bin"
