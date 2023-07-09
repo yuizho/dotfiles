@@ -907,3 +907,23 @@
   description = "show auto_increment id values of tables"
   command = "SELECT table_name, auto_increment FROM information_schema.tables ORDER BY auto_increment DESC;"
   output = ""
+
+[[snippets]]
+  description = "open binary file by hexyl(HEX viewer)"
+  command = "hexyl <binary_file>"
+  output = ""
+
+[[snippets]]
+  description = "show diff by delta(enhanced diff)"
+  command = "delta <file1> <file2>"
+  output = ""
+
+[[snippets]]
+  description = "generate regex"
+  command = "grex a b c d"
+  output = ""
+
+[[snippets]]
+  description = "syntax highlight source file"
+  command = "bat <source file>"
+  output = ""
