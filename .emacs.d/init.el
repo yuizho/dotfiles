@@ -1,5 +1,4 @@
 ;;; init.el --- init.el  -*- lexical-binding: t; -*-
-
 ;;; Commentary:
 
 ;; Emacs実践入門の内容をかなり参考にさせてもらっています。
@@ -80,7 +79,7 @@
 (setq frame-title-format "%f")
 
 ;; 行番号を常に表示する
-(global-linum-mode t)
+(global-display-line-numbers-mode t)
 
 ;; スタートアップメッセージを非表示
 (setq inhibit-startup-screen t)
