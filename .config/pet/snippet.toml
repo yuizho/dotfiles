@@ -927,3 +927,13 @@
   description = "syntax highlight source file"
   command = "bat <source file>"
   output = ""
+
+[[snippets]]
+  description = "find processes using the port_number"
+  command = "lsof -i:<port_number>"
+  output = ""
+
+[[snippets]]
+  description = "list configured JVM system properties"
+  command = "jcmd <PID_of_JVM> VM.system_properties"
+  output = ""
