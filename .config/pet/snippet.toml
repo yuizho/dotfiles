@@ -937,3 +937,8 @@
   description = "list configured JVM system properties"
   command = "jcmd <PID_of_JVM> VM.system_properties"
   output = ""
+
+[[snippets]]
+  description = "checkout a file in a specified branch"
+  command = "git checkout <branch_name> -- <file_path>"
+  output = ""
