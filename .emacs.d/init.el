@@ -454,6 +454,16 @@
   :emacs>= 25.1
   :ensure t)
 
+(leaf terraform-mode
+  :doc "Major mode for terraform configuration file"
+  :req "emacs-24.3" "hcl-mode-0.3" "dash-2.17.0"
+  :tag "emacs>=24.3"
+  :url "https://github.com/syohex/emacs-terraform-mode"
+  :added "2023-10-01"
+  :emacs>= 24.3
+  :ensure t
+  :after hcl-mode)
+
 (leaf zenburn-theme
   :doc "A low contrast color theme for Emacs."
   :url "http://github.com/bbatsov/zenburn-emacs"
