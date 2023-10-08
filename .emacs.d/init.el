@@ -464,6 +464,17 @@
   :ensure t
   :after hcl-mode)
 
+(leaf company-terraform
+  :doc "A company backend for terraform"
+  :req "emacs-24.4" "company-0.8.12" "terraform-mode-0.6"
+  :tag "company" "terraform" "convenience" "abbrev" "emacs>=24.4"
+  :url "https://github.com/rafalcieslak/emacs-company-terraform"
+  :added "2023-10-08"
+  :emacs>= 24.4
+  :ensure t
+  :after company terraform-mode
+  :config (company-terraform-init))
+
 (leaf zenburn-theme
   :doc "A low contrast color theme for Emacs."
   :url "http://github.com/bbatsov/zenburn-emacs"
