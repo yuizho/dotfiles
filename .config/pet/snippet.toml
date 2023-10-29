@@ -942,3 +942,8 @@
   description = "checkout a file in a specified branch"
   command = "git checkout <branch_name> -- <file_path>"
   output = ""
+
+[[snippets]]
+  description = "install maven wrapper (mvnw)"
+  command = "mvn wrapper:wrapper"
+  output = ""
