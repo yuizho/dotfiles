@@ -34,6 +34,11 @@ case ${OSTYPE} in
         # SDKMAN
         [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
         ;;
+    linux*)
+        # alias
+        # tmux(byobu)
+        alias t2x='tmux save-buffer - | xclip -selection c'
+        ;;
 esac
 
 # Init mcfly
