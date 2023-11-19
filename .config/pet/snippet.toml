@@ -947,3 +947,8 @@
   description = "install maven wrapper (mvnw)"
   command = "mvn wrapper:wrapper"
   output = ""
+
+[[snippets]]
+  description = "copy tmux(byobu) save-buffer to clipoard"
+  command = "tmux save-buffer - | xclip -selection c"
+  output = ""
