@@ -942,3 +942,28 @@
   description = "checkout a file in a specified branch"
   command = "git checkout <branch_name> -- <file_path>"
   output = ""
+
+[[snippets]]
+  description = "dump mysql database"
+  command = "mysqldump -h <host> -u <user> -p <database> > <dump_file_name>"
+  output = ""
+
+[[snippets]]
+  description = "import mysql dump file"
+  command = "mysql -h <host> -u <user> -p <database> < <dump_file_name>"
+  output = ""
+
+[[snippets]]
+  description = "create new Python project by pipenv"
+  command = "pipenv install"
+  output = ""
+
+[[snippets]]
+  description = "install python package in pipenv project"
+  command = "pipenv install <package_name>"
+  output = ""
+
+[[snippets]]
+  description = "execute python command in pipenv project"
+  command = "pipenv run <some_python_command>"
+  output = ""
