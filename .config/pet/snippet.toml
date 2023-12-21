@@ -967,3 +967,23 @@
   description = "execute python command in pipenv project"
   command = "pipenv run <some_python_command>"
   output = ""
+
+[[snippets]]
+  description = "use matched string in sed string replacement"
+  command = "echo \"Time: 22.000 sec\" | sed -E 's/Time: (.*) sec/\\1/'"
+  output = ""
+
+[[snippets]]
+  description = "add line end (改行) each 2 rows"
+  command = "echo \"1\\n2\\n3\\n4\\n5\\n6\" | awk 'NR % 2 == 0 {print $0 \"\\n\"} NR % 2 != 0 {print $0}'"
+  output = ""
+
+[[snippets]]
+  description = "check if a file exists in shell (short hands)"
+  command = "[ -e <file_name> ] && echo \"file exists\""
+  output = ""
+
+[[snippets]]
+  description = "convert unix time to datetime by strftime of awk"
+  command = "echo \"1, 1560000000\\n2, 1703160585\" | awk -F',' '{print $1, strftime(\"%Y-%m-%d %H:%M:%S\", $2)}'"
+  output = ""
