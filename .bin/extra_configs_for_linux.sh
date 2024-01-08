@@ -22,5 +22,6 @@ sudo cp "${dotfiles_dir}/linux/x/30-touchpad.conf" /etc/X11/xorg.conf.d/
 echo "=====> configurations for leftwm"
 ln $ln_option "${dotfiles_abs_dir}/.config/leftwm" ~/.config/
 git clone https://github.com/b4skyx/leftwm-soothe.git "${dotfiles_dir}/.config/leftwm/themes/leftwm-soothe"
+ln $ln_option "${dotfiles_dir}/.config/leftwm/themes/leftwm-soothe/themes" "${dotfiles_dir}/.config/leftwm/themes/current"
 
 echo "=====> extra configurations for linux is complete!!"
