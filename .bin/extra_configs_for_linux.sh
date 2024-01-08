@@ -14,4 +14,7 @@ dotfiles_abs_dir=$(realpath $dotfiles_dir)
 
 echo "=====> start extra configurations for linux"
 
-ln $ln_option "${dotfiles_abs_dir}/.xprofile" ~/
+echo "=====> configurations for x"
+ln $ln_option "${dotfiles_abs_dir}/linux/x/.xprofile" ~/
+
+echo "=====> extra configurations for linux is complete!!"
