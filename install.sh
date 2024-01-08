@@ -76,7 +76,7 @@ function main() {
             "${current_dir}/.bin/extra_configs_for_mac.sh" $current_dir
             ;;
         linux*)
-            # FIXME: Linux向けの実装を書く
+            "${current_dir}/.bin/extra_configs_for_linux.sh" $ln_option $current_dir
             ;;
         *)
             echo "unsupported OS $OSTYPE"
