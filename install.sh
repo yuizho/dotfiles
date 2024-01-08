@@ -40,7 +40,7 @@ function main() {
                 "${current_dir}/.bin/install_packages_for_mac.sh" $current_dir
                 ;;
             linux*)
-                # FIXME: Linux向けの実装を書く
+                "${current_dir}/.bin/install_packages_for_linux.sh" $current_dir
                 ;;
             *)
                 echo "unsupported OS $OSTYPE"
