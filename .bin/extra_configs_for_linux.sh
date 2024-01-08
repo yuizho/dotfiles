@@ -19,4 +19,8 @@ ln $ln_option "${dotfiles_abs_dir}/linux/x/.xprofile" ~/
 sudo cp "${dotfiles_dir}/linux/x/00-keyboard.conf" /etc/X11/xorg.conf.d/
 sudo cp "${dotfiles_dir}/linux/x/30-touchpad.conf" /etc/X11/xorg.conf.d/
 
+echo "=====> configurations for leftwm"
+ln $ln_option "${dotfiles_abs_dir}/.config/leftwm" ~/.config/
+git clone https://github.com/b4skyx/leftwm-soothe.git "${dotfiles_dir}/.config/leftwm/themes/leftwm-soothe"
+
 echo "=====> extra configurations for linux is complete!!"
