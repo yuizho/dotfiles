@@ -44,6 +44,11 @@ case ${OSTYPE} in
         # 1Password Cli
         source $HOME/.config/op/plugins.sh
         ;;
+    linux*)
+        # alias
+        # tmux(byobu)
+        alias t2x='tmux save-buffer - | xclip -selection c'
+        ;;
 esac
 
 # Init mcfly

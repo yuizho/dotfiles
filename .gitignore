@@ -12,3 +12,5 @@ ac-comphist.dat
 *.elc
 .cask
 *.pyc
+
+.pacman_backup

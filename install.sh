@@ -40,7 +40,7 @@ function main() {
                 "${current_dir}/.bin/install_packages_for_mac.sh" $current_dir
                 ;;
             linux*)
-                # FIXME: Linux向けの実装を書く
+                "${current_dir}/.bin/install_packages_for_linux.sh" $current_dir
                 ;;
             *)
                 echo "unsupported OS $OSTYPE"
@@ -52,6 +52,9 @@ function main() {
     echo "=====> create symlinks for config files"
 
     local current_abs_dir=$(realpath $current_dir)
+    if [ ! -e ~/.config ]; then
+        mkdir ~/.config
+    fi
 
     # zsh
     ln $ln_option "${current_abs_dir}/.zshenv" ~/
@@ -63,17 +66,17 @@ function main() {
     ln $ln_option "${current_abs_dir}/.emacs.d" ~/
 
     # pet
-    if [ ! -e ~/.config ]; then
-        mkdir ~/.config
-    fi
     ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/
+
+    # kitty
+    ln $ln_option "${current_abs_dir}/.config/kitty" ~/.config/
 
     case ${OSTYPE} in
         darwin*)
             "${current_dir}/.bin/extra_configs_for_mac.sh" $current_dir
             ;;
         linux*)
-            # FIXME: Linux向けの実装を書く
+            "${current_dir}/.bin/extra_configs_for_linux.sh" $ln_option $current_dir
             ;;
         *)
             echo "unsupported OS $OSTYPE"

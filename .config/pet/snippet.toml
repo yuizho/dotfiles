@@ -944,6 +944,31 @@
   output = ""
 
 [[snippets]]
+  description = "install maven wrapper (mvnw)"
+  command = "mvn wrapper:wrapper"
+  output = ""
+
+[[snippets]]
+  description = "copy tmux(byobu) save-buffer to clipoard"
+  command = "tmux save-buffer - | xclip -selection c"
+  output = ""
+
+[[snippets]]
+  description = "if there is no hoge file, create hoge file"
+  command = "[ -e hoge ] || touch hoge"
+  output = ""
+
+[[snippets]]
+  description = "tfenv install"
+  command = "install specific version of terraform by tfenv"
+  output = ""
+
+[[snippets]]
+  description = "ssh login by SSM SessionManager"
+  command = "aws ssm start-session --target <instance_id> --document-name SSM-SessionManagerRunShell"
+  output = ""
+
+[[snippets]]
   description = "dump mysql database"
   command = "mysqldump -h <host> -u <user> -p <database> > <dump_file_name>"
   output = ""
