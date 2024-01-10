@@ -52,6 +52,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
 fcitx5-qt
+feh
 file
 filesystem
 findutils
@@ -142,7 +143,9 @@ pciutils
 pcmanfm
 peco
 perl
+picom
 pkgconf
+polybar
 powerline
 powerline-fonts
 powertop
@@ -156,6 +159,7 @@ python-pipenv
 r
 reiserfsprogs
 rlwrap
+rofi
 ruby
 rustup
 rye
