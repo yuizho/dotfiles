@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# rye config
+source "$HOME/.rye/env"
+
 # https://unix.stackexchange.com/questions/339954/zsh-command-not-found-compinstall-compinit-compdef
 autoload -Uz compinit && compinit
 
@@ -29,10 +32,17 @@ set bell-style none
 # confis for each OS
 case ${OSTYPE} in
     darwin*)
+        # alias
+        # jmc
+        # https://medium.com/@damian.kolasa/running-jdk-mission-control-on-macos-cb2039700adf
+        alias jmc='/Applications/JDK\ Mission\ Control.app/Contents/MacOS/jmc -vm ~/.sdkman/candidates/java/current/lib/jli/libjli.dylib'
+
         # add keys stored in key-chain to ssh agent
         ssh-add --apple-load-keychain
         # SDKMAN
         [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+        # 1Password Cli
+        source $HOME/.config/op/plugins.sh
         ;;
     linux*)
         # alias
