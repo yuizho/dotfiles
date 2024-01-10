@@ -1,0 +1,10 @@
+configuration {
+  modes: [ combi ];
+  font: "HackNerdFont 12";
+  combi-modes: [ window, drun, run ];
+}
+
+// https://github.com/davatorium/rofi/tree/next/themes
+@theme "DarkBlue"
+
+/* Insert theme modifications after this */
