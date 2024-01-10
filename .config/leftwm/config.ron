@@ -83,6 +83,7 @@
         (command: FocusWindowUp, value: "", modifier: ["modkey"], key: "Up"),
         (command: FocusWindowDown, value: "", modifier: ["modkey"], key: "Down"),
         (command: NextLayout, value: "", modifier: ["modkey", "Control"], key: "Up"),
+        (command: NextLayout, value: "", modifier: ["modkey"], key: "space"),
         (command: PreviousLayout, value: "", modifier: ["modkey", "Control"], key: "Down"),
         (command: FocusWorkspaceNext, value: "", modifier: ["modkey"], key: "Right"),
         (command: FocusWorkspacePrevious, value: "", modifier: ["modkey"], key: "Left"),
