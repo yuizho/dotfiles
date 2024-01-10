@@ -51,7 +51,7 @@
         (name: "Kitty", value: "kitty", x: 860, y: 390, height: 300, width: 200),
     ],
     window_rules: [],
-    disable_current_tag_swap: false,
+    disable_current_tag_swap: true,
     disable_tile_drag: false,
     disable_window_snap: true,
     focus_behaviour: Sloppy,
