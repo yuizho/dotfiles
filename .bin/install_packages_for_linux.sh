@@ -12,6 +12,12 @@ if [[ ! "$OSTYPE" =~ ^linux* ]]; then
     exit 1
 fi
 
+if ! command -v pacman &> /dev/null; then
+    echo "unexpected linux distro.this script depends on Pacman."
+    echo "see https://en.wikipedia.org/wiki/Category:Pacman-based_Linux_distributions"
+    exit 1
+fi
+
 echo "=====> start package instllation"
 dotfiles_dir="$1"
 
