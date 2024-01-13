@@ -15,3 +15,4 @@ for DISCONNECTED in $DICSONNECTED_DISPLAYS; do
     xrandr --output $DISCONNECTED --off
 done
 
+leftwm command SoftReload
