@@ -20,7 +20,7 @@ fi
 
 echo "=====> start package instllation"
 dotfiles_dir="$1"
-/opt/homebrew/bin/brew bundle install --file "${dotfiles_dir}/.Brewfile"
+/opt/homebrew/bin/brew bundle install --file "${dotfiles_dir}/mac/.Brewfile"
 
 echo "=====> configure PATH for commands installed by brew!!"
 export PATH="/opt/homebrew/bin:$PATH"

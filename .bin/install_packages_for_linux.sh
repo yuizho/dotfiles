@@ -22,7 +22,7 @@ echo "=====> start package instllation"
 dotfiles_dir="$1"
 
 echo "=====> start abs package instllation by pacman"
-cat "${dotfiles_dir}/.abs_packages" | xargs pacman -S --noconfirm
+cat "${dotfiles_dir}/linux/.abs_packages" | xargs pacman -S --noconfirm
 
 echo "=====> start aur package instllation by yay"
 echo "=====> start installing yay"
@@ -34,6 +34,6 @@ rm -rf "${dotfiles_dir}/yay"
 yay --version
 
 echo "=====> start aur package instllation by yay"
-cat "${dotfiles_dir}/.aur_packages" | xargs yay -S --noconfirm
+cat "${dotfiles_dir}/linux/.aur_packages" | xargs yay -S --noconfirm
 
 echo "=====> package instllation is complete!!"
