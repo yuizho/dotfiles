@@ -11,7 +11,7 @@ echo "Done!"
 
 
 echo "=====> start dumping abs, aur packages"
-pacman -Qqne > "${current_dir}/.abs_packages"
-echo "dumped abs packages to ${current_dir}/.abs_packages"
-pacman -Qqme > "${current_dir}/.aur_packages"
-echo "dumped aur packages to ${current_dir}/.aur_packages"
+pacman -Qqne > "${current_dir}/linux/.abs_packages"
+echo "dumped abs packages to ${current_dir}/linux/.abs_packages"
+pacman -Qqme > "${current_dir}/linux/.aur_packages"
+echo "dumped aur packages to ${current_dir}/linux/.aur_packages"
