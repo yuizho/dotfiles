@@ -41,6 +41,7 @@ docker
 docker-compose
 docker-machine
 dosfstools
+dunst
 e2fsprogs
 efibootmgr
 elinks
