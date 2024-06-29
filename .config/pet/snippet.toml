@@ -1012,3 +1012,8 @@
   description = "convert unix time to datetime by strftime of awk"
   command = "echo \"1, 1560000000\\n2, 1703160585\" | awk -F',' '{print $1, strftime(\"%Y-%m-%d %H:%M:%S\", $2)}'"
   output = ""
+
+[[snippets]]
+  description = "copy a local file to docker container"
+  command = "docker cp <local_file_name> <container_name>:/<copied_file_name>"
+  output = ""

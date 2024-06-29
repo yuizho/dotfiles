@@ -3,7 +3,7 @@
 # key: main
 # --
 function helpmsg() {
-    echo "Usage: ${BASH_SOURCE[0]:-$0} [--debug | -d] [--help | -h]"
+    echo "Usage: \${BASH_SOURCE[0]:-\$0} [--debug | -d] [--help | -h]"
 }
 
 function main() {
