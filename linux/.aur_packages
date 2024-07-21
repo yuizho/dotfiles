@@ -1,12 +1,12 @@
 apache-tools
 arch-silence-grub-theme
+aws-cli-v2
 aws-session-manager-plugin
 bdf-unifont
 cnijfilter2
 ecspresso
 epr-git
 google-chrome
-heroku-cli
 intellij-idea-ultimate-edition
 leftwm
 man-pages-ja
@@ -16,7 +16,6 @@ pet-bin
 pkgtools
 postman-bin
 sakura
-slack-desktop
 tfenv
 ttf-meslo-nerd-font-powerlevel10k
 ttf-migmix
