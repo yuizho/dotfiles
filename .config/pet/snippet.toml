@@ -1017,3 +1017,18 @@
   description = "copy a local file to docker container"
   command = "docker cp <local_file_name> <container_name>:/<copied_file_name>"
   output = ""
+
+[[snippets]]
+  description = "enable mysql global lock monitor"
+  command = "SET GLOBAL innodb_status_output_locks=ON;"
+  output = ""
+
+[[snippets]]
+  description = "show transaction isolation level of mysql"
+  command = "SELECT @@transaction_isolation;"
+  output = ""
+
+[[snippets]]
+  description = "show innodb status of mysql"
+  command = "SHOW ENGINE INNODB STATUS \\G;"
+  output = ""
