@@ -1,1034 +1,1243 @@
-[[snippets]]
-  description = "find files that have '10' recursively"
+
+[[Snippets]]
+  Description = "find files that have '10' recursively"
+  Output = ""
+  Tag = []
   command = "grep -l '^10$' -R"
-  output = ""
 
-[[snippets]]
-  description = "count unique words in a file by lines"
+[[Snippets]]
+  Description = "count unique words in a file by lines"
+  Output = ""
+  Tag = []
   command = "cat <file_name> | sort | uniq -c"
-  output = ""
 
-[[snippets]]
-  description = "create symlink"
+[[Snippets]]
+  Description = "create symlink"
+  Output = ""
+  Tag = []
   command = "ln -s <real_file(dir)_path> <symlink_path>"
-  output = ""
 
-[[snippets]]
-  description = "unlink <symlink_path>"
+[[Snippets]]
+  Description = "unlink <symlink_path>"
+  Output = ""
+  Tag = []
   command = "remove symlink"
-  output = ""
 
-[[snippets]]
-  description = "filter lines by regexp"
+[[Snippets]]
+  Description = "filter lines by regexp"
+  Output = ""
+  Tag = []
   command = "seq 5 | awk '/[24]/'"
-  output = ""
 
-[[snippets]]
-  description = "三項演算子 by awk"
+[[Snippets]]
+  Description = "三項演算子 by awk"
+  Output = ""
+  Tag = []
   command = "seq 5 | awk '{r=$1%2 ? \"奇数\":\"偶数\"; print r}'"
-  output = ""
 
-[[snippets]]
-  description = "print just first line by awk"
+[[Snippets]]
+  Description = "print just first line by awk"
+  Output = ""
+  Tag = []
   command = "seq 5 | awk 'NR==1 {print $1}'"
-  output = ""
 
-[[snippets]]
-  description = "basic usage of sed"
+[[Snippets]]
+  Description = "basic usage of sed"
+  Output = ""
+  Tag = []
   command = "echo foobar | sed 's/bar/baz/'"
-  output = ""
 
-[[snippets]]
-  description = "summary lines by awk BEGIN-END"
+[[Snippets]]
+  Description = "summary lines by awk BEGIN-END"
+  Output = ""
+  Tag = []
   command = "seq 5 | awk 'BEGIN{a=0}$1%2==0{print $1,\"偶数\"}$1%2{print $1,\"奇数\"}{a+=$1}END{print \"合計\",a}'"
-  output = ""
 
-[[snippets]]
-  description = "\"tail -f\" by less"
+[[Snippets]]
+  Description = "\"tail -f\" by less"
+  Output = ""
+  Tag = []
   command = "less +F <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "awk by specified separator string"
+[[Snippets]]
+  Description = "awk by specified separator string"
+  Output = ""
+  Tag = []
   command = "echo \"1,2,3,4\\n5,6,7,8\" | awk -F',' '{print $2,$4}'"
-  output = ""
 
-[[snippets]]
-  description = "extract by from-to condition of sed"
+[[Snippets]]
+  Description = "extract by from-to condition of sed"
+  Output = ""
+  Tag = []
   command = "seq 10 | sed -n '/2/,/6/p'"
-  output = ""
 
-[[snippets]]
-  description = "find fonts"
+[[Snippets]]
+  Description = "find fonts"
+  Output = ""
+  Tag = []
   command = "fc-list"
-  output = ""
 
-[[snippets]]
-  description = "find files that have '10' recursively by ripgrep"
+[[Snippets]]
+  Description = "find files that have '10' recursively by ripgrep"
+  Output = ""
+  Tag = []
   command = "rg -l '^10$'"
-  output = ""
 
-[[snippets]]
-  description = "find commands that can execute by current login user"
+[[Snippets]]
+  Description = "find commands that can execute by current login user"
+  Output = ""
+  Tag = []
   command = "sudo -l"
-  output = ""
 
-[[snippets]]
-  description = "find commands that can execute by group"
+[[Snippets]]
+  Description = "find commands that can execute by group"
+  Output = ""
+  Tag = []
   command = "sudo -l -g <group_name>"
-  output = ""
 
-[[snippets]]
-  description = "find opened files by a process"
+[[Snippets]]
+  Description = "find opened files by a process"
+  Output = ""
+  Tag = []
   command = "ls /proc/<process_id>/fd"
-  output = ""
 
-[[snippets]]
-  description = "find openned files by a process"
+[[Snippets]]
+  Description = "find openned files by a process"
+  Output = ""
+  Tag = []
   command = "lsof -c <process_name>"
-  output = ""
 
-[[snippets]]
-  description = "show network communication status on this server"
+[[Snippets]]
+  Description = "show network communication status on this server"
+  Output = ""
+  Tag = []
   command = "netstat -anp"
-  output = ""
 
-[[snippets]]
-  description = "extract logs 2016/12/24 21:00~2016/12/25 03:00"
+[[Snippets]]
+  Description = "extract logs 2016/12/24 21:00~2016/12/25 03:00"
+  Output = ""
+  Tag = []
   command = "cat <log_file_name> | sed -n '/24\\/Dec\\/2016 21:..:../,/25\\/Dec\\/2016 03:..:../p'"
-  output = ""
 
-[[snippets]]
-  description = "convert line break to space every 3 lines by xargs"
+[[Snippets]]
+  Description = "convert line break to space every 3 lines by xargs"
+  Output = ""
+  Tag = []
   command = "seq 10 | xargs -n3"
-  output = ""
 
-[[snippets]]
-  description = "concurrent execute by xargs"
+[[Snippets]]
+  Description = "concurrent execute by xargs"
+  Output = ""
+  Tag = []
   command = "seq 10 | xargs -P$(nproc)"
-  output = ""
 
-[[snippets]]
-  description = "use here document"
+[[Snippets]]
+  Description = "use here document"
+  Output = ""
+  Tag = []
   command = "cat << END"
-  output = ""
 
-[[snippets]]
-  description = "substring like operation by parameter expression (変数展開)"
+[[Snippets]]
+  Description = "substring like operation by parameter expression (変数展開)"
+  Output = ""
+  Tag = []
   command = "a=私は俳優よ; echo ${a:0:1}${a:2:2};"
-  output = ""
 
-[[snippets]]
-  description = "sed like operation by parameter expression (変数展開)"
+[[Snippets]]
+  Description = "sed like operation by parameter expression (変数展開)"
+  Output = ""
+  Tag = []
   command = "a=私は俳優よ; echo ${a/俳優/排骨麺};"
-  output = ""
 
-[[snippets]]
-  description = "play music by mpv"
+[[Snippets]]
+  Description = "play music by mpv"
+  Output = ""
+  Tag = []
   command = "mpv --no-video ."
-  output = ""
 
-[[snippets]]
-  description = "save a command result to clipboard in Linux"
+[[Snippets]]
+  Description = "save a command result to clipboard in Linux"
+  Output = ""
+  Tag = []
   command = "echo \"hoge\" | xclip -selection c"
-  output = ""
 
-[[snippets]]
-  description = "arithmetic operations (四則演算) in shell"
+[[Snippets]]
+  Description = "arithmetic operations (四則演算) in shell"
+  Output = ""
+  Tag = []
   command = "echo $((1+2))"
-  output = ""
 
-[[snippets]]
-  description = "declare list in shell"
+[[Snippets]]
+  Description = "declare list in shell"
+  Output = ""
+  Tag = []
   command = "a=(\"$SHELL\" \"$LANG\" \"$USER\")"
-  output = ""
 
-[[snippets]]
-  description = "declare dictionary in shell"
+[[Snippets]]
+  Description = "declare dictionary in shell"
+  Output = ""
+  Tag = []
   command = "declare -A b; b[\"SHELL\"]=\"$SHELL\"; b[\"LANG\"]=\"$LANG\"; b[\"USER\"]=\"$USER\""
-  output = ""
 
-[[snippets]]
-  description = "get string length by parameter expression (変数展開)"
+[[Snippets]]
+  Description = "get string length by parameter expression (変数展開)"
+  Output = ""
+  Tag = []
   command = "hoge=\"hoge\"; echo ${#hoge}"
-  output = ""
 
-[[snippets]]
-  description = "for-loop in shell"
+[[Snippets]]
+  Description = "for-loop in shell"
+  Output = ""
+  Tag = []
   command = "for x in \"$1\" \"$2\" \"$3\"; do echo $x; done"
-  output = ""
 
-[[snippets]]
-  description = "while-loop in shell"
+[[Snippets]]
+  Description = "while-loop in shell"
+  Output = ""
+  Tag = []
   command = "seq 3 | while read x; do echo $x; done"
-  output = ""
 
-[[snippets]]
-  description = "check previous command's result"
+[[Snippets]]
+  Description = "check previous command's result"
+  Output = ""
+  Tag = []
   command = "echo $?"
-  output = ""
 
-[[snippets]]
-  description = "check previous pipeline's results in zsh"
+[[Snippets]]
+  Description = "check previous pipeline's results in zsh"
+  Output = ""
+  Tag = []
   command = "echo ${pipestatus[@]}"
-  output = ""
 
-[[snippets]]
-  description = "check previous pipeline's results in bash"
+[[Snippets]]
+  Description = "check previous pipeline's results in bash"
+  Output = ""
+  Tag = []
   command = "echo ${PIPESTATUS[@]}"
-  output = ""
 
-[[snippets]]
-  description = "handle shell script's parameters as list by \"$@\""
+[[Snippets]]
+  Description = "handle shell script's parameters as list by \"$@\""
+  Output = ""
+  Tag = []
   command = "set aa bb cc; for x in \"$@\"; do echo $x; done"
-  output = ""
 
-[[snippets]]
-  description = "check if a file exists in shell"
+[[Snippets]]
+  Description = "check if a file exists in shell"
+  Output = ""
+  Tag = []
   command = "if [ -e <file_name> ]; then echo \"file exists\"; else echo \"file doesn't exists\"; fi"
-  output = ""
 
-[[snippets]]
-  description = "compare if numbers are same in shell"
+[[Snippets]]
+  Description = "compare if numbers are same in shell"
+  Output = ""
+  Tag = []
   command = "if [ 1 -eq 1 ]; then echo \"same num\"; else echo \"different num\"; fi"
-  output = ""
 
-[[snippets]]
-  description = "compare if strings are same in shell"
+[[Snippets]]
+  Description = "compare if strings are same in shell"
+  Output = ""
+  Tag = []
   command = "if [ 'a' = 'b' ]; then echo \"same str\"; else echo \"different str\"; fi"
-  output = ""
 
-[[snippets]]
-  description = "read std input in shell script"
+[[Snippets]]
+  Description = "read std input in shell script"
+  Output = ""
+  Tag = []
   command = "echo $(cat)"
-  output = ""
 
-[[snippets]]
-  description = "use deafult value if a specified variable is empty by parameter expression (変数展開)"
+[[Snippets]]
+  Description = "use deafult value if a specified variable is empty by parameter expression (変数展開)"
+  Output = ""
+  Tag = []
   command = "echo ${<variable_name>:-\"fuga\"}"
-  output = ""
 
-[[snippets]]
-  description = "count line break number"
+[[Snippets]]
+  Description = "count line break number"
+  Output = ""
+  Tag = []
   command = "seq 100 | wc -l"
-  output = ""
 
-[[snippets]]
-  description = "show all procs with CPU utilization, memory usage"
+[[Snippets]]
+  Description = "show all procs with CPU utilization, memory usage"
+  Output = ""
+  Tag = []
   command = "ps aux"
-  output = ""
 
-[[snippets]]
-  description = "show process tree (parent-child relation)"
+[[Snippets]]
+  Description = "show process tree (parent-child relation)"
+  Output = ""
+  Tag = []
   command = "pstree -T"
-  output = ""
 
-[[snippets]]
-  description = "pet search"
+[[Snippets]]
+  Description = "pet search"
+  Output = ""
+  Tag = []
   command = "list1=(\"a\", \"b\", \"c\");list2=(\"${list1[@]}\", \"d\");echo ${list2[@]}"
-  output = ""
 
-[[snippets]]
-  description = "add items to list in shell"
+[[Snippets]]
+  Description = "add items to list in shell"
+  Output = ""
+  Tag = []
   command = "list1=(\"a\", \"b\", \"c\");list2=(\"${list1[@]}\", \"d\", \"e\");echo ${list2[@]}"
-  output = ""
 
-[[snippets]]
-  description = "check variable and declare defaul val by parameter expression (変数展開)"
+[[Snippets]]
+  Description = "check variable and declare defaul val by parameter expression (変数展開)"
+  Output = ""
+  Tag = []
   command = "echo ${hoge:-\"default value\"}"
-  output = ""
 
-[[snippets]]
-  description = "create string patterns by brace expression (ブレース展開)"
+[[Snippets]]
+  Description = "create string patterns by brace expression (ブレース展開)"
+  Output = ""
+  Tag = []
   command = "echo file.{txt,csv}"
-  output = ""
 
-[[snippets]]
-  description = "treat a command result as a file by process substitution (プロセス置き換え)"
+[[Snippets]]
+  Description = "treat a command result as a file by process substitution (プロセス置き換え)"
+  Output = ""
+  Tag = []
   command = "diff <(echo \"a\\nb\\nc\") <(echo \"a\\nB\\nc\")"
-  output = ""
 
-[[snippets]]
-  description = "reference prev command"
+[[Snippets]]
+  Description = "reference prev command"
+  Output = ""
+  Tag = []
   command = "!!"
-  output = ""
 
-[[snippets]]
-  description = "history 20"
+[[Snippets]]
+  Description = "history 20"
+  Output = ""
+  Tag = []
   command = "history"
-  output = ""
 
-[[snippets]]
-  description = "show a command history"
+[[Snippets]]
+  Description = "show a command history"
+  Output = ""
+  Tag = []
   command = "history <history_length>"
-  output = ""
 
-[[snippets]]
-  description = "exec a command in history by history number"
+[[Snippets]]
+  Description = "exec a command in history by history number"
+  Output = ""
+  Tag = []
   command = "!<history_number>"
-  output = ""
 
-[[snippets]]
-  description = "dump Brewfile to specified path"
+[[Snippets]]
+  Description = "dump Brewfile to specified path"
+  Output = ""
+  Tag = []
   command = "brew bundle dump --file ./.Brewfile --force"
-  output = ""
 
-[[snippets]]
-  description = "install brew packages by .Brewfile in specified path"
+[[Snippets]]
+  Description = "install brew packages by .Brewfile in specified path"
+  Output = ""
+  Tag = []
   command = "brew bundle install --file ./.Brewfile"
-  output = ""
 
-[[snippets]]
-  description = "generate random high secure passwords"
+[[Snippets]]
+  Description = "generate random high secure passwords"
+  Output = ""
+  Tag = []
   command = "pwgen -s -y 20"
-  output = ""
 
-[[snippets]]
-  description = "compare strings by regexp in if-statement of shell"
+[[Snippets]]
+  Description = "compare strings by regexp in if-statement of shell"
+  Output = ""
+  Tag = []
   command = "if [[ 'abc' =~ '^a$' ]]; then echo \"same str\"; else echo \"different str\"; fi"
-  output = ""
 
-[[snippets]]
-  description = "while infinit-loop in shell"
+[[Snippets]]
+  Description = "while infinit-loop in shell"
+  Output = ""
+  Tag = []
   command = "while :; do sleep 1; echo hoge; done"
-  output = ""
 
-[[snippets]]
-  description = "list current folder files recursive"
+[[Snippets]]
+  Description = "list current folder files recursive"
+  Output = ""
+  Tag = []
   command = "find -type f"
-  output = ""
 
-[[snippets]]
-  description = "find recursively files by file name in current folder"
+[[Snippets]]
+  Description = "find recursively files by file name in current folder"
+  Output = ""
+  Tag = []
   command = "find . -name \"file_name\""
-  output = ""
 
-[[snippets]]
-  description = "find files by file name in current folder"
+[[Snippets]]
+  Description = "find files by file name in current folder"
+  Output = ""
+  Tag = []
   command = "find . -maxdepth 1 -name \"file_name\""
-  output = ""
 
-[[snippets]]
-  description = "remove lines by grep"
+[[Snippets]]
+  Description = "remove lines by grep"
+  Output = ""
+  Tag = []
   command = "echo \"a\\nb\\nc\" | grep -v '^[ab]'"
-  output = ""
 
-[[snippets]]
-  description = "replace string by tr command"
+[[Snippets]]
+  Description = "replace string by tr command"
+  Output = ""
+  Tag = []
   command = "echo \"a, b, c, d\" | tr ',' '|'"
-  output = ""
 
-[[snippets]]
-  description = "delete string by tr command"
+[[Snippets]]
+  Description = "delete string by tr command"
+  Output = ""
+  Tag = []
   command = "echo \"a, b, c, d\" | tr -d ','"
-  output = ""
 
-[[snippets]]
-  description = "show available java environment in ArchLinux"
+[[Snippets]]
+  Description = "show available java environment in ArchLinux"
+  Output = ""
+  Tag = []
   command = "archlinux-java status"
-  output = ""
 
-[[snippets]]
-  description = "set specified java environment as system default in ArchLinux"
+[[Snippets]]
+  Description = "set specified java environment as system default in ArchLinux"
+  Output = ""
+  Tag = []
   command = "sudo archlinux-java set <java_environment_name>"
-  output = ""
 
-[[snippets]]
-  description = "register message to slack reminder"
+[[Snippets]]
+  Description = "register message to slack reminder"
+  Output = ""
+  Tag = []
   command = "/remind <#channel_name> <message> <date_time>"
-  output = ""
 
-[[snippets]]
-  description = "overwrite and create backup file by sed"
+[[Snippets]]
+  Description = "overwrite and create backup file by sed"
+  Output = ""
+  Tag = []
   command = "sed -i.bk 's/hoge/fuga/g' hoge.txt"
-  output = ""
 
-[[snippets]]
-  description = "show calendar"
+[[Snippets]]
+  Description = "show calendar"
+  Output = ""
+  Tag = []
   command = "cal"
-  output = ""
 
-[[snippets]]
-  description = "check if swap is happend (see Swap row)"
+[[Snippets]]
+  Description = "check if swap is happend (see Swap row)"
+  Output = ""
+  Tag = []
   command = "free"
-  output = ""
 
-[[snippets]]
-  description = "check the cause of high load average (CPU utilization(user?, system?), ioawait?)"
+[[Snippets]]
+  Description = "check the cause of high load average (CPU utilization(user?, system?), ioawait?)"
+  Output = ""
+  Tag = []
   command = "sar <duration> <count>"
-  output = ""
 
-[[snippets]]
-  description = "check I/O utilization (see %util column)"
+[[Snippets]]
+  Description = "check I/O utilization (see %util column)"
+  Output = ""
+  Tag = []
   command = "iostat -x"
-  output = ""
 
-[[snippets]]
-  description = "check load aveages"
+[[Snippets]]
+  Description = "check load aveages"
+  Output = ""
+  Tag = []
   command = "top"
-  output = ""
 
-[[snippets]]
-  description = "check high memory consuming process (use 'Shift + m' shortcut key)"
+[[Snippets]]
+  Description = "check high memory consuming process (use 'Shift + m' shortcut key)"
+  Output = ""
+  Tag = []
   command = "top"
-  output = ""
 
-[[snippets]]
-  description = "check high CPU utilization (including user, system) processes"
+[[Snippets]]
+  Description = "check high CPU utilization (including user, system) processes"
+  Output = ""
+  Tag = []
   command = "pidstat"
-  output = ""
 
-[[snippets]]
-  description = "check high I/O utilization processes (see kB_rd/s、kB_wr/s)"
+[[Snippets]]
+  Description = "check high I/O utilization processes (see kB_rd/s、kB_wr/s)"
+  Output = ""
+  Tag = []
   command = "pidstat -d"
-  output = ""
 
-[[snippets]]
-  description = "execute a coomand in cycles"
+[[Snippets]]
+  Description = "execute a coomand in cycles"
+  Output = ""
+  Tag = []
   command = "watch <command>"
-  output = ""
 
-[[snippets]]
-  description = "just check syntax errors in a command (the command is not executed)."
+[[Snippets]]
+  Description = "just check syntax errors in a command (the command is not executed)."
+  Output = ""
+  Tag = []
   command = "bash -n <command>"
-  output = ""
 
-[[snippets]]
-  description = "cut by delimiter and specify columns range"
+[[Snippets]]
+  Description = "cut by delimiter and specify columns range"
+  Output = ""
+  Tag = []
   command = "echo \"1:user1:root\\n2:user2:normal\\n3:user3:root\" | cut -d ':' -f 2-"
-  output = ""
 
-[[snippets]]
-  description = "show variables which start by \"FOO\""
+[[Snippets]]
+  Description = "show variables which start by \"FOO\""
+  Output = ""
+  Tag = []
   command = "echo ${!FOO*}"
-  output = ""
 
-[[snippets]]
-  description = "reverse each line"
+[[Snippets]]
+  Description = "reverse each line"
+  Output = ""
+  Tag = []
   command = "echo \"12345\\nabcde\" | rev"
-  output = ""
 
-[[snippets]]
-  description = "output to stdout and file by tee command"
+[[Snippets]]
+  Description = "output to stdout and file by tee command"
+  Output = ""
+  Tag = []
   command = "echo \"abcdefg\" | tee <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "write oneliner by Python"
+[[Snippets]]
+  Description = "write oneliner by Python"
+  Output = ""
+  Tag = []
   command = "cat hoge.txt | python -c 'import sys; [print(a.strip()) for a in sys.stdin]'"
-  output = ""
 
-[[snippets]]
-  description = "count length of each line"
+[[Snippets]]
+  Description = "count length of each line"
+  Output = ""
+  Tag = []
   command = "cat speech.txt | awk '{print length($1), $1}'"
-  output = ""
 
-[[snippets]]
-  description = "find files which are created at 30 or more days before."
+[[Snippets]]
+  Description = "find files which are created at 30 or more days before."
+  Output = ""
+  Tag = []
   command = "find . -ctime +30"
-  output = ""
 
-[[snippets]]
-  description = "find files by multiple conditions with -or option (-and option is also able to use)"
+[[Snippets]]
+  Description = "find files by multiple conditions with -or option (-and option is also able to use)"
+  Output = ""
+  Tag = []
   command = "find . -ctime +30 -or -name hoge"
-  output = ""
 
-[[snippets]]
-  description = "show disk utilization"
+[[Snippets]]
+  Description = "show disk utilization"
+  Output = ""
+  Tag = []
   command = "df -h"
-  output = ""
 
-[[snippets]]
-  description = "show disk utilization of the specified folder"
+[[Snippets]]
+  Description = "show disk utilization of the specified folder"
+  Output = ""
+  Tag = []
   command = "du -h ."
-  output = ""
 
-[[snippets]]
-  description = "check network utilization of each process"
+[[Snippets]]
+  Description = "check network utilization of each process"
+  Output = ""
+  Tag = []
   command = "sudo nethogs"
-  output = ""
 
-[[snippets]]
-  description = "grep and show only words matched by regex"
+[[Snippets]]
+  Description = "grep and show only words matched by regex"
+  Output = ""
+  Tag = []
   command = "echo 'abc1def2gh3' | grep -oE '[1-9]+'"
-  output = ""
 
-[[snippets]]
-  description = "output system call log by strace"
+[[Snippets]]
+  Description = "output system call log by strace"
+  Output = ""
+  Tag = []
   command = "strace -o <strace_log_file_name> <command_name>"
-  output = ""
 
-[[snippets]]
-  description = "display information about ELF file(実行可能ファイル)"
+[[Snippets]]
+  Description = "display information about ELF file(実行可能ファイル)"
+  Output = ""
+  Tag = []
   command = "readelf -h <executable_file>"
-  output = ""
 
-[[snippets]]
-  description = "show only unique rows"
+[[Snippets]]
+  Description = "show only unique rows"
+  Output = ""
+  Tag = []
   command = "echo \"a\\na\\nb\\nc\" | uniq -u"
-  output = ""
 
-[[snippets]]
-  description = "skip evaluating column 1 by uniq command"
+[[Snippets]]
+  Description = "skip evaluating column 1 by uniq command"
+  Output = ""
+  Tag = []
   command = "echo \"1 a\\n2 a\\n3 b\\n4 c\" | uniq -f1 -c"
-  output = ""
 
-[[snippets]]
-  description = "wrap all matched string by 全体マッチ of sed"
+[[Snippets]]
+  Description = "wrap all matched string by 全体マッチ of sed"
+  Output = ""
+  Tag = []
   command = "echo \"私はラーメンが好きです。\\nラーメンうまい。\" | sed 's/ラーメン/「&」/g'"
-  output = ""
 
-[[snippets]]
-  description = "show logical cpu count"
+[[Snippets]]
+  Description = "show logical cpu count"
+  Output = ""
+  Tag = []
   command = "grep -c processor /proc/cpuinfo"
-  output = ""
 
-[[snippets]]
-  description = "show reminder list of the skack channel"
+[[Snippets]]
+  Description = "show reminder list of the skack channel"
+  Output = ""
+  Tag = []
   command = "/remind list"
-  output = ""
 
-[[snippets]]
-  description = "delete local git branch"
+[[Snippets]]
+  Description = "delete local git branch"
+  Output = ""
+  Tag = []
   command = "git branch -d <branch_name>"
-  output = ""
 
-[[snippets]]
-  description = "check Line Break Code (改行コード) of the file ($: LF, ^M: CR)"
+[[Snippets]]
+  Description = "check Line Break Code (改行コード) of the file ($: LF, ^M: CR)"
+  Output = ""
+  Tag = []
   command = "cat -e <fine_name>"
-  output = ""
 
-[[snippets]]
-  description = "format table"
+[[Snippets]]
+  Description = "format table"
+  Output = ""
+  Tag = []
   command = "echo 'hoge 1000\\nfoo 200\\nfugafuga 10' | column -t"
-  output = ""
 
-[[snippets]]
-  description = "parse csv by python csv package"
+[[Snippets]]
+  Description = "parse csv by python csv package"
+  Output = ""
+  Tag = []
   command = "echo '\"1\",\"\"\"2\"\"\",3\\n4,5,6' | python -c 'import csv,sys;[print(x[1]) for x in csv.reader(sys.stdin)]'"
-  output = ""
 
-[[snippets]]
-  description = "convert txt format or apply formatter by pandoc"
+[[Snippets]]
+  Description = "convert txt format or apply formatter by pandoc"
+  Output = ""
+  Tag = []
   command = "cat table.md | pandoc -t gfm"
-  output = ""
 
-[[snippets]]
-  description = "show 10 days ago date by date command"
+[[Snippets]]
+  Description = "show 10 days ago date by date command"
+  Output = ""
+  Tag = []
   command = "date -d '10 days ago'"
-  output = ""
 
-[[snippets]]
-  description = "show 10 days later date by date command"
+[[Snippets]]
+  Description = "show 10 days later date by date command"
+  Output = ""
+  Tag = []
   command = "date -d '10 days'"
-  output = ""
 
-[[snippets]]
-  description = "show date specified by time zone"
+[[Snippets]]
+  Description = "show date specified by time zone"
+  Output = ""
+  Tag = []
   command = "TZ=UTC date"
-  output = ""
 
-[[snippets]]
-  description = "replace parameter string by xargs"
+[[Snippets]]
+  Description = "replace parameter string by xargs"
+  Output = ""
+  Tag = []
   command = "seq 4 | xargs -I@ echo '@ days'"
-  output = ""
 
-[[snippets]]
-  description = "show a date 10 days later from 2017-02-14"
+[[Snippets]]
+  Description = "show a date 10 days later from 2017-02-14"
+  Output = ""
+  Tag = []
   command = "date -d '2017-02-14 10 days'"
-  output = ""
 
-[[snippets]]
-  description = "compare only first 7 caracters by uniq command"
+[[Snippets]]
+  Description = "compare only first 7 caracters by uniq command"
+  Output = ""
+  Tag = []
   command = "seq 0 10 | xargs -I@ date '+%F' -d '2017-02-24 @day' | uniq -w7"
-  output = ""
 
-[[snippets]]
-  description = "do startsWith by cut command"
+[[Snippets]]
+  Description = "do startsWith by cut command"
+  Output = ""
+  Tag = []
   command = "echo \"2021-12-01\\n2021-12-02\" | cut -c 1-7"
-  output = ""
 
-[[snippets]]
-  description = "convert hex to decimal number in bash"
+[[Snippets]]
+  Description = "convert hex to decimal number in bash"
+  Output = ""
+  Tag = []
   command = "echo $(( 16#101e ))"
-  output = ""
 
-[[snippets]]
-  description = "separate string by 4 words with sed"
+[[Snippets]]
+  Description = "separate string by 4 words with sed"
+  Output = ""
+  Tag = []
   command = "echo \"1111111111111111\" | sed -E 's/.{4}/& /g'"
-  output = ""
 
-[[snippets]]
-  description = "separate chars by new line (改行) with grep -o"
+[[Snippets]]
+  Description = "separate chars by new line (改行) with grep -o"
+  Output = ""
+  Tag = []
   command = "echo \"あいうえお\" | grep -o ."
-  output = ""
 
-[[snippets]]
-  description = "show byte length by wc"
+[[Snippets]]
+  Description = "show byte length by wc"
+  Output = ""
+  Tag = []
   command = "echo あ | wc -c"
-  output = ""
 
-[[snippets]]
-  description = "show emoji by unicode"
+[[Snippets]]
+  Description = "show emoji by unicode"
+  Output = ""
+  Tag = []
   command = "echo -e '\\U1F363\\U1F37A'"
-  output = ""
 
-[[snippets]]
-  description = "check caracter code(文字コード) of the file"
+[[Snippets]]
+  Description = "check caracter code(文字コード) of the file"
+  Output = ""
+  Tag = []
   command = "file -i <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "echo unicode codepoints of emoji"
+[[Snippets]]
+  Description = "echo unicode codepoints of emoji"
+  Output = ""
+  Tag = []
   command = "echo 🍣🍺 | iconv -f UTF-8 -t UCS-4 | xxd -p | fold -b8"
-  output = ""
 
-[[snippets]]
-  description = "encode a bianry file to base64"
+[[Snippets]]
+  Description = "encode a bianry file to base64"
+  Output = ""
+  Tag = []
   command = "base64 <binary_file_name>"
-  output = ""
 
-[[snippets]]
-  description = "generate sha256 hash of a file"
+[[Snippets]]
+  Description = "generate sha256 hash of a file"
+  Output = ""
+  Tag = []
   command = "sha256sum <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "convert binary number to hex"
+[[Snippets]]
+  Description = "convert binary number to hex"
+  Output = ""
+  Tag = []
   command = "echo 11100100 | sed 's/^/obase=16;ibase=2;/' | bc"
-  output = ""
 
-[[snippets]]
-  description = "add prefix string by sed"
+[[Snippets]]
+  Description = "add prefix string by sed"
+  Output = ""
+  Tag = []
   command = "echo \"hoge\\nfuga\" | sed '1s/^/[prefix]/'"
-  output = ""
 
-[[snippets]]
-  description = "decompress gz file"
+[[Snippets]]
+  Description = "decompress gz file"
+  Output = ""
+  Tag = []
   command = "gzip -d <gz file name>"
-  output = ""
 
-[[snippets]]
-  description = "check Line Break Code (改行コード) of the file"
+[[Snippets]]
+  Description = "check Line Break Code (改行コード) of the file"
+  Output = ""
+  Tag = []
   command = "cat newline.txt | tr -dc '\\015\\012' | sed -z 's/\\x0d/CR/g;s/\\x0a/LF&/g' | sort | uniq -c"
-  output = ""
 
-[[snippets]]
-  description = "filter rows by sed (just show 1~3 rows)"
+[[Snippets]]
+  Description = "filter rows by sed (just show 1~3 rows)"
+  Output = ""
+  Tag = []
   command = "seq 5 | sed -n '1,3p'"
-  output = ""
 
-[[snippets]]
-  description = "filter rows by sed (just show 2~ rows)"
+[[Snippets]]
+  Description = "filter rows by sed (just show 2~ rows)"
+  Output = ""
+  Tag = []
   command = "seq 5 | sed -n '2,$p'"
-  output = ""
 
-[[snippets]]
-  description = "filter rows by sed (just show 1行目から2行飛ばし)"
+[[Snippets]]
+  Description = "filter rows by sed (just show 1行目から2行飛ばし)"
+  Output = ""
+  Tag = []
   command = "seq 10 | sed -n '1~2p'"
-  output = ""
 
-[[snippets]]
-  description = "encode str to base64 string"
+[[Snippets]]
+  Description = "encode str to base64 string"
+  Output = ""
+  Tag = []
   command = "echo \"hoge\" | base64"
-  output = ""
 
-[[snippets]]
-  description = "decode base64 string"
+[[Snippets]]
+  Description = "decode base64 string"
+  Output = ""
+  Tag = []
   command = "echo \"aG9nZQo=\" | base64 -d"
-  output = ""
 
-[[snippets]]
-  description = "infnity loop by seq"
+[[Snippets]]
+  Description = "infnity loop by seq"
+  Output = ""
+  Tag = []
   command = "pref"
-  output = ""
 
-[[snippets]]
-  description = "split each char and do something by awk"
+[[Snippets]]
+  Description = "split each char and do something by awk"
+  Output = ""
+  Tag = []
   command = "seq -w 0 10 | awk -F \"\" '{print $1*$1+$2*$2}'"
-  output = ""
 
-[[snippets]]
-  description = "setup slack reacji-channeler (emoji reaction)"
+[[Snippets]]
+  Description = "setup slack reacji-channeler (emoji reaction)"
+  Output = ""
+  Tag = []
   command = "/reacji-channeler <target_emoji like :mega:> <channel_name like #big-news>"
-  output = ""
 
-[[snippets]]
-  description = "reset working directory to HEAD"
+[[Snippets]]
+  Description = "reset working directory to HEAD"
+  Output = ""
+  Tag = []
   command = "git restore <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "checkout tags to branch"
+[[Snippets]]
+  Description = "checkout tags to branch"
+  Output = ""
+  Tag = []
   command = "git checkout -b <branch_name> refs/tags/<tag_name>"
-  output = ""
 
-[[snippets]]
-  description = "sort rows by second column values"
+[[Snippets]]
+  Description = "sort rows by second column values"
+  Output = ""
+  Tag = []
   command = "echo \"bar 30\\nhogehoge 3\\nhoge 2\\nfuga 1\" | sort -k 2,2"
-  output = ""
 
-[[snippets]]
-  description = "sort files by created at (DESC)"
+[[Snippets]]
+  Description = "sort files by created at (DESC)"
+  Output = ""
+  Tag = []
   command = "ls -ltr"
-  output = ""
 
-[[snippets]]
-  description = "list files with full created at"
+[[Snippets]]
+  Description = "list files with full created at"
+  Output = ""
+  Tag = []
   command = "ls --full-time"
-  output = ""
 
-[[snippets]]
-  description = "rename current git branch"
+[[Snippets]]
+  Description = "rename current git branch"
+  Output = ""
+  Tag = []
   command = "git branch -m <new_branch_name>"
-  output = ""
 
-[[snippets]]
-  description = "modify artifact version of pom.xml by mvn command"
+[[Snippets]]
+  Description = "modify artifact version of pom.xml by mvn command"
+  Output = ""
+  Tag = []
   command = "mvn versions:set -DnewVersion=<artifact_version>"
-  output = ""
 
-[[snippets]]
-  description = "show dependency tree of the mevan project"
+[[Snippets]]
+  Description = "show dependency tree of the mevan project"
+  Output = ""
+  Tag = []
   command = "mvn dependency:tree"
-  output = ""
 
-[[snippets]]
-  description = "shuffle passed lines"
+[[Snippets]]
+  Description = "shuffle passed lines"
+  Output = ""
+  Tag = []
   command = "seq 5 | shuf"
-  output = ""
 
-[[snippets]]
-  description = "check required shared library of the command"
+[[Snippets]]
+  Description = "check required shared library of the command"
+  Output = ""
+  Tag = []
   command = "ldd /usr/bin/tail"
-  output = ""
 
-[[snippets]]
-  description = "mount a device"
+[[Snippets]]
+  Description = "mount a device"
+  Output = ""
+  Tag = []
   command = "mount -t <file system type e.g. vfat> <partition e.g. /dev/sdb1> <mount dir e.g. /mnt/disk1>"
-  output = ""
 
-[[snippets]]
-  description = "observ usb devices"
+[[Snippets]]
+  Description = "observ usb devices"
+  Output = ""
+  Tag = []
   command = "lsusb"
-  output = ""
 
-[[snippets]]
-  description = "show proc id of the app name"
+[[Snippets]]
+  Description = "show proc id of the app name"
+  Output = ""
+  Tag = []
   command = "pgrep <app_name>"
-  output = ""
 
-[[snippets]]
-  description = "sabe clipboard contents to a file"
+[[Snippets]]
+  Description = "sabe clipboard contents to a file"
+  Output = ""
+  Tag = []
   command = "pbpaste > <filename>"
-  output = ""
 
-[[snippets]]
-  description = "save a command result to clipboard in Mac"
+[[Snippets]]
+  Description = "save a command result to clipboard in Mac"
+  Output = ""
+  Tag = []
   command = "echo \"hoge\" | pbcopy"
-  output = ""
 
-[[snippets]]
-  description = "connect local mysql by mysql client"
+[[Snippets]]
+  Description = "connect local mysql by mysql client"
+  Output = ""
+  Tag = []
   command = "mysql -h 127.0.0.1 -u <user_name> -p <schema_name> -A"
-  output = ""
 
-[[snippets]]
-  description = "check general_log config of mysql"
+[[Snippets]]
+  Description = "check general_log config of mysql"
+  Output = ""
+  Tag = []
   command = "show variables like 'general_log%';"
-  output = ""
 
-[[snippets]]
-  description = "configure general_log"
+[[Snippets]]
+  Description = "configure general_log"
+  Output = ""
+  Tag = []
   command = "set global general_log = on;"
-  output = ""
 
-[[snippets]]
-  description = "list changed file of the GitHub pull request"
+[[Snippets]]
+  Description = "list changed file of the GitHub pull request"
+  Output = ""
+  Tag = []
   command = "gh pr diff <pr_number> --name-only"
-  output = ""
 
-[[snippets]]
-  description = "get a GitHub personal token configured to use"
+[[Snippets]]
+  Description = "get a GitHub personal token configured to use"
+  Output = ""
+  Tag = []
   command = "gh auth token"
-  output = ""
 
-[[snippets]]
-  description = "save git chages to stash"
+[[Snippets]]
+  Description = "save git chages to stash"
+  Output = ""
+  Tag = []
   command = "git stash -u"
-  output = ""
 
-[[snippets]]
-  description = "list saved changes of git stash"
+[[Snippets]]
+  Description = "list saved changes of git stash"
+  Output = ""
+  Tag = []
   command = "git stash list"
-  output = ""
 
-[[snippets]]
-  description = "apply git stash of \"stash@{0}\""
+[[Snippets]]
+  Description = "apply git stash of \"stash@{0}\""
+  Output = ""
+  Tag = []
   command = "git stash apply stash@{0}"
-  output = ""
 
-[[snippets]]
-  description = "checkout specified file of the branch"
+[[Snippets]]
+  Description = "checkout specified file of the branch"
+  Output = ""
+  Tag = []
   command = "git checkout <branch_name> -- <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "get absolute path"
+[[Snippets]]
+  Description = "get absolute path"
+  Output = ""
+  Tag = []
   command = "realpath <path>"
-  output = ""
 
-[[snippets]]
-  description = "format mysql datetime type value to yyyy-mm-dd string"
+[[Snippets]]
+  Description = "format mysql datetime type value to yyyy-mm-dd string"
+  Output = ""
+  Tag = []
   command = "DATE_FORMAT(<date_time_column>, '%Y-%m-%d')"
-  output = ""
 
-[[snippets]]
-  description = "show ip address of devices"
+[[Snippets]]
+  Description = "show ip address of devices"
+  Output = ""
+  Tag = []
   command = "ip address"
-  output = ""
 
-[[snippets]]
-  description = "show terminal emulator's configs"
+[[Snippets]]
+  Description = "show terminal emulator's configs"
+  Output = ""
+  Tag = []
   command = "stty -a"
-  output = ""
 
-[[snippets]]
-  description = "show the shared libraries that the program depends on."
+[[Snippets]]
+  Description = "show the shared libraries that the program depends on."
+  Output = ""
+  Tag = []
   command = "ldd <program_path>"
-  output = ""
 
-[[snippets]]
-  description = "add prefix string by sed ver2"
+[[Snippets]]
+  Description = "add prefix string by sed ver2"
+  Output = ""
+  Tag = []
   command = "echo \"hoge\" | sed 's/.*/prefix_&/g'"
-  output = ""
 
-[[snippets]]
-  description = "echo string by unicode"
+[[Snippets]]
+  Description = "echo string by unicode"
+  Output = ""
+  Tag = []
   command = "echo -e '\\U30B7\\U30A7\\U30EB'"
-  output = ""
 
-[[snippets]]
-  description = "start http server by python"
+[[Snippets]]
+  Description = "start http server by python"
+  Output = ""
+  Tag = []
   command = "python -m http.server 8000"
-  output = ""
 
-[[snippets]]
-  description = "start telnet server by nc"
+[[Snippets]]
+  Description = "start telnet server by nc"
+  Output = ""
+  Tag = []
   command = "nc -l -p 8080"
-  output = ""
 
-[[snippets]]
-  description = "send text on telnet by bash feature"
+[[Snippets]]
+  Description = "send text on telnet by bash feature"
+  Output = ""
+  Tag = []
   command = "echo \"hoge\" > /dev/tcp/127.0.0.1/8080"
-  output = ""
 
-[[snippets]]
-  description = "generate random number (0~255)"
+[[Snippets]]
+  Description = "generate random number (0~255)"
+  Output = ""
+  Tag = []
   command = "shuf -i 0-255 -n 1"
-  output = ""
 
-[[snippets]]
-  description = "shuffle and increace by shuf command"
+[[Snippets]]
+  Description = "shuffle and increace by shuf command"
+  Output = ""
+  Tag = []
   command = "seq 0 5 | shuf -rn 10"
-  output = ""
 
-[[snippets]]
-  description = "show specified row's text"
+[[Snippets]]
+  Description = "show specified row's text"
+  Output = ""
+  Tag = []
   command = "seq 1 10 | head -n 4 | tail -n 1"
-  output = ""
 
-[[snippets]]
-  description = "joint multiple text files"
+[[Snippets]]
+  Description = "joint multiple text files"
+  Output = ""
+  Tag = []
   command = "paste <file_1> <file_2> <file_3>"
-  output = ""
 
-[[snippets]]
-  description = "show files modified and unstaged"
+[[Snippets]]
+  Description = "show files modified and unstaged"
+  Output = ""
+  Tag = []
   command = "git ls-files -m"
-  output = ""
 
-[[snippets]]
-  description = "restore a file managed by git to previous commit"
+[[Snippets]]
+  Description = "restore a file managed by git to previous commit"
+  Output = ""
+  Tag = []
   command = "git restore -s HEAD^ <file_name>"
-  output = ""
 
-[[snippets]]
-  description = "echo same row 2 times"
+[[Snippets]]
+  Description = "echo same row 2 times"
+  Output = ""
+  Tag = []
   command = "seq 5 | sed p"
-  output = ""
 
-[[snippets]]
-  description = "remove first row and final row by sed"
+[[Snippets]]
+  Description = "remove first row and final row by sed"
+  Output = ""
+  Tag = []
   command = "seq 5 | sed '1d;$d'"
-  output = ""
 
-[[snippets]]
-  description = "exec command passed by string"
+[[Snippets]]
+  Description = "exec command passed by string"
+  Output = ""
+  Tag = []
   command = "bash -c 'echo \"hoge\"'"
-  output = ""
 
-[[snippets]]
-  description = "connect server with ssh"
+[[Snippets]]
+  Description = "connect server with ssh"
+  Output = ""
+  Tag = []
   command = "ssh <user_name>@<host_name>"
-  output = ""
 
-[[snippets]]
-  description = "request to http server and just get http status"
+[[Snippets]]
+  Description = "request to http server and just get http status"
+  Output = ""
+  Tag = []
   command = "curl -s -o /dev/null -w '%{http_code}' https://www.google.co.jp"
-  output = ""
 
-[[snippets]]
-  description = "request to a http server (support redirect)"
+[[Snippets]]
+  Description = "request to a http server (support redirect)"
+  Output = ""
+  Tag = []
   command = "curl -IL https://google.co.jp"
-  output = ""
 
-[[snippets]]
-  description = "tail docker compose woking on background log"
+[[Snippets]]
+  Description = "tail docker compose woking on background log"
+  Output = ""
+  Tag = []
   command = "docker compose logs -f"
-  output = ""
 
-[[snippets]]
-  description = "start docker compose with Dockerfile build"
+[[Snippets]]
+  Description = "start docker compose with Dockerfile build"
+  Output = ""
+  Tag = []
   command = "docker compose up --build"
-  output = ""
 
-[[snippets]]
-  description = "reset docker enrvironment"
+[[Snippets]]
+  Description = "reset docker enrvironment"
+  Output = ""
+  Tag = []
   command = "docker system prune -a"
-  output = ""
 
-[[snippets]]
-  description = "show emoji by bytecode(Hex)"
+[[Snippets]]
+  Description = "show emoji by bytecode(Hex)"
+  Output = ""
+  Tag = []
   command = "echo -e '\\xF0\\x9F\\x91\\x8D'"
-  output = ""
 
-[[snippets]]
-  description = "show auto_increment id values of tables"
+[[Snippets]]
+  Description = "show auto_increment id values of tables"
+  Output = ""
+  Tag = []
   command = "SELECT table_name, auto_increment FROM information_schema.tables ORDER BY auto_increment DESC;"
-  output = ""
 
-[[snippets]]
-  description = "open binary file by hexyl(HEX viewer)"
+[[Snippets]]
+  Description = "open binary file by hexyl(HEX viewer)"
+  Output = ""
+  Tag = []
   command = "hexyl <binary_file>"
-  output = ""
 
-[[snippets]]
-  description = "show diff by delta(enhanced diff)"
+[[Snippets]]
+  Description = "show diff by delta(enhanced diff)"
+  Output = ""
+  Tag = []
   command = "delta <file1> <file2>"
-  output = ""
 
-[[snippets]]
-  description = "generate regex"
+[[Snippets]]
+  Description = "generate regex"
+  Output = ""
+  Tag = []
   command = "grex a b c d"
-  output = ""
 
-[[snippets]]
-  description = "syntax highlight source file"
+[[Snippets]]
+  Description = "syntax highlight source file"
+  Output = ""
+  Tag = []
   command = "bat <source file>"
-  output = ""
 
-[[snippets]]
-  description = "find processes using the port_number"
+[[Snippets]]
+  Description = "find processes using the port_number"
+  Output = ""
+  Tag = []
   command = "lsof -i:<port_number>"
-  output = ""
 
-[[snippets]]
-  description = "list configured JVM system properties"
+[[Snippets]]
+  Description = "list configured JVM system properties"
+  Output = ""
+  Tag = []
   command = "jcmd <PID_of_JVM> VM.system_properties"
-  output = ""
 
-[[snippets]]
-  description = "checkout a file in a specified branch"
+[[Snippets]]
+  Description = "checkout a file in a specified branch"
+  Output = ""
+  Tag = []
   command = "git checkout <branch_name> -- <file_path>"
-  output = ""
 
-[[snippets]]
-  description = "install maven wrapper (mvnw)"
+[[Snippets]]
+  Description = "install maven wrapper (mvnw)"
+  Output = ""
+  Tag = []
   command = "mvn wrapper:wrapper"
-  output = ""
 
-[[snippets]]
-  description = "copy tmux(byobu) save-buffer to clipoard"
+[[Snippets]]
+  Description = "copy tmux(byobu) save-buffer to clipoard"
+  Output = ""
+  Tag = []
   command = "tmux save-buffer - | xclip -selection c"
-  output = ""
 
-[[snippets]]
-  description = "if there is no hoge file, create hoge file"
+[[Snippets]]
+  Description = "if there is no hoge file, create hoge file"
+  Output = ""
+  Tag = []
   command = "[ -e hoge ] || touch hoge"
-  output = ""
 
-[[snippets]]
-  description = "tfenv install"
+[[Snippets]]
+  Description = "tfenv install"
+  Output = ""
+  Tag = []
   command = "install specific version of terraform by tfenv"
-  output = ""
 
-[[snippets]]
-  description = "ssh login by SSM SessionManager"
+[[Snippets]]
+  Description = "ssh login by SSM SessionManager"
+  Output = ""
+  Tag = []
   command = "aws ssm start-session --target <instance_id> --document-name SSM-SessionManagerRunShell"
-  output = ""
 
-[[snippets]]
-  description = "dump mysql database"
+[[Snippets]]
+  Description = "dump mysql database"
+  Output = ""
+  Tag = []
   command = "mysqldump -h <host> -u <user> -p <database> > <dump_file_name>"
-  output = ""
 
-[[snippets]]
-  description = "import mysql dump file"
+[[Snippets]]
+  Description = "import mysql dump file"
+  Output = ""
+  Tag = []
   command = "mysql -h <host> -u <user> -p <database> < <dump_file_name>"
-  output = ""
 
-[[snippets]]
-  description = "create new Python project by pipenv"
+[[Snippets]]
+  Description = "create new Python project by pipenv"
+  Output = ""
+  Tag = []
   command = "pipenv install"
-  output = ""
 
-[[snippets]]
-  description = "install python package in pipenv project"
+[[Snippets]]
+  Description = "install python package in pipenv project"
+  Output = ""
+  Tag = []
   command = "pipenv install <package_name>"
-  output = ""
 
-[[snippets]]
-  description = "execute python command in pipenv project"
+[[Snippets]]
+  Description = "execute python command in pipenv project"
+  Output = ""
+  Tag = []
   command = "pipenv run <some_python_command>"
-  output = ""
 
-[[snippets]]
-  description = "use matched string in sed string replacement"
+[[Snippets]]
+  Description = "use matched string in sed string replacement"
+  Output = ""
+  Tag = []
   command = "echo \"Time: 22.000 sec\" | sed -E 's/Time: (.*) sec/\\1/'"
-  output = ""
 
-[[snippets]]
-  description = "add line end (改行) each 2 rows"
+[[Snippets]]
+  Description = "add line end (改行) each 2 rows"
+  Output = ""
+  Tag = []
   command = "echo \"1\\n2\\n3\\n4\\n5\\n6\" | awk 'NR % 2 == 0 {print $0 \"\\n\"} NR % 2 != 0 {print $0}'"
-  output = ""
 
-[[snippets]]
-  description = "check if a file exists in shell (short hands)"
+[[Snippets]]
+  Description = "check if a file exists in shell (short hands)"
+  Output = ""
+  Tag = []
   command = "[ -e <file_name> ] && echo \"file exists\""
-  output = ""
 
-[[snippets]]
-  description = "convert unix time to datetime by strftime of awk"
+[[Snippets]]
+  Description = "convert unix time to datetime by strftime of awk"
+  Output = ""
+  Tag = []
   command = "echo \"1, 1560000000\\n2, 1703160585\" | awk -F',' '{print $1, strftime(\"%Y-%m-%d %H:%M:%S\", $2)}'"
-  output = ""
 
-[[snippets]]
-  description = "copy a local file to docker container"
+[[Snippets]]
+  Description = "copy a local file to docker container"
+  Output = ""
+  Tag = []
   command = "docker cp <local_file_name> <container_name>:/<copied_file_name>"
-  output = ""
 
-[[snippets]]
-  description = "enable mysql global lock monitor"
+[[Snippets]]
+  Description = "enable mysql global lock monitor"
+  Output = ""
+  Tag = []
   command = "SET GLOBAL innodb_status_output_locks=ON;"
-  output = ""
 
-[[snippets]]
-  description = "show transaction isolation level of mysql"
+[[Snippets]]
+  Description = "show transaction isolation level of mysql"
+  Output = ""
+  Tag = []
   command = "SELECT @@transaction_isolation;"
-  output = ""
 
-[[snippets]]
-  description = "show innodb status of mysql"
+[[Snippets]]
+  Description = "show innodb status of mysql"
+  Output = ""
+  Tag = []
   command = "SHOW ENGINE INNODB STATUS \\G;"
-  output = ""
+
