@@ -1,3 +1,5 @@
+1password
+1password-cli
 apache-tools
 arch-silence-grub-theme
 aws-cli-v2
@@ -15,7 +17,6 @@ num-utils
 pet-bin
 pkgtools
 postman-bin
-sakura
 tfenv
 ttf-meslo-nerd-font-powerlevel10k
 ttf-migmix

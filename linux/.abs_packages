@@ -17,6 +17,7 @@ bat
 bind
 binutils
 bison
+bitwarden
 blueberry
 bpython
 breeze-gtk
@@ -71,6 +72,7 @@ geckodriver
 gedit
 gettext
 git-delta
+github-cli
 glibc
 gnome-keyring
 gnu-free-fonts
@@ -165,6 +167,7 @@ ruby
 rustup
 rye
 s-nail
+sakura
 sbt
 screenfetch
 scrot
@@ -186,6 +189,7 @@ tmux
 tree
 ttf-font-awesome
 ttf-hack-nerd
+ufw
 unzip
 usbutils
 util-linux
