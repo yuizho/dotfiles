@@ -1241,3 +1241,38 @@
   Tag = []
   command = "SHOW ENGINE INNODB STATUS \\G;"
 
+[[Snippets]]
+  Description = "check character code(文字コード) of the file"
+  Output = ""
+  Tag = []
+  command = "nkf --guess <file_name>"
+
+[[Snippets]]
+  Description = "create new git branch"
+  Output = ""
+  Tag = []
+  command = "git switch -c <new_branch_name>"
+
+[[Snippets]]
+  Description = "switch to another git branch.the swiched branch tracks the remote one."
+  Output = ""
+  Tag = []
+  command = "git switch <branch_name>"
+
+[[Snippets]]
+  Description = "remove git worktree folder"
+  Output = ""
+  Tag = []
+  command = "git worktree remove <worktree_name>"
+
+[[Snippets]]
+  Description = "create git worktree as branch_name"
+  Output = ""
+  Tag = []
+  command = "git worktree add <branch_name>"
+
+[[Snippets]]
+  Description = "show git worktree list"
+  Output = ""
+  Tag = []
+  command = "git worktree list"
