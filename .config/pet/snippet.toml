@@ -1276,3 +1276,9 @@
   Output = ""
   Tag = []
   command = "git worktree list"
+
+[[Snippets]]
+  Description = "search deleted git log which includes the deleted string in the file"
+  Output = ""
+  Tag = []
+  command = "git log -p -S'<deleted_str>' <file_path>"
