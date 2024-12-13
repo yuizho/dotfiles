@@ -1,1284 +1,1498 @@
 
 [[Snippets]]
   Description = "find files that have '10' recursively"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "grep -l '^10$' -R"
 
 [[Snippets]]
   Description = "count unique words in a file by lines"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat <file_name> | sort | uniq -c"
 
 [[Snippets]]
   Description = "create symlink"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ln -s <real_file(dir)_path> <symlink_path>"
 
 [[Snippets]]
   Description = "unlink <symlink_path>"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "remove symlink"
 
 [[Snippets]]
   Description = "filter lines by regexp"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | awk '/[24]/'"
 
 [[Snippets]]
   Description = "三項演算子 by awk"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | awk '{r=$1%2 ? \"奇数\":\"偶数\"; print r}'"
 
 [[Snippets]]
   Description = "print just first line by awk"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | awk 'NR==1 {print $1}'"
 
 [[Snippets]]
   Description = "basic usage of sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo foobar | sed 's/bar/baz/'"
 
 [[Snippets]]
   Description = "summary lines by awk BEGIN-END"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | awk 'BEGIN{a=0}$1%2==0{print $1,\"偶数\"}$1%2{print $1,\"奇数\"}{a+=$1}END{print \"合計\",a}'"
 
 [[Snippets]]
   Description = "\"tail -f\" by less"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "less +F <file_name>"
 
 [[Snippets]]
   Description = "awk by specified separator string"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"1,2,3,4\\n5,6,7,8\" | awk -F',' '{print $2,$4}'"
 
 [[Snippets]]
   Description = "extract by from-to condition of sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 10 | sed -n '/2/,/6/p'"
 
 [[Snippets]]
   Description = "find fonts"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "fc-list"
 
 [[Snippets]]
   Description = "find files that have '10' recursively by ripgrep"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "rg -l '^10$'"
 
 [[Snippets]]
   Description = "find commands that can execute by current login user"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sudo -l"
 
 [[Snippets]]
   Description = "find commands that can execute by group"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sudo -l -g <group_name>"
 
 [[Snippets]]
   Description = "find opened files by a process"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ls /proc/<process_id>/fd"
 
 [[Snippets]]
   Description = "find openned files by a process"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "lsof -c <process_name>"
 
 [[Snippets]]
   Description = "show network communication status on this server"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "netstat -anp"
 
 [[Snippets]]
   Description = "extract logs 2016/12/24 21:00~2016/12/25 03:00"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat <log_file_name> | sed -n '/24\\/Dec\\/2016 21:..:../,/25\\/Dec\\/2016 03:..:../p'"
 
 [[Snippets]]
   Description = "convert line break to space every 3 lines by xargs"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 10 | xargs -n3"
 
 [[Snippets]]
   Description = "concurrent execute by xargs"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 10 | xargs -P$(nproc)"
 
 [[Snippets]]
   Description = "use here document"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat << END"
 
 [[Snippets]]
   Description = "substring like operation by parameter expression (変数展開)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "a=私は俳優よ; echo ${a:0:1}${a:2:2};"
 
 [[Snippets]]
   Description = "sed like operation by parameter expression (変数展開)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "a=私は俳優よ; echo ${a/俳優/排骨麺};"
 
 [[Snippets]]
   Description = "play music by mpv"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mpv --no-video ."
 
 [[Snippets]]
   Description = "save a command result to clipboard in Linux"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"hoge\" | xclip -selection c"
 
 [[Snippets]]
   Description = "arithmetic operations (四則演算) in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo $((1+2))"
 
 [[Snippets]]
   Description = "declare list in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "a=(\"$SHELL\" \"$LANG\" \"$USER\")"
 
 [[Snippets]]
   Description = "declare dictionary in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "declare -A b; b[\"SHELL\"]=\"$SHELL\"; b[\"LANG\"]=\"$LANG\"; b[\"USER\"]=\"$USER\""
 
 [[Snippets]]
   Description = "get string length by parameter expression (変数展開)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "hoge=\"hoge\"; echo ${#hoge}"
 
 [[Snippets]]
   Description = "for-loop in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "for x in \"$1\" \"$2\" \"$3\"; do echo $x; done"
 
 [[Snippets]]
   Description = "while-loop in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 3 | while read x; do echo $x; done"
 
 [[Snippets]]
   Description = "check previous command's result"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo $?"
 
 [[Snippets]]
   Description = "check previous pipeline's results in zsh"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo ${pipestatus[@]}"
 
 [[Snippets]]
   Description = "check previous pipeline's results in bash"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo ${PIPESTATUS[@]}"
 
 [[Snippets]]
   Description = "handle shell script's parameters as list by \"$@\""
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "set aa bb cc; for x in \"$@\"; do echo $x; done"
 
 [[Snippets]]
   Description = "check if a file exists in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "if [ -e <file_name> ]; then echo \"file exists\"; else echo \"file doesn't exists\"; fi"
 
 [[Snippets]]
   Description = "compare if numbers are same in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "if [ 1 -eq 1 ]; then echo \"same num\"; else echo \"different num\"; fi"
 
 [[Snippets]]
   Description = "compare if strings are same in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "if [ 'a' = 'b' ]; then echo \"same str\"; else echo \"different str\"; fi"
 
 [[Snippets]]
   Description = "read std input in shell script"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo $(cat)"
 
 [[Snippets]]
   Description = "use deafult value if a specified variable is empty by parameter expression (変数展開)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo ${<variable_name>:-\"fuga\"}"
 
 [[Snippets]]
   Description = "count line break number"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 100 | wc -l"
 
 [[Snippets]]
   Description = "show all procs with CPU utilization, memory usage"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ps aux"
 
 [[Snippets]]
   Description = "show process tree (parent-child relation)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pstree -T"
 
 [[Snippets]]
   Description = "pet search"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "list1=(\"a\", \"b\", \"c\");list2=(\"${list1[@]}\", \"d\");echo ${list2[@]}"
 
 [[Snippets]]
   Description = "add items to list in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "list1=(\"a\", \"b\", \"c\");list2=(\"${list1[@]}\", \"d\", \"e\");echo ${list2[@]}"
 
 [[Snippets]]
   Description = "check variable and declare defaul val by parameter expression (変数展開)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo ${hoge:-\"default value\"}"
 
 [[Snippets]]
   Description = "create string patterns by brace expression (ブレース展開)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo file.{txt,csv}"
 
 [[Snippets]]
   Description = "treat a command result as a file by process substitution (プロセス置き換え)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "diff <(echo \"a\\nb\\nc\") <(echo \"a\\nB\\nc\")"
 
 [[Snippets]]
   Description = "reference prev command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "!!"
 
 [[Snippets]]
   Description = "history 20"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "history"
 
 [[Snippets]]
   Description = "show a command history"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "history <history_length>"
 
 [[Snippets]]
   Description = "exec a command in history by history number"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "!<history_number>"
 
 [[Snippets]]
   Description = "dump Brewfile to specified path"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "brew bundle dump --file ./.Brewfile --force"
 
 [[Snippets]]
   Description = "install brew packages by .Brewfile in specified path"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "brew bundle install --file ./.Brewfile"
 
 [[Snippets]]
   Description = "generate random high secure passwords"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pwgen -s -y 20"
 
 [[Snippets]]
   Description = "compare strings by regexp in if-statement of shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "if [[ 'abc' =~ '^a$' ]]; then echo \"same str\"; else echo \"different str\"; fi"
 
 [[Snippets]]
   Description = "while infinit-loop in shell"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "while :; do sleep 1; echo hoge; done"
 
 [[Snippets]]
   Description = "list current folder files recursive"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "find -type f"
 
 [[Snippets]]
   Description = "find recursively files by file name in current folder"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "find . -name \"file_name\""
 
 [[Snippets]]
   Description = "find files by file name in current folder"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "find . -maxdepth 1 -name \"file_name\""
 
 [[Snippets]]
   Description = "remove lines by grep"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"a\\nb\\nc\" | grep -v '^[ab]'"
 
 [[Snippets]]
   Description = "replace string by tr command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"a, b, c, d\" | tr ',' '|'"
 
 [[Snippets]]
   Description = "delete string by tr command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"a, b, c, d\" | tr -d ','"
 
 [[Snippets]]
   Description = "show available java environment in ArchLinux"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "archlinux-java status"
 
 [[Snippets]]
   Description = "set specified java environment as system default in ArchLinux"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sudo archlinux-java set <java_environment_name>"
 
 [[Snippets]]
   Description = "register message to slack reminder"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "/remind <#channel_name> <message> <date_time>"
 
 [[Snippets]]
   Description = "overwrite and create backup file by sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sed -i.bk 's/hoge/fuga/g' hoge.txt"
 
 [[Snippets]]
   Description = "show calendar"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cal"
 
 [[Snippets]]
   Description = "check if swap is happend (see Swap row)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "free"
 
 [[Snippets]]
   Description = "check the cause of high load average (CPU utilization(user?, system?), ioawait?)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sar <duration> <count>"
 
 [[Snippets]]
   Description = "check I/O utilization (see %util column)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "iostat -x"
 
 [[Snippets]]
   Description = "check load aveages"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "top"
 
 [[Snippets]]
   Description = "check high memory consuming process (use 'Shift + m' shortcut key)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "top"
 
 [[Snippets]]
   Description = "check high CPU utilization (including user, system) processes"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pidstat"
 
 [[Snippets]]
   Description = "check high I/O utilization processes (see kB_rd/s、kB_wr/s)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pidstat -d"
 
 [[Snippets]]
   Description = "execute a coomand in cycles"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "watch <command>"
 
 [[Snippets]]
   Description = "just check syntax errors in a command (the command is not executed)."
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "bash -n <command>"
 
 [[Snippets]]
   Description = "cut by delimiter and specify columns range"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"1:user1:root\\n2:user2:normal\\n3:user3:root\" | cut -d ':' -f 2-"
 
 [[Snippets]]
   Description = "show variables which start by \"FOO\""
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo ${!FOO*}"
 
 [[Snippets]]
   Description = "reverse each line"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"12345\\nabcde\" | rev"
 
 [[Snippets]]
   Description = "output to stdout and file by tee command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"abcdefg\" | tee <file_name>"
 
 [[Snippets]]
   Description = "write oneliner by Python"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat hoge.txt | python -c 'import sys; [print(a.strip()) for a in sys.stdin]'"
 
 [[Snippets]]
   Description = "count length of each line"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat speech.txt | awk '{print length($1), $1}'"
 
 [[Snippets]]
   Description = "find files which are created at 30 or more days before."
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "find . -ctime +30"
 
 [[Snippets]]
   Description = "find files by multiple conditions with -or option (-and option is also able to use)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "find . -ctime +30 -or -name hoge"
 
 [[Snippets]]
   Description = "show disk utilization"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "df -h"
 
 [[Snippets]]
   Description = "show disk utilization of the specified folder"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "du -h ."
 
 [[Snippets]]
   Description = "check network utilization of each process"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sudo nethogs"
 
 [[Snippets]]
   Description = "grep and show only words matched by regex"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo 'abc1def2gh3' | grep -oE '[1-9]+'"
 
 [[Snippets]]
   Description = "output system call log by strace"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "strace -o <strace_log_file_name> <command_name>"
 
 [[Snippets]]
   Description = "display information about ELF file(実行可能ファイル)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "readelf -h <executable_file>"
 
 [[Snippets]]
   Description = "show only unique rows"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"a\\na\\nb\\nc\" | uniq -u"
 
 [[Snippets]]
   Description = "skip evaluating column 1 by uniq command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"1 a\\n2 a\\n3 b\\n4 c\" | uniq -f1 -c"
 
 [[Snippets]]
   Description = "wrap all matched string by 全体マッチ of sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"私はラーメンが好きです。\\nラーメンうまい。\" | sed 's/ラーメン/「&」/g'"
 
 [[Snippets]]
   Description = "show logical cpu count"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "grep -c processor /proc/cpuinfo"
 
 [[Snippets]]
   Description = "show reminder list of the skack channel"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "/remind list"
 
 [[Snippets]]
   Description = "delete local git branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git branch -d <branch_name>"
 
 [[Snippets]]
   Description = "check Line Break Code (改行コード) of the file ($: LF, ^M: CR)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat -e <fine_name>"
 
 [[Snippets]]
   Description = "format table"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo 'hoge 1000\\nfoo 200\\nfugafuga 10' | column -t"
 
 [[Snippets]]
   Description = "parse csv by python csv package"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo '\"1\",\"\"\"2\"\"\",3\\n4,5,6' | python -c 'import csv,sys;[print(x[1]) for x in csv.reader(sys.stdin)]'"
 
 [[Snippets]]
   Description = "convert txt format or apply formatter by pandoc"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat table.md | pandoc -t gfm"
 
 [[Snippets]]
   Description = "show 10 days ago date by date command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "date -d '10 days ago'"
 
 [[Snippets]]
   Description = "show 10 days later date by date command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "date -d '10 days'"
 
 [[Snippets]]
   Description = "show date specified by time zone"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "TZ=UTC date"
 
 [[Snippets]]
   Description = "replace parameter string by xargs"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 4 | xargs -I@ echo '@ days'"
 
 [[Snippets]]
   Description = "show a date 10 days later from 2017-02-14"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "date -d '2017-02-14 10 days'"
 
 [[Snippets]]
   Description = "compare only first 7 caracters by uniq command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 0 10 | xargs -I@ date '+%F' -d '2017-02-24 @day' | uniq -w7"
 
 [[Snippets]]
   Description = "do startsWith by cut command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"2021-12-01\\n2021-12-02\" | cut -c 1-7"
 
 [[Snippets]]
   Description = "convert hex to decimal number in bash"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo $(( 16#101e ))"
 
 [[Snippets]]
   Description = "separate string by 4 words with sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"1111111111111111\" | sed -E 's/.{4}/& /g'"
 
 [[Snippets]]
   Description = "separate chars by new line (改行) with grep -o"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"あいうえお\" | grep -o ."
 
 [[Snippets]]
   Description = "show byte length by wc"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo あ | wc -c"
 
 [[Snippets]]
   Description = "show emoji by unicode"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo -e '\\U1F363\\U1F37A'"
 
 [[Snippets]]
   Description = "check caracter code(文字コード) of the file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "file -i <file_name>"
 
 [[Snippets]]
   Description = "echo unicode codepoints of emoji"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo 🍣🍺 | iconv -f UTF-8 -t UCS-4 | xxd -p | fold -b8"
 
 [[Snippets]]
   Description = "encode a bianry file to base64"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "base64 <binary_file_name>"
 
 [[Snippets]]
   Description = "generate sha256 hash of a file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "sha256sum <file_name>"
 
 [[Snippets]]
   Description = "convert binary number to hex"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo 11100100 | sed 's/^/obase=16;ibase=2;/' | bc"
 
 [[Snippets]]
   Description = "add prefix string by sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"hoge\\nfuga\" | sed '1s/^/[prefix]/'"
 
 [[Snippets]]
   Description = "decompress gz file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "gzip -d <gz file name>"
 
 [[Snippets]]
   Description = "check Line Break Code (改行コード) of the file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "cat newline.txt | tr -dc '\\015\\012' | sed -z 's/\\x0d/CR/g;s/\\x0a/LF&/g' | sort | uniq -c"
 
 [[Snippets]]
   Description = "filter rows by sed (just show 1~3 rows)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | sed -n '1,3p'"
 
 [[Snippets]]
   Description = "filter rows by sed (just show 2~ rows)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | sed -n '2,$p'"
 
 [[Snippets]]
   Description = "filter rows by sed (just show 1行目から2行飛ばし)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 10 | sed -n '1~2p'"
 
 [[Snippets]]
   Description = "encode str to base64 string"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"hoge\" | base64"
 
 [[Snippets]]
   Description = "decode base64 string"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"aG9nZQo=\" | base64 -d"
 
 [[Snippets]]
   Description = "infnity loop by seq"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pref"
 
 [[Snippets]]
   Description = "split each char and do something by awk"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq -w 0 10 | awk -F \"\" '{print $1*$1+$2*$2}'"
 
 [[Snippets]]
   Description = "setup slack reacji-channeler (emoji reaction)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "/reacji-channeler <target_emoji like :mega:> <channel_name like #big-news>"
 
 [[Snippets]]
   Description = "reset working directory to HEAD"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git restore <file_name>"
 
 [[Snippets]]
   Description = "checkout tags to branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git checkout -b <branch_name> refs/tags/<tag_name>"
 
 [[Snippets]]
   Description = "sort rows by second column values"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"bar 30\\nhogehoge 3\\nhoge 2\\nfuga 1\" | sort -k 2,2"
 
 [[Snippets]]
   Description = "sort files by created at (DESC)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ls -ltr"
 
 [[Snippets]]
   Description = "list files with full created at"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ls --full-time"
 
 [[Snippets]]
   Description = "rename current git branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git branch -m <new_branch_name>"
 
 [[Snippets]]
   Description = "modify artifact version of pom.xml by mvn command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mvn versions:set -DnewVersion=<artifact_version>"
 
 [[Snippets]]
   Description = "show dependency tree of the mevan project"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mvn dependency:tree"
 
 [[Snippets]]
   Description = "shuffle passed lines"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | shuf"
 
 [[Snippets]]
   Description = "check required shared library of the command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ldd /usr/bin/tail"
 
 [[Snippets]]
   Description = "mount a device"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mount -t <file system type e.g. vfat> <partition e.g. /dev/sdb1> <mount dir e.g. /mnt/disk1>"
 
 [[Snippets]]
   Description = "observ usb devices"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "lsusb"
 
 [[Snippets]]
   Description = "show proc id of the app name"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pgrep <app_name>"
 
 [[Snippets]]
   Description = "sabe clipboard contents to a file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pbpaste > <filename>"
 
 [[Snippets]]
   Description = "save a command result to clipboard in Mac"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"hoge\" | pbcopy"
 
 [[Snippets]]
   Description = "connect local mysql by mysql client"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mysql -h 127.0.0.1 -u <user_name> -p <schema_name> -A"
 
 [[Snippets]]
   Description = "check general_log config of mysql"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "show variables like 'general_log%';"
 
 [[Snippets]]
   Description = "configure general_log"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "set global general_log = on;"
 
 [[Snippets]]
   Description = "list changed file of the GitHub pull request"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "gh pr diff <pr_number> --name-only"
 
 [[Snippets]]
   Description = "get a GitHub personal token configured to use"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "gh auth token"
 
 [[Snippets]]
   Description = "save git chages to stash"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git stash -u"
 
 [[Snippets]]
   Description = "list saved changes of git stash"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git stash list"
 
 [[Snippets]]
   Description = "apply git stash of \"stash@{0}\""
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git stash apply stash@{0}"
 
 [[Snippets]]
   Description = "checkout specified file of the branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git checkout <branch_name> -- <file_name>"
 
 [[Snippets]]
   Description = "get absolute path"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "realpath <path>"
 
 [[Snippets]]
   Description = "format mysql datetime type value to yyyy-mm-dd string"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "DATE_FORMAT(<date_time_column>, '%Y-%m-%d')"
 
 [[Snippets]]
   Description = "show ip address of devices"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ip address"
 
 [[Snippets]]
   Description = "show terminal emulator's configs"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "stty -a"
 
 [[Snippets]]
   Description = "show the shared libraries that the program depends on."
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ldd <program_path>"
 
 [[Snippets]]
   Description = "add prefix string by sed ver2"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"hoge\" | sed 's/.*/prefix_&/g'"
 
 [[Snippets]]
   Description = "echo string by unicode"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo -e '\\U30B7\\U30A7\\U30EB'"
 
 [[Snippets]]
   Description = "start http server by python"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "python -m http.server 8000"
 
 [[Snippets]]
   Description = "start telnet server by nc"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "nc -l -p 8080"
 
 [[Snippets]]
   Description = "send text on telnet by bash feature"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"hoge\" > /dev/tcp/127.0.0.1/8080"
 
 [[Snippets]]
   Description = "generate random number (0~255)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "shuf -i 0-255 -n 1"
 
 [[Snippets]]
   Description = "shuffle and increace by shuf command"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 0 5 | shuf -rn 10"
 
 [[Snippets]]
   Description = "show specified row's text"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 1 10 | head -n 4 | tail -n 1"
 
 [[Snippets]]
   Description = "joint multiple text files"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "paste <file_1> <file_2> <file_3>"
 
 [[Snippets]]
   Description = "show files modified and unstaged"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git ls-files -m"
 
 [[Snippets]]
   Description = "restore a file managed by git to previous commit"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git restore -s HEAD^ <file_name>"
 
 [[Snippets]]
   Description = "echo same row 2 times"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | sed p"
 
 [[Snippets]]
   Description = "remove first row and final row by sed"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "seq 5 | sed '1d;$d'"
 
 [[Snippets]]
   Description = "exec command passed by string"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "bash -c 'echo \"hoge\"'"
 
 [[Snippets]]
   Description = "connect server with ssh"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "ssh <user_name>@<host_name>"
 
 [[Snippets]]
   Description = "request to http server and just get http status"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "curl -s -o /dev/null -w '%{http_code}' https://www.google.co.jp"
 
 [[Snippets]]
   Description = "request to a http server (support redirect)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "curl -IL https://google.co.jp"
 
 [[Snippets]]
   Description = "tail docker compose woking on background log"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "docker compose logs -f"
 
 [[Snippets]]
   Description = "start docker compose with Dockerfile build"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "docker compose up --build"
 
 [[Snippets]]
   Description = "reset docker enrvironment"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "docker system prune -a"
 
 [[Snippets]]
   Description = "show emoji by bytecode(Hex)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo -e '\\xF0\\x9F\\x91\\x8D'"
 
 [[Snippets]]
   Description = "show auto_increment id values of tables"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "SELECT table_name, auto_increment FROM information_schema.tables ORDER BY auto_increment DESC;"
 
 [[Snippets]]
   Description = "open binary file by hexyl(HEX viewer)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "hexyl <binary_file>"
 
 [[Snippets]]
   Description = "show diff by delta(enhanced diff)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "delta <file1> <file2>"
 
 [[Snippets]]
   Description = "generate regex"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "grex a b c d"
 
 [[Snippets]]
   Description = "syntax highlight source file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "bat <source file>"
 
 [[Snippets]]
   Description = "find processes using the port_number"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "lsof -i:<port_number>"
 
 [[Snippets]]
   Description = "list configured JVM system properties"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "jcmd <PID_of_JVM> VM.system_properties"
 
 [[Snippets]]
   Description = "checkout a file in a specified branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git checkout <branch_name> -- <file_path>"
 
 [[Snippets]]
   Description = "install maven wrapper (mvnw)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mvn wrapper:wrapper"
 
 [[Snippets]]
   Description = "copy tmux(byobu) save-buffer to clipoard"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "tmux save-buffer - | xclip -selection c"
 
 [[Snippets]]
   Description = "if there is no hoge file, create hoge file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "[ -e hoge ] || touch hoge"
 
 [[Snippets]]
   Description = "tfenv install"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "install specific version of terraform by tfenv"
 
 [[Snippets]]
   Description = "ssh login by SSM SessionManager"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "aws ssm start-session --target <instance_id> --document-name SSM-SessionManagerRunShell"
 
 [[Snippets]]
   Description = "dump mysql database"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mysqldump -h <host> -u <user> -p <database> > <dump_file_name>"
 
 [[Snippets]]
   Description = "import mysql dump file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "mysql -h <host> -u <user> -p <database> < <dump_file_name>"
 
 [[Snippets]]
   Description = "create new Python project by pipenv"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pipenv install"
 
 [[Snippets]]
   Description = "install python package in pipenv project"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pipenv install <package_name>"
 
 [[Snippets]]
   Description = "execute python command in pipenv project"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "pipenv run <some_python_command>"
 
 [[Snippets]]
   Description = "use matched string in sed string replacement"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"Time: 22.000 sec\" | sed -E 's/Time: (.*) sec/\\1/'"
 
 [[Snippets]]
   Description = "add line end (改行) each 2 rows"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"1\\n2\\n3\\n4\\n5\\n6\" | awk 'NR % 2 == 0 {print $0 \"\\n\"} NR % 2 != 0 {print $0}'"
 
 [[Snippets]]
   Description = "check if a file exists in shell (short hands)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "[ -e <file_name> ] && echo \"file exists\""
 
 [[Snippets]]
   Description = "convert unix time to datetime by strftime of awk"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo \"1, 1560000000\\n2, 1703160585\" | awk -F',' '{print $1, strftime(\"%Y-%m-%d %H:%M:%S\", $2)}'"
 
 [[Snippets]]
   Description = "copy a local file to docker container"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "docker cp <local_file_name> <container_name>:/<copied_file_name>"
 
 [[Snippets]]
   Description = "enable mysql global lock monitor"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "SET GLOBAL innodb_status_output_locks=ON;"
 
 [[Snippets]]
   Description = "show transaction isolation level of mysql"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "SELECT @@transaction_isolation;"
 
 [[Snippets]]
   Description = "show innodb status of mysql"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "SHOW ENGINE INNODB STATUS \\G;"
 
 [[Snippets]]
   Description = "check character code(文字コード) of the file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "nkf --guess <file_name>"
 
 [[Snippets]]
   Description = "create new git branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git switch -c <new_branch_name>"
 
 [[Snippets]]
   Description = "switch to another git branch.the swiched branch tracks the remote one."
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git switch <branch_name>"
 
 [[Snippets]]
   Description = "remove git worktree folder"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git worktree remove <worktree_name>"
 
 [[Snippets]]
   Description = "create git worktree as branch_name"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git worktree add <branch_name>"
 
 [[Snippets]]
   Description = "show git worktree list"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git worktree list"
 
 [[Snippets]]
   Description = "search deleted git log which includes the deleted string in the file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "git log -p -S'<deleted_str>' <file_path>"
