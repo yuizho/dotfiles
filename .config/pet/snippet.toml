@@ -1496,3 +1496,24 @@
   Output = ""
   Tag = []
   command = "git log -p -S'<deleted_str>' <file_path>"
+
+[[Snippets]]
+  Description = "show mysql lock information by performance schema"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "select engine_transaction_id as tx_id, index_name, lock_mode, lock_data from performance_schema.data_locks where lock_type = 'RECORD' and object_schema = '<database_name>' and object_name = '<table_name>';"
+
+[[Snippets]]
+  Description = "create simple mysql container"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "docker run --name <container_name> -p 127.0.0.1:3306:3306 -e MYSQL_ROOT_PASSWORD=password -d mysql:<image_version>"
+
+[[Snippets]]
+  Description = "find 10 days before some date by MySQL"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "DATE_SUB(<date>, INTERVAL 10 DAY)"
