@@ -1282,3 +1282,15 @@
   Output = ""
   Tag = []
   command = "git log -p -S'<deleted_str>' <file_path>"
+
+[[Snippets]]
+  Description = "get last executed back ground process's PID"
+  Output = ""
+  Tag = []
+  command = "echo $!"
+
+[[Snippets]]
+  Description = "get last executed process's result code"
+  Output = ""
+  Tag = []
+  command = "echo $?"
