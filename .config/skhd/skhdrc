@@ -15,6 +15,9 @@ alt - h : yabai -m window --resize right:-20:0 || yabai -m window --resize left:
 # organize window balance
 alt - space : yabai -m space --balance
 
+# close window
+shift + alt - c : skhd -k "cmd - q "
+
 # move managed window
 # shift + cmd - h : yabai -m window --warp east
 
