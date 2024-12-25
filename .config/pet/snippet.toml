@@ -1294,3 +1294,9 @@
   Output = ""
   Tag = []
   command = "echo $?"
+
+[[Snippets]]
+  Description = "launch java mission control (jmc)"
+  Output = ""
+  Tag = []
+  command = "jmc -vm $JAVA_HOME/bin"
