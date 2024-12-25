@@ -95,6 +95,7 @@ iproute2
 iputils
 ipython
 jdk-openjdk
+jdk21-openjdk
 jfsutils
 jq
 kitty
