@@ -21,4 +21,7 @@ case ${OSTYPE} in
     darwin*)
         export JAVA_HOME="/Users/yui-ito/.sdkman/candidates/java/current"
         ;;
+    linux*)
+        export JAVA_HOME="/usr/lib/jvm/default"
+        ;;
 esac
