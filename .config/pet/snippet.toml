@@ -1300,3 +1300,15 @@
   Output = ""
   Tag = []
   command = "jmc -vm $JAVA_HOME/bin"
+
+[[Snippets]]
+  Description = "start yabai service"
+  Output = ""
+  Tag = []
+  command = "yabai --start-service"
+
+[[Snippets]]
+  Description = "start skhd service"
+  Output = ""
+  Tag = []
+  command = "skhd --start-service"
