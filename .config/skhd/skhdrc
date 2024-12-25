@@ -18,6 +18,9 @@ alt - space : yabai -m window --toggle split && yabai -m space --balance
 # close window
 shift + alt - c : skhd -k "cmd - q "
 
+# launch terminal
+alt - return : kitty
+
 # move managed window
 # shift + cmd - h : yabai -m window --warp east
 
