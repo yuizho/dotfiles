@@ -23,7 +23,7 @@ function prev() {
 
 # alias
 alias emacs='emacs -nw'
-alias ls='exa -la'
+alias ls='eza --icons --git  -al'
 alias sbt='rlwrap sbt'
 
 # set bell-style none

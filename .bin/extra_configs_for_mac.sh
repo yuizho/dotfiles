@@ -24,3 +24,9 @@ echo "from iterm preference 'General > Preferences > Load preferences from a cus
 echo "After the opelation you need to reboot OS to apply the configurations."
 
 echo "=====> extra configurations for mac is complete!!"
+
+# yabai & skhd
+# https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
+yabai --start-service
+# https://github.com/koekeishiya/skhd?tab=readme-ov-file#install
+skhd --start-service
