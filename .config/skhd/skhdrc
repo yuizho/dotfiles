@@ -18,9 +18,6 @@ alt - space : yabai -m space --balance
 # move managed window
 # shift + cmd - h : yabai -m window --warp east
 
-# balance size of windows
-# shift + alt - 0 : yabai -m space --balance
-
 # make floating window fill screen
 # shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 
@@ -40,10 +37,6 @@ alt - space : yabai -m space --balance
 # send window to desktop and follow focus
 # shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
 # shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
-
-# focus monitor
-# ctrl + alt - z  : yabai -m display --focus prev
-# ctrl + alt - 3  : yabai -m display --focus 3
 
 # send window to monitor and follow focus
 # ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
