@@ -43,4 +43,8 @@ yabai -m config                                 \
     mouse_action2                resize         \
     mouse_drop_action            swap
 
+# for JankyBorders
+# https://github.com/FelixKratz/JankyBorders
+borders active_color=0xffe6e6fa width=6.0 &
+
 echo "yabai configuration loaded.."
