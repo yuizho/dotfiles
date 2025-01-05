@@ -1520,30 +1520,49 @@
 
 [[Snippets]]
   Description = "get last executed back ground process's PID"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo $!"
 
 [[Snippets]]
   Description = "get last executed process's result code"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "echo $?"
 
 [[Snippets]]
   Description = "launch java mission control (jmc)"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "jmc -vm $JAVA_HOME/bin"
 
 [[Snippets]]
   Description = "start yabai service"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "yabai --start-service"
 
 [[Snippets]]
   Description = "start skhd service"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
   Output = ""
   Tag = []
   command = "skhd --start-service"
+
+[[Snippets]]
+  Description = "unstage staged file"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "git restore --staged <file_name>"
+
+[[Snippets]]
+  Description = "switch back to the previous branch"
+  Filename = "/home/yuizho/.config/pet/snippet.toml"
+  Output = ""
+  Tag = []
+  command = "git switch -"
