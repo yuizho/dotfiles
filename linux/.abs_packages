@@ -4,7 +4,6 @@ arc-gtk-theme
 arc-icon-theme
 archlinux-wallpaper
 ascii
-asunder
 autoconf
 automake
 awesome
@@ -38,6 +37,7 @@ device-mapper
 dhcpcd
 dialog
 diffutils
+dive
 docker
 docker-compose
 docker-machine
