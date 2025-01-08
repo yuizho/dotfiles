@@ -12,8 +12,11 @@ shift + alt - k : yabai -m window --swap next || yabai -m window --swap first
 alt - l : yabai -m window --resize left:40:0 || yabai -m window --resize right:-40:0
 alt - h : yabai -m window --resize right:-40:0 || yabai -m window --resize left:40:0
 
-# toggle window split type and organize window balance
-alt - space : yabai -m window --toggle split && yabai -m space --balance
+# toggle window split type
+alt - space : yabai -m window --toggle zoom-fullscreen
+
+# organize window balance
+alt - b : yabai -m space --balance
 
 # close window
 shift + alt - c : skhd -k "cmd - q "
