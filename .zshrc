@@ -25,6 +25,7 @@ function prev() {
 alias emacs='emacs -nw'
 alias ls='eza --icons --git  -al'
 alias sbt='rlwrap sbt'
+alias gl='git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h %C(green) %ar%Creset %C(magenta reverse)%d%Creset %s"'
 
 # set bell-style none
 set bell-style none
