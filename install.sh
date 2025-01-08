@@ -71,6 +71,9 @@ function main() {
     # kitty
     ln $ln_option "${current_abs_dir}/.config/kitty" ~/.config/
 
+    # ghostty
+    ln $ln_option "${current_abs_dir}/.config/ghostty" ~/.config/
+
     case ${OSTYPE} in
         darwin*)
             "${current_dir}/.bin/extra_configs_for_mac.sh" $current_dir
