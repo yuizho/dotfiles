@@ -21,6 +21,9 @@ alt - b : yabai -m space --balance
 # close window
 shift + alt - c : skhd -k "cmd - q "
 
+# restart yabai & skhd
+alt + ctrl - r : yabai --restart-service && skhd --restart-service
+
 # move managed window
 # shift + cmd - h : yabai -m window --warp east
 
