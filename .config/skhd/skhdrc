@@ -24,6 +24,9 @@ shift + alt - c : skhd -k "cmd - q "
 # restart yabai & skhd
 alt + ctrl - r : yabai --restart-service && skhd --restart-service
 
+# float / unfloat window and center on screen
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
 # move managed window
 # shift + cmd - h : yabai -m window --warp east
 
@@ -65,9 +68,6 @@ alt + ctrl - r : yabai --restart-service && skhd --restart-service
 # toggle window zoom
 # alt - d : yabai -m window --toggle zoom-parent
 # alt - f : yabai -m window --toggle zoom-fullscreen
-
-# float / unfloat window and center on screen
-# alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # toggle sticky(+float), picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle pip
