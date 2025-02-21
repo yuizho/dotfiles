@@ -1566,3 +1566,15 @@
   Output = ""
   Tag = []
   command = "git switch -"
+
+[[Snippets]]
+  Description = "query performance_schema.data_locks of mysql"
+  Output = ""
+  Tag = []
+  command = "select lock_type, engine_transaction_id as tx_id, index_name, lock_mode, lock_status, lock_data from performance_schema.data_locks;"
+
+[[Snippets]]
+  Description = "show disk utilization of the specified folder by df"
+  Output = ""
+  Tag = []
+  command = "df -h ."
