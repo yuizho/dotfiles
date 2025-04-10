@@ -12,10 +12,10 @@ if [[ ! "$OSTYPE" =~ ^darwin* ]]; then
     exit 1
 fi
 
-if ! command -v brew &> /dev/null; then
+if [ ! -e /opt/homebrew/bin/brew ]; then
     echo "=====> Homebrew is not installed!"
-    echo "=====> start installing Homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "=====> please install Homebrew"
+    echo "=====> https://brew.sh/"
 fi
 
 echo "=====> start package instllation"
