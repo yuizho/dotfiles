@@ -16,6 +16,7 @@ if [ ! -e /opt/homebrew/bin/brew ]; then
     echo "=====> Homebrew is not installed!"
     echo "=====> please install Homebrew"
     echo "=====> https://brew.sh/"
+    exit 1
 fi
 
 echo "=====> start package instllation"
