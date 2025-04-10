@@ -26,7 +26,11 @@ echo "After the opelation you need to reboot OS to apply the configurations."
 echo "=====> extra configurations for mac is complete!!"
 
 # yabai & skhd
+ln $ln_option "${current_abs_dir}/.config/yabai" ~/.config/
+ln $ln_option "${current_abs_dir}/.config/skhd" ~/.config/
+
 # https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 yabai --start-service
 # https://github.com/koekeishiya/skhd?tab=readme-ov-file#install
 skhd --start-service
+
