@@ -34,3 +34,5 @@ yabai --start-service
 # https://github.com/koekeishiya/skhd?tab=readme-ov-file#install
 skhd --start-service
 
+# karabiner
+ln $ln_option "${current_abs_dir}/.config/karabiner" ~/.config/
