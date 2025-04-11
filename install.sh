@@ -76,6 +76,13 @@ function main() {
 
     case ${OSTYPE} in
         darwin*)
+            # yabai & skhd
+            ln $ln_option "${current_abs_dir}/.config/yabai" ~/.config/
+            ln $ln_option "${current_abs_dir}/.config/skhd" ~/.config/
+
+            # karabiner
+            ln -sf "${current_abs_dir}/.config/karabiner" ~/.config/
+
             "${current_dir}/.bin/extra_configs_for_mac.sh" $current_dir
             ;;
         linux*)

@@ -23,16 +23,16 @@ echo "You needs to set iterm config file path (${dotfiles_dir}/mac/iterm/com.goo
 echo "from iterm preference 'General > Preferences > Load preferences from a custom folder or URL'."
 echo "After the opelation you need to reboot OS to apply the configurations."
 
-echo "=====> extra configurations for mac is complete!!"
-
 # yabai & skhd
-ln $ln_option "${current_abs_dir}/.config/yabai" ~/.config/
-ln $ln_option "${current_abs_dir}/.config/skhd" ~/.config/
-
+echo "=====> Start yabai & skhd"
 # https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 yabai --start-service
 # https://github.com/koekeishiya/skhd?tab=readme-ov-file#install
 skhd --start-service
 
 # karabiner
-ln $ln_option "${current_abs_dir}/.config/karabiner" ~/.config/
+echo "=====> Restart karabiner to load karabiner configs"
+echo "=====> https://karabiner-elements.pqrs.org/docs/manual/misc/configuration-file-path/"
+launchctl kickstart -k gui/`id -u`/org.pqrs.karabiner.karabiner_console_user_server
+
+echo "=====> extra configurations for mac is complete!!"
