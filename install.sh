@@ -63,7 +63,7 @@ function main() {
     ln $ln_option "${current_abs_dir}/.config/sheldon" ~/.config/
 
     # emacs
-    ln $ln_option "${current_abs_dir}/.emacs.d" ~/
+    ln $ln_option "${current_abs_dir}/.config/emacs" ~/.config/
 
     # pet
     ln $ln_option "${current_abs_dir}/.config/pet" ~/.config/
