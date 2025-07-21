@@ -1,7 +1,5 @@
 accountsservice
 alacritty
-arc-gtk-theme
-arc-icon-theme
 archlinux-wallpaper
 ascii
 autoconf
@@ -163,7 +161,6 @@ python-lsp-server
 python-pip
 python-pipenv
 r
-reiserfsprogs
 rlwrap
 rofi
 ruby

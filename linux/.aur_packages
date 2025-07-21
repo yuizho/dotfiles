@@ -1,6 +1,8 @@
 1password
 1password-cli
 apache-tools
+arc-gtk-theme
+arc-icon-theme
 arch-silence-grub-theme
 asunder
 aws-cli-v2
@@ -20,6 +22,7 @@ num-utils
 pet-bin
 pkgtools
 postman-bin
+reiserfsprogs
 tfenv
 ttf-meslo-nerd-font-powerlevel10k
 ttf-migmix
