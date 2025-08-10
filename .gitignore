@@ -14,3 +14,5 @@ ac-comphist.dat
 *.pyc
 
 .pacman_backup
+
+.config/karabiner/automatic_backups
