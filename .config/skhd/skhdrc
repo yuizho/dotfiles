@@ -9,8 +9,8 @@ alt - right: yabai -m display --focus east
 shift + alt - k : yabai -m window --swap next || yabai -m window --swap first
 
 # increase window size
-alt - l : yabai -m window --resize left:40:0 || yabai -m window --resize right:-40:0
-alt - h : yabai -m window --resize right:-40:0 || yabai -m window --resize left:40:0
+alt - l : yabai -m window --resize left:50:0
+alt - h : yabai -m window --resize right:-50:0
 
 # toggle window split type
 alt - space : yabai -m window --toggle zoom-fullscreen
