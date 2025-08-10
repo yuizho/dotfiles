@@ -1,3 +1,5 @@
 macos-option-as-alt = true
 
+font-feature = -dlig
 font-family = "HackNerdFont"
+font-size = 15
