@@ -1354,3 +1354,9 @@
   Output = ""
   Tag = []
   command = "df -h ."
+
+[[Snippets]]
+  Description = "increase recursion limit"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "sys.setrecursionlimit(10**8)"
