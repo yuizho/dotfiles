@@ -1360,3 +1360,39 @@
   Output = ""
   Tag = ["python", "kyopro"]
   command = "sys.setrecursionlimit(10**8)"
+
+[[Snippets]]
+  Description = "create stack"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "stack = [1, 2, 3]\n\npopped = stack.pop()"
+
+[[Snippets]]
+  Description = "create queue"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "queue = collections.deque()\n\nqueue.append(1)\n\npopped = queue.popleft()"
+
+[[Snippets]]
+  Description = "binary search"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "# 2\nbisect.bisect_left([1, 3, 4, 4], 4)\n\n# 4\nbisect.bisect_right([1, 3, 4, 4], 4)"
+
+[[Snippets]]
+  Description = "reverse list"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "l = [1, 2, 3]\n# [3, 2, 1]\nl[::-1]"
+
+[[Snippets]]
+  Description = "count items in iterable"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "collections.Counter([1, 2, 2, 1, 1, 3, 4])"
+
+[[Snippets]]
+  Description = "create heap"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "# create min heap\nheap = []\nheapq.heapify(heap)\n\nheapq.heappush(heap, 3)\nheapq.heappush(heap, 1)\nheapq.heappush(heap, 2)\nheapq.heappush(heap, 4)\n\n# get top element of heap (min value)\n# 1\nheap[0]"
