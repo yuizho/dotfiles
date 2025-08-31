@@ -42,8 +42,6 @@ case ${OSTYPE} in
         ssh-add --apple-load-keychain
         # SDKMAN
         [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-        # 1Password Cli
-        source $HOME/.config/op/plugins.sh
         ;;
     linux*)
         # alias
