@@ -1414,3 +1414,63 @@
   Output = ""
   Tag = ["python", "kyopro"]
   command = "devide with ceiling (切り上げ割り算)"
+
+[[Snippets]]
+  Description = "create direct product (直積. 上記は2 ** 3のパターン集合)"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "itertools.product(\"+-\", repeat=3)"
+
+[[Snippets]]
+  Description = "bit full search"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "for i in range(8):\n    print(f\"{(i >> 0) & 1}{(i >> 1) & 1}{(i >> 2) & 1}\")"
+
+[[Snippets]]
+  Description = "create dictionry initialized by 0"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "collections.defaultdict(int)"
+
+[[Snippets]]
+  Description = "flatten list"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "itertools.chain.from_iterable([[1], [1, 2]])"
+
+[[Snippets]]
+  Description = "range compression (連長圧縮) template"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "i = 0\nwhile i < S_size:\n    j = i\n    while j < S_size and S[j] == S[i]:\n        j += 1\n\n    print(S[i], j - 1)\n\n    i = j"
+
+[[Snippets]]
+  Description = "grouping by sequences of the same chargs (連続する文字)"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "itertools.groupby(\"AAAABBBCCDAABBB\")"
+
+[[Snippets]]
+  Description = "count items in iter"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "\"abcaaaad\".count(\"a\")"
+
+[[Snippets]]
+  Description = "create prime number list until n (nまでの素数のリストを作成)"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "def create_sosu_list(n):\n    primes = [True] * (n + 1)  # n+1 のサイズのブーリアンリストを作成\n    primes[0] = primes[1] = False  # 0 と 1 は素数ではない\n\n    # 2から√nまでをチェック\n    for p in range(2, int(n**0.5) + 1):\n        if primes[p]:\n            # pの倍数をすべて消す\n            for i in range(p * p, n + 1, p):\n                primes[i] = False\n\n    # 素数のみをリストに格納\n    return [p for p, is_prime in enumerate(primes) if is_prime]"
+
+[[Snippets]]
+  Description = "calculate expected value (期待値). time complexity is O(1)."
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "n = 6\nexpected_value = (n + 1) / 2"
+
+[[Snippets]]
+  Description = "calculate gcd (最大公約数)"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "math.gcd(4, 6) # 2"
