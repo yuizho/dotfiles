@@ -404,7 +404,7 @@
 [[Snippets]]
   Description = "register message to slack reminder"
   Output = ""
-  Tag = []
+  Tag = ["slack"]
   command = "/remind <#channel_name> <message> <date_time>"
 
 [[Snippets]]
@@ -782,7 +782,7 @@
 [[Snippets]]
   Description = "setup slack reacji-channeler (emoji reaction)"
   Output = ""
-  Tag = []
+  Tag = ["slack"]
   command = "/reacji-channeler <target_emoji like :mega:> <channel_name like #big-news>"
 
 [[Snippets]]
@@ -1474,3 +1474,15 @@
   Output = ""
   Tag = ["python", "kyopro"]
   command = "math.gcd(4, 6) # 2"
+
+[[Snippets]]
+  Description = "visualize cron schedules in crontab"
+  Output = ""
+  Tag = []
+  command = "cat <crontab_file> | cronv -o output.html -d 24h"
+
+[[Snippets]]
+  Description = "list github slack reminder configs in this slack channel"
+  Output = ""
+  Tag = ["slack"]
+  command = "/github subscribe list features"
