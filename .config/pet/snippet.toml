@@ -1486,3 +1486,16 @@
   Output = ""
   Tag = ["slack"]
   command = "/github subscribe list features"
+
+[[Snippets]]
+  Description = "calculate lcm (最小公倍数)"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "math.lcm(4, 6, 3) # 12"
+
+[[Snippets]]
+  Description = "calculate maximum value of N mod"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "N - 1  % N"
+
