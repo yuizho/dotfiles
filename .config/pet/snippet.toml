@@ -1499,3 +1499,8 @@
   Tag = ["python", "kyopro"]
   command = "N - 1  % N"
 
+[[Snippets]]
+  Description = "sort by case insensitive (大文字小文字を区別せずにソート)"
+  Output = ""
+  Tag = ["python", "kyopro"]
+  command = "sorted(\"aaBdaAcCfFDdf\", key=str.lower) # ['a', 'a', 'a', 'A', 'B', 'c', 'C', 'd', 'D', 'd', 'f', 'F', 'f']"
