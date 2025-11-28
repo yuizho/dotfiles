@@ -1504,3 +1504,21 @@
   Output = ""
   Tag = ["python", "kyopro"]
   command = "sorted(\"aaBdaAcCfFDdf\", key=str.lower) # ['a', 'a', 'a', 'A', 'B', 'c', 'C', 'd', 'D', 'd', 'f', 'F', 'f']"
+
+[[Snippets]]
+  Description = "connect mysql client in docker container"
+  Output = ""
+  Tag = []
+  command = "docker exec -it <mysql_container_name> mysql -h 127.0.0.1 -u <user> -p -A"
+
+[[Snippets]]
+  Description = "visualize running docker container status"
+  Output = ""
+  Tag = []
+  command = "lazydocker"
+
+[[Snippets]]
+  Description = "fill a template (${}) with env variables"
+  Output = ""
+  Tag = []
+  command = "NAME=\"YUI\"; envsubst < <(echo \"Hello ${NAME}\")"
