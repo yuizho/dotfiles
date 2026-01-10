@@ -1522,3 +1522,9 @@
   Output = ""
   Tag = []
   command = "NAME=\"YUI\"; envsubst < <(echo \"Hello ${NAME}\")"
+
+[[Snippets]]
+  Description = "trace route until arriving ip packet to destination"
+  Output = ""
+  Tag = []
+  command = "traceroute -n <IP address>"
