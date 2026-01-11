@@ -1528,3 +1528,9 @@
   Output = ""
   Tag = []
   command = "traceroute -n <IP address>"
+
+[[Snippets]]
+  Description = "show routing table of current network"
+  Output = ""
+  Tag = []
+  command = "ip route show"
