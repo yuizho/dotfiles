@@ -978,12 +978,6 @@
   command = "python -m http.server 8000"
 
 [[Snippets]]
-  Description = "start telnet server by nc"
-  Output = ""
-  Tag = []
-  command = "nc -l -p 8080"
-
-[[Snippets]]
   Description = "send text on telnet by bash feature"
   Output = ""
   Tag = []
@@ -1534,3 +1528,33 @@
   Output = ""
   Tag = []
   command = "ip route show"
+
+[[Snippets]]
+  Description = "Start UDP server by nc"
+  Output = ""
+  Tag = []
+  command = "nc -ulnv 127.0.0.1 <server port>"
+
+[[Snippets]]
+  Description = "Start UDP client by nc"
+  Output = ""
+  Tag = []
+  command = "nc -u <server ip> <server port>"
+
+[[Snippets]]
+  Description = "Start TCP server by nc"
+  Output = ""
+  Tag = []
+  command = "nc -lnv 127.0.0.1 <server port>"
+
+[[Snippets]]
+  Description = "Start TCP client by nc"
+  Output = ""
+  Tag = []
+  command = "nc <server ip> <server port>"
+
+[[Snippets]]
+  Description = "send HTTP GET request to a HTTP Server"
+  Output = ""
+  Tag = []
+  command = "echo -en \"GET / HTTP/1.0\\r\\n\\r\\n\" | nc <http server ip> <http server port>"
