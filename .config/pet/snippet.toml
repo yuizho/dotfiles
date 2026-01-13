@@ -975,7 +975,7 @@
   Description = "start http server by python"
   Output = ""
   Tag = []
-  command = "python -m http.server 8000"
+  command = "python -m http.server -b 127.0.0.1 8000"
 
 [[Snippets]]
   Description = "send text on telnet by bash feature"
