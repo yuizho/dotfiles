@@ -3,6 +3,7 @@ export PATH=~/.local/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
 export PATH=~/go/bin:$PATH
+export PATH=~/.ghcup/bin:$PATH
 case ${OSTYPE} in
     darwin*)
         export PATH=~/Library/Python/$(python3 --version | cut -d ' ' -f 2 | sed -E 's/^(.+)\.(.+)\.(.+)$/\1\.\2/')/bin:$PATH
