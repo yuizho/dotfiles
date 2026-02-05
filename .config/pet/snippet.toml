@@ -1558,3 +1558,9 @@
   Output = ""
   Tag = []
   command = "echo -en \"GET / HTTP/1.0\\r\\n\\r\\n\" | nc <http server ip> <http server port>"
+
+[[Snippets]]
+  Description = "launch repl of Haskell"
+  Output = ""
+  Tag = []
+  command = "ghci"
