@@ -1564,3 +1564,27 @@
   Output = ""
   Tag = []
   command = "ghci"
+
+[[Snippets]]
+  Description = "lambda expression"
+  Output = ""
+  Tag = ["haskell"]
+  command = "(\\x -> x + x) 2"
+
+[[Snippets]]
+  Description = "List Comprehension (リスト内包表記)"
+  Output = ""
+  Tag = ["haskell"]
+  command = "[x^2 | x <- [1..5]]"
+
+[[Snippets]]
+  Description = "List Comprehesion ((リスト内包表記) with Guard"
+  Output = ""
+  Tag = ["haskell"]
+  command = "[x^2 | x <- [1..10], x `mod` 2 == 0]"
+
+[[Snippets]]
+  Description = "reload hs file to GHCi"
+  Output = ""
+  Tag = ["haskell"]
+  command = ":reload"
