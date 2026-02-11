@@ -1588,3 +1588,9 @@
   Output = ""
   Tag = ["haskell"]
   command = ":reload"
+
+[[Snippets]]
+  Description = "change Mode (Auto-Accept Mode -> Plan Mode -> Default Mode)"
+  Output = ""
+  Tag = ["claude-code"]
+  command = "Shift+Tab"
