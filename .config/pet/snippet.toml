@@ -1594,3 +1594,15 @@
   Output = ""
   Tag = ["claude-code"]
   command = "Shift+Tab"
+
+[[Snippets]]
+  Description = "create CLAUDE.md by current project structure"
+  Output = ""
+  Tag = ["claude-code"]
+  command = "/init"
+
+[[Snippets]]
+  Description = "generate a report about proposal for using claude code"
+  Output = ""
+  Tag = ["claude-code"]
+  command = "/insights"
