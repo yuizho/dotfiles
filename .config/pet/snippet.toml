@@ -1606,3 +1606,9 @@
   Output = ""
   Tag = ["claude-code"]
   command = "/insights"
+
+[[Snippets]]
+  Description = "run gemini cli via command line"
+  Output = ""
+  Tag = []
+  command = "gemini \"prompt\""
