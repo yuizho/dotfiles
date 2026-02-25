@@ -14,6 +14,7 @@ alt - h : yabai -m window --resize right:-50:0
 
 # toggle window split type
 alt - space : yabai -m window --toggle zoom-fullscreen
+ctrl- t : yabai -m window --toggle split
 
 # organize window balance
 alt - b : yabai -m space --balance
