@@ -1612,3 +1612,9 @@
   Output = ""
   Tag = []
   command = "gemini \"prompt\""
+
+[[Snippets]]
+  Description = "create index and value pair by haskell"
+  Output = ""
+  Tag = ["haskell"]
+  command = "zip [1..] ['a', 'b', 'c', 'd', 'e', 'f']"
