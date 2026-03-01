@@ -436,6 +436,13 @@
   :emacs>= 25.1
   :ensure t)
 
+(leaf ormolu
+  :ensure t
+  :after haskell-mode
+  :hook (haskell-mode-hook . ormolu-format-on-save-mode)
+  :bind (:haskell-mode-map
+         ("C-c r" . ormolu-format-buffer)))
+
 (leaf lua-mode
   :doc "a major-mode for editing Lua scripts"
   :req "emacs-24.3"
@@ -484,3 +491,4 @@
 
 (provide 'init)
 ;;; init.el ends here
+
