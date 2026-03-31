@@ -1612,3 +1612,15 @@
   Output = ""
   Tag = []
   command = "gemini \"prompt\""
+
+[[Snippets]]
+  Description = "get a item value from 1password"
+  Output = ""
+  Tag = []
+  command = "op item get <item_name> --fields label=<label_name> --reveal"
+
+[[Snippets]]
+  Description = "show the cost report of claude code"
+  Output = ""
+  Tag = []
+  command = "npx ccusage@latest"
