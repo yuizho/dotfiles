@@ -1643,3 +1643,8 @@
   Tag = []
   command = "ghcup list"
 
+[[Snippets]]
+  Description = "pretty print json by jq"
+  Output = ""
+  Tag = []
+  command = "echo '{\"id\": 1, \"name\": \"yui\"}' | jq \".\""
