@@ -1648,3 +1648,9 @@
   Output = ""
   Tag = []
   command = "echo '{\"id\": 1, \"name\": \"yui\"}' | jq \".\""
+
+[[Snippets]]
+  Description = "execute haskell file by interpriter directory (no compile)"
+  Output = ""
+  Tag = ["haskell"]
+  command = "runhaskell <haskell_file_name>"
