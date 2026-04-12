@@ -1654,3 +1654,9 @@
   Output = ""
   Tag = ["haskell"]
   command = "runhaskell <haskell_file_name>"
+
+[[Snippets]]
+  Description = "applicative style"
+  Output = ""
+  Tag = ["haskell"]
+  command = "(++) <$> Just \"yui\" <*> Just \"ito\""
